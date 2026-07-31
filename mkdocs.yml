@@ -61,6 +61,9 @@ plugins:
             行政总览: Overview
             报销流程: Reimbursement
             采购流程: Purchasing
+            实验室资源: Lab Resources
+            资源总览: Overview
+            硬件资源中心: Hardware Resource Center
             如何贡献: How to Contribute
 
 markdown_extensions:
@@ -92,4 +95,7 @@ nav:
       - 行政总览: administration/index.md
       - 报销流程: administration/reimbursement.md
       - 采购流程: administration/purchasing.md
+  - 实验室资源:
+      - 资源总览: resources/index.md
+      - 硬件资源中心: resources/hardware.md
   - 如何贡献: contributing.md
