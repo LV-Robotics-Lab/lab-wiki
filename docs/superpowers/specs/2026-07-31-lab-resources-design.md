@@ -61,4 +61,3 @@ Because this is a status and contribution page rather than an operational guide,
 - Search the changed files for the supplied account identifier, credential material, Google Sheet IDs, and Notion page IDs.
 - Review `git diff` before any commit.
 - Run `mkdocs build --strict` and require a zero exit status.
-
