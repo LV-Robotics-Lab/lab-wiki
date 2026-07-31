@@ -1,0 +1,95 @@
+site_name: LV Robotics Lab Wiki
+site_description: Internal documentation for laboratory members
+site_url: https://make-it-realll.github.io/lab-wiki/
+repo_name: make-it-realll/lab-wiki
+repo_url: https://github.com/make-it-realll/lab-wiki
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; LV Robotics Lab
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            首页: Home
+            新成员入门: Onboarding
+            入门总览: Overview
+            新成员清单: New Member Checklist
+            账号与权限: Accounts and Access
+            行政流程: Administration
+            行政总览: Overview
+            报销流程: Reimbursement
+            采购流程: Purchasing
+            如何贡献: How to Contribute
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 新成员入门:
+      - 入门总览: onboarding/index.md
+      - 新成员清单: onboarding/new-member.md
+      - 账号与权限: onboarding/accounts.md
+  - 行政流程:
+      - 行政总览: administration/index.md
+      - 报销流程: administration/reimbursement.md
+      - 采购流程: administration/purchasing.md
+  - 如何贡献: contributing.md

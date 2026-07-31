@@ -1,0 +1,8 @@
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.5rem;
+}
+
+.md-typeset .wiki-meta {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.82rem;
+}

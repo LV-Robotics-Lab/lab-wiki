@@ -1,0 +1,10 @@
+.venv/
+site/
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
