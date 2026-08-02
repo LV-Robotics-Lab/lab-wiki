@@ -57,6 +57,7 @@ plugins:
             入门总览: Overview
             新成员清单: New Member Checklist
             账号与权限: Accounts and Access
+            实验室门禁: Lab Access
             行政流程: Administration
             行政总览: Overview
             报销流程: Reimbursement
@@ -91,6 +92,7 @@ nav:
       - 入门总览: onboarding/index.md
       - 新成员清单: onboarding/new-member.md
       - 账号与权限: onboarding/accounts.md
+      - 实验室门禁: onboarding/lab-access.md
   - 行政流程:
       - 行政总览: administration/index.md
       - 报销流程: administration/reimbursement.md
