@@ -4,8 +4,8 @@
 
 Find commonly used laboratory administration sheets, code repositories, compute, remote access, data storage, and hardware guidance in one place.
 
-!!! warning "Internal resource links"
-    The internal sheets below use placeholders. Replace them with actual URLs only after the maintainer confirms that publication is appropriate.
+!!! warning "Link and credential boundary"
+    Maintainer-approved resource links may be listed directly, although some still require an organization account or file permission. Never place a password, API key, token, private key, Auth ID, or cookie in a URL, page, or screenshot.
 
 ## Resource Links
 

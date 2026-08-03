@@ -1,11 +1,23 @@
 # Remote Access and Private-Network Enrollment
 
-!!! danger "Never publish network inventory"
-    The Wiki must not store control-server addresses, tailnet IPs, hostnames, device inventories, pre-authentication keys, Auth IDs, SSH targets, remote-control codes, or passwords.
+!!! danger "Addresses are visible; credentials are not"
+    Maintainer-approved control-server addresses, tailnet IPs, hostnames, and device inventories may be documented in the Wiki. Never publish pre-authentication keys, Auth IDs, SSH private keys, passwords, access tokens, remote-control codes, or unattended-access passwords.
 
 ## Purpose
 
 Enroll an approved personal work computer in the laboratory's self-hosted private network to access workstations or services assigned to a project.
+
+## Current Enrollment Information
+
+| Item | Current value |
+|---|---|
+| Headscale control server | [https://hs.jingxiangguo.com](https://hs.jingxiangguo.com) |
+| Gateway / control plane | `sg-ai-gateway` (`100.64.0.1`), no GPU, not a development machine |
+| New-device enrollment contact | `@nilou` (Ye Zheng) |
+| Device, IP, and GPU inventory | [Compute Resource Requests and Selection](compute-access.en.md) |
+
+!!! note "Dynamic information"
+    The table above and compute page are a snapshot dated 2026-08-03. Run `tailscale status` before connecting to verify current node state; network reachability does not grant permission to operate a device.
 
 ## Prerequisites
 
@@ -21,7 +33,7 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 |---|---|
 | Project | Project and project-owner role |
 | Device | Operating system, device type, and proposed unique device name |
-| Access target | Required resource category; do not include internal addresses |
+| Access target | Required resource category, hostname, or tailnet IP |
 | Purpose | Visualization, development, inference, file access, or operational support |
 | Period | Expected start and end dates |
 
@@ -33,10 +45,10 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 2. Add the administrator-provided custom control server in the client settings, or run this in a terminal with the CLI configured:
 
     ```bash
-    tailscale login --login-server=<HEADSCALE_URL>
+    tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
-3. Do not paste the control-server address, browser registration page, or complete terminal output into public chats or Issues.
+3. The control-server address may be public; never publish the browser registration page, Auth ID, or complete terminal output containing credentials.
 
 ### Windows
 
@@ -44,7 +56,7 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 2. Run this in PowerShell:
 
     ```powershell
-    tailscale login --login-server=<HEADSCALE_URL>
+    tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
 3. If the command is not on `PATH`, use the installed client UI or ask the Network Administrator to confirm the local installation method.
@@ -55,10 +67,10 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 2. Run:
 
     ```bash
-    sudo tailscale up --login-server=<HEADSCALE_URL>
+    sudo tailscale up --login-server=https://hs.jingxiangguo.com
     ```
 
-3. Do not place the control-server address in public scripts, images, or repositories.
+3. The control-server address may appear in setup instructions; never place a pre-authentication key, Auth ID, or other credential in scripts, images, or repositories.
 
 ## Auth ID Registration
 
@@ -91,7 +103,7 @@ Get-Content "$env:USERPROFILE\.ssh\id_ed25519.pub"
 
 ### Submit Authorization
 
-Through a controlled channel, submit the public key, requested resource category, project, period, and target account role. The administrator grants access through controlled configuration or automation; the Wiki does not publish server paths, real accounts, or `authorized_keys` locations.
+Through a controlled channel, submit the public key, requested resource category, project, period, and target account role. The administrator grants access through controlled configuration or automation; the Wiki may document approved target hostnames/IPs but does not publish real accounts, credentials, or `authorized_keys` locations.
 
 ### Verify SSH
 
@@ -103,7 +115,7 @@ OpenSSH public-key authorization and Tailscale SSH are separate mechanisms. Tail
 
 ## Procedure
 
-1. Contact the **Network Administrator** through the controlled directory and submit the request information.
+1. Contact **`@nilou` (Ye Zheng)** and submit the request information.
 2. The administrator confirms the device, project permissions, and allowed resource scope.
 3. Receive enrollment information through a one-time or short-lived secure channel; never forward it.
 4. Complete the client login and Auth ID registration for the relevant operating system.
@@ -115,7 +127,7 @@ OpenSSH public-key authorization and Tailscale SSH are separate mechanisms. Tail
 
 - Use the private network only for research collaboration and approved resource access, not unrelated traffic forwarding.
 - Never share node identities, pre-authentication keys, SSH private keys, or unattended-access passwords.
-- Do not paste complete network status, IPs, hostnames, or error screenshots into public Issues or the Wiki.
+- Hostnames, tailnet IPs, and GPU configurations may be maintained in the Wiki; inspect and redact Auth IDs, keys, tokens, accounts, and other credentials before publishing error screenshots.
 - Confirm the current path and authorization before remote-desktop use; network reachability does not authorize device operation.
 - After temporary support, close sharing, revoke one-time permissions, and review the remote session.
 
@@ -131,17 +143,17 @@ tailscale ping <AUTHORIZED_HOSTNAME>
 - The administrator sees the device as an independent node with the expected identity.
 - Only approved resources are reachable, and the project service, SSH, or remote desktop works as expected.
 - SSH verification does not fall back to password authentication.
-- No network inventory or credentials appear in terminal output, screenshots, or documentation.
+- No Auth ID, key, password, token, or other credential appears in terminal output, screenshots, or documentation.
 
 ## Troubleshooting
 
-- The login command does not produce an Auth ID: confirm that the controlled control-server value was entered correctly, then check the client version and network state.
+- The login command does not produce an Auth ID: confirm the control server is `https://hs.jingxiangguo.com`, then check the client version and network state.
 - The device appears as another node: stop using it and re-enroll with independent state to avoid disconnecting an active device.
 - A node is visible but not interactive: validate the current direct or relay path and target service ports; do not rely on the online label alone.
 - SSH still requests a password: confirm that the correct public key was submitted, the target account is authorized, and the matching local private key is in use; never place a password in a script.
 - Remote desktop is slow: record the time and connection type, then ask the Network Administrator to inspect the path.
 - Device lost or member leaving: revoke the node and related temporary credentials immediately.
-- On-site support required: use the controlled directory to contact the duty maintainer; do not publish personal locations.
+- On-site support required: contact `@nilou` (Ye Zheng) or the equipment maintainer. Lab equipment locations may be documented, but do not publish anyone's live personal location.
 
 ## References
 
@@ -152,5 +164,5 @@ tailscale ping <AUTHORIZED_HOSTNAME>
 ## Maintenance
 
 - Owner: Network Administrator
-- Contact: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- Contact: `@nilou` (Ye Zheng)
 - Last verified: 2026-08-03

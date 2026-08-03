@@ -1,11 +1,21 @@
 # AI API 申请与使用
 
-!!! danger "禁止公开凭据"
-    Wiki 只记录申请流程和使用规范。API Base URL、API key、账户、用量明细和内部服务地址必须通过获批的受控渠道获取，不得写入 Wiki、代码仓库、工单、截图或群聊。
+!!! danger "地址可公开，凭据不可公开"
+    Wiki 可以记录 API Base URL、服务主页和负责人，但不得记录 API key、访问 token、密码、Cookie、请求头或个人用量明细。
 
 ## 用途
 
 为已获批准的实验室科研项目申请和使用实验室管理的 AI API，并在可追踪的个人额度内完成模型调用。
+
+## 当前服务入口
+
+| 服务 | 地址 | 申请或咨询 |
+|---|---|---|
+| 实验室 AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@_嗯`、`@赖咏曦` |
+| 实验室 Codex 中转站 | [https://goaihz.com/](https://goaihz.com/) | `@赖咏曦` |
+
+!!! note "个人 key"
+    API key 按用户分配并进行流量监控。页面公开 Base URL，但 key 仍须向负责人单独申请，禁止共用。
 
 ## 前置条件
 
@@ -27,13 +37,13 @@
 
 ## 操作步骤
 
-1. 通过实验室受控通讯录联系 **AI 服务管理员**，提交上表信息。
+1. 联系 `@_嗯` 或 `@赖咏曦`，提交上表信息。
 2. 管理员确认科研用途、额度、模型权限和数据边界。
-3. 通过获批的密码管理器或一次性安全渠道接收 Base URL 与个人 key。
+3. 通过获批的密码管理器或一次性安全渠道接收个人 key。
 4. 仅在本机环境变量或获批的密钥管理系统中配置凭据，例如：
 
     ```bash
-    export LAB_AI_BASE_URL="<AI_API_BASE_URL>"
+    export LAB_AI_BASE_URL="https://kjapi.botsmart.net"
     export LAB_AI_API_KEY="<AI_API_KEY>"
     ```
 
@@ -44,7 +54,7 @@
 
 - 凭据按用户分配并进行流量监控，禁止共享、转发或代他人使用。
 - 仅用于获批科研项目，禁止用于与项目无关的日常任务。
-- 多 Agent、长时间运行和高并发任务可能快速消耗额度，启动前应评估预算并取得批准。
+- Goal 模式、多 Agent、长时间运行和高并发任务可能快速消耗额度，启动前应评估预算并取得批准。
 - 不得把未脱敏的个人信息、受限数据或未公开材料发送给未经批准的模型服务。
 - 不得在 Notebook、Shell 历史、训练日志、错误截图或 Git 提交中保留 key。
 
@@ -52,7 +62,7 @@
 
 - 最小测试返回预期模型结果，且未在终端或日志中显示凭据。
 - 管理员侧能够看到对应个人账户的用量记录。
-- 代码仓库和文档中只出现 `<AI_API_BASE_URL>`、`<AI_API_KEY>` 等占位符。
+- 代码仓库和文档可以记录 `https://kjapi.botsmart.net`，但 key 只能使用 `<AI_API_KEY>` 等占位符。
 
 ## 故障排查
 
@@ -66,6 +76,7 @@
 
 ## 维护信息
 
-- 负责人：AI 服务管理员
-- 联系入口：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- 负责人：`@_嗯`、`@赖咏曦`
+- AI API：[https://kjapi.botsmart.net](https://kjapi.botsmart.net)
+- Codex 中转站：[https://goaihz.com/](https://goaihz.com/)
 - 最后核验：2026-08-03

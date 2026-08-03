@@ -42,6 +42,6 @@ Provide one place to request laboratory accounts, compute, remote-network access
 - Suspected credential exposure: stop using it and contact the administrator for immediate rotation.
 
 !!! warning "Sensitive information"
-    Never store passwords, private keys, tokens, internal addresses, remote-control codes, or `.env` files in the Wiki.
+    Approved service addresses, hostnames, and IPs may be documented, but never store passwords, private keys, API keys, tokens, Auth IDs, unattended-access passwords, or `.env` files in the Wiki.
 
 <p class="wiki-meta">Owner: Onboarding Maintainer · Last verified: 2026-08-03</p>

@@ -1,7 +1,7 @@
 # Physical-Hardware Resource Center
 
 !!! danger "Public pages must not store credentials"
-    This page contains only public vendor resources, verification procedures, and controlled-resource placeholders. Never place real keys, passwords, accounts, host/IP details, device serial numbers, internal document URLs, or personal contact details in the Wiki.
+    Maintainer-approved Google Drive, Feishu, Yuque, and vendor-document links, as well as hostnames, tailnet IPs, GPU configurations, and equipment locations, may be documented in the Wiki. Never publish passwords, API keys, access tokens, private keys, Auth IDs, cookies, unattended-access passwords, or request headers containing them.
 
 ## Purpose
 
@@ -34,7 +34,7 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 
 - Match the asset label to the product, model, handedness/end-effector configuration, and accessory list.
 - Verify live device state, maintenance history, booking conflicts, and recent incidents in the controlled system; the public page does not display live inventory.
-- When collecting necessary appearance or wiring evidence, avoid serial numbers, on-screen credentials, and private-network information.
+- When collecting necessary appearance or wiring evidence, avoid serial numbers and on-screen credentials. Hostnames/IPs may be recorded, but do not show them together with passwords, tokens, or account credentials in the same screenshot.
 
 ### Safety and Site
 
@@ -46,7 +46,7 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 
 - Record client, SDK, firmware, model, and communication-protocol versions and confirm compatibility with the target device.
 - Run a read-only status query or the vendor's minimal example before project code.
-- Never place shared passwords, device accounts, private-network addresses, or access tokens in scripts, notebooks, Issues, or log screenshots.
+- Never place shared passwords, device-account credentials, API keys, access tokens, private keys, or unattended-access passwords in scripts, notebooks, Issues, or log screenshots.
 
 ### Data and Return
 
@@ -58,29 +58,33 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 
 | Hardware or resource | Recommended group | Verify before use | Safe entry point |
 |---|---|---|---|
-| RealHand / LinkerHand | Dexterous Hands | Model, handedness, firmware, and teleoperation-script version | [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python); request internal material through the controlled directory |
-| AgileX NERO / TRACER | Shared Physical Systems | Arm/base model, emergency stop, control mode, SDK, and communication-protocol version | [AgileX NERO product page](https://global.agilex.ai/products/nero); request internal manuals and CAN protocols through the controlled directory |
-| Daimon / TacClaw | Tactile and Dexterous Hands | Main board, sensors, calibration revision, acquisition link, and connection authorization | Controlled internal material; no SSH target is published in the Wiki |
-| UDEXREAL / HigVR data gloves | Ego and Dexterous Hands | Handedness, size, firmware, calibration, and time synchronization | [HigVR User Manual](https://higvr.com/en-cn/pages/user-manual); request other material through the controlled directory |
-| WUJI Hand | Dexterous Hands | Product generation, handedness, power, SDK/ROS compatibility, and safety constraints | [WUJI Hand Documentation Center](https://docs.wuji.tech/docs/en/wuji-hand/latest/) |
-| Franka / GELLO | Ego and Dexterous Hands | Arm identity, controller state, end effector, limits, and teleoperation link | Request the GELLO single-arm guide and control authorization through the controlled directory |
-| YAM / i2rt | Shared Physical Systems | Model, end effector, API/SDK revision, calibration, and safety boundary | [i2rt Python API](https://github.com/i2rt-robotics/i2rt); request internal material through the controlled directory |
+| RealHand / LinkerHand | Dexterous Hands | Model, handedness, firmware, and teleoperation-script version | [RealHand resource folder](https://drive.google.com/drive/folders/1bDQFkxWZW1SapAQazwENOSOL_vWyM9Ti?usp=sharing); [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
+| AgileX NERO / TRACER | Shared Physical Systems | Arm/base model, emergency stop, control mode, SDK, and communication-protocol version | [NERO product page](https://global.agilex.ai/products/nero); [NERO user manual](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/air57k7k3nhgeuxb?singleDoc=); [support document 1](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/ad5tfngbirdvhunm?singleDoc=); [support document 2](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/tcpvae9wrb5xnivn?singleDoc=); [TRACER 2.0 user manual](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/yg09k9oh1b4b046x?singleDoc#%20%E3%80%8A%E9%99%84%E4%BB%B62-TRACER%202.0%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E3%80%8B); [support document 4](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/km95una15ctk4b17?singleDoc=) |
+| Daimon / TacClaw | Tactile and Dexterous Hands | Main board, sensors, calibration revision, acquisition link, and connection authorization | [Daimon hardware resource folder](https://drive.google.com/drive/folders/1gOMqA2WjBhTcx3Af2x-t1vo9qJFS78E8?usp=sharing) |
+| UDEXREAL / HigVR data gloves | Ego and Dexterous Hands | Handedness, size, firmware, calibration, and time synchronization | [UDEXREAL usage guide](https://hs7ghlauag.feishu.cn/docx/BlqKdFOSeoFQG1xzbV9ccNMMnzc); [HigVR User Manual](https://higvr.com/en-cn/pages/user-manual) |
+| WUJI Hand | Dexterous Hands | Product generation, handedness, power, SDK/ROS compatibility, and safety constraints | [WUJI Hand Documentation Center](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
+| Franka / GELLO | Ego and Dexterous Hands | Arm identity, controller state, end effector, limits, and teleoperation link | [Franka GELLO single-arm guide](https://docs.google.com/document/d/13ILD-wukxa0Szt1wgoUBytA2SqVOcGDsZ0kLR67Po7M/edit?usp=drivesdk) |
+| YAM / i2rt | Shared Physical Systems | Model, end effector, API/SDK revision, calibration, and safety boundary | [YAM / YUM resource folder](https://drive.google.com/drive/folders/1et1BCPRL1p-zUde3mMlmilPYLowDVnn3); [i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
+| LeRobot | Physical Systems and Simulation | Data format, hardware adapters, version, and example configuration | [LeRobot usage tutorial](https://zihao-ai.feishu.cn/wiki/TS6swApHbinx01kHDi5cf5n5n8c) |
 | NERO Arm Communication Protocol V1.2.1 | Shared Physical Systems | Applicable model, revision, CAN standard, bit rate, and data format | Request as a controlled technical attachment; do not reproduce it in the public Wiki |
 
-## Controlled Internal Resources
+!!! info "Link permissions"
+    Some Drive, Feishu, Yuque, or Google Docs links may require login or authorization from the resource owner. The Wiki does not store accounts, cookies, passwords, or tokens used to open them.
+
+## Supporting Management Resources
 
 - Hardware resource directory: `<HARDWARE_RESOURCE_DIRECTORY_URL>`
 - Asset and state register: `<HARDWARE_ASSET_REGISTER_URL>`
 - Booking and occupation log: `<HARDWARE_BOOKING_URL>`
 - Protocol and calibration archive: `<HARDWARE_PROTOCOL_ARCHIVE_URL>`
 - Maintenance and incident log: `<HARDWARE_MAINTENANCE_LOG_URL>`
-- Controlled contact directory: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- Contact directory: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
 
 ## Procedure
 
 1. Use the project task and Group Scope above to identify the required hardware or documentation.
 2. Confirm device state and maintainer in the asset register, then submit the booking, purpose, period, and on-site responsible member.
-3. Read the public vendor material first; request internal manuals, protocols, calibration, and access authorization through the controlled directory.
+3. Read this page's resource links first; request additional permissions for manuals, protocols, calibration, and access from the resource owner or equipment maintainer.
 4. Complete identity, safety, version, and data checks from the pre-use checklist and retain necessary controlled records.
 5. Pass the minimum smoke test before the formal experiment; stop on any anomaly, preserve evidence, and notify the maintainer.
 6. Complete power-down, return, data storage, and state updates after the experiment.
@@ -91,7 +95,7 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 - Booking, operating authorization, and on-site safety conditions are confirmed.
 - The minimum smoke test passes with no unexplained error or out-of-bound event.
 - Raw data, calibration, and experiment metadata are written to an approved storage location.
-- No real credential, private-network address, serial number, or restricted-document link appears in the Wiki or public repository.
+- No real password, API key, token, private key, Auth ID, cookie, unattended-access password, or device serial number appears in the Wiki or public repository.
 
 ## Troubleshooting
 
@@ -99,7 +103,7 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 - A public link fails: record the product and page name and submit a maintenance request; do not substitute an untrusted mirror.
 - Protocol or SDK does not match the device: stop control and verify the model, firmware, applicable protocol scope, and maintenance record.
 - Connection fails: check power, cables, emergency stop, and the official minimal example before controlled network and permission checks.
-- A token, password, or internal target is exposed: stop using it and notify the maintainer for revocation and rotation; never paste the value into an Issue.
+- A key, token, password, private key, Auth ID, cookie, or unattended-access password is exposed: stop using it and notify the maintainer for revocation and rotation; never paste the value into an Issue.
 - Hardware appears damaged: stop, power down, isolate the device, and attach redacted evidence to the maintenance record.
 
 ## Maintenance

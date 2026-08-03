@@ -1,7 +1,7 @@
 # 真机硬件资源中心
 
 !!! danger "公开页面不保存凭据"
-    本页只提供公开厂商资料、查验流程和受控资源占位符。真实密钥、密码、账号、主机/IP、设备序列号、内部文档地址和个人联系方式不得写入 Wiki。
+    经负责人确认的 Google Drive、飞书、语雀和厂商资料链接，以及主机名、tailnet IP、GPU 配置和设备位置可以写入 Wiki。密码、API Key、访问 token、私钥、Auth ID、Cookie、无人值守访问密码和包含这些信息的请求头不得公开。
 
 ## 用途
 
@@ -34,7 +34,7 @@
 
 - 对照资产标签确认产品、型号、左右手/末端配置和附件清单。
 - 在受控系统核验设备状态、维护记录、预约冲突和最近异常；公开页面不展示实时库存。
-- 拍摄必要的外观或布线证据时避开序列号、屏幕凭据和内网信息。
+- 拍摄必要的外观或布线证据时避开序列号和屏幕凭据；主机名/IP 可以记录，但不要让其与密码、token 或账号凭据出现在同一截图中。
 
 ### 安全与场地
 
@@ -46,7 +46,7 @@
 
 - 记录客户端、SDK、固件、模型和通信协议版本，确认与目标设备匹配。
 - 先运行只读状态查询或官方最小示例，再运行项目代码。
-- 禁止把共享密码、设备账户、内网地址或访问 token 写入脚本、Notebook、Issue 或日志截图。
+- 禁止把共享密码、设备账户凭据、API Key、访问 token、私钥或无人值守访问密码写入脚本、Notebook、Issue 或日志截图。
 
 ### 数据与归还
 
@@ -58,29 +58,33 @@
 
 | 硬件或资料 | 建议使用组 | 使用前重点查验 | 安全入口 |
 |---|---|---|---|
-| RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python)；内部资料走受控目录 |
-| AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [AgileX NERO 产品页](https://global.agilex.ai/products/nero)；内部手册与 CAN 协议走受控目录 |
-| Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | 受控内部资料；不在 Wiki 发布 SSH 目标 |
-| UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | [HigVR 用户手册](https://higvr.com/en-cn/pages/user-manual)；其余资料走受控目录 |
+| RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | [RealHand 资料目录](https://drive.google.com/drive/folders/1bDQFkxWZW1SapAQazwENOSOL_vWyM9Ti?usp=sharing)；[LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
+| AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [NERO 产品页](https://global.agilex.ai/products/nero)；[NERO 用户手册](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/air57k7k3nhgeuxb?singleDoc=)；[支持文档 1](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/ad5tfngbirdvhunm?singleDoc=)；[支持文档 2](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/tcpvae9wrb5xnivn?singleDoc=)；[TRACER 2.0 用户手册](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/yg09k9oh1b4b046x?singleDoc#%20%E3%80%8A%E9%99%84%E4%BB%B62-TRACER%202.0%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E3%80%8B)；[支持文档 4](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/km95una15ctk4b17?singleDoc=) |
+| Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | [戴盟硬件资料目录](https://drive.google.com/drive/folders/1gOMqA2WjBhTcx3Af2x-t1vo9qJFS78E8?usp=sharing) |
+| UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | [UDEXREAL 使用文档](https://hs7ghlauag.feishu.cn/docx/BlqKdFOSeoFQG1xzbV9ccNMMnzc)；[HigVR 用户手册](https://higvr.com/en-cn/pages/user-manual) |
 | WUJI Hand | 灵巧手组 | 产品代次、左右手、供电、SDK/ROS 兼容性和安全约束 | [WUJI Hand 文档中心](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
-| Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | GELLO 单臂指南与控制授权走受控目录 |
-| YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | [i2rt Python API](https://github.com/i2rt-robotics/i2rt)；内部资料走受控目录 |
+| Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | [Franka GELLO 单臂指南](https://docs.google.com/document/d/13ILD-wukxa0Szt1wgoUBytA2SqVOcGDsZ0kLR67Po7M/edit?usp=drivesdk) |
+| YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | [YAM / YUM 资料目录](https://drive.google.com/drive/folders/1et1BCPRL1p-zUde3mMlmilPYLowDVnn3)；[i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
+| LeRobot | 真机组、仿真组 | 数据格式、硬件适配器、版本和示例配置 | [LeRobot 使用教程](https://zihao-ai.feishu.cn/wiki/TS6swApHbinx01kHDi5cf5n5n8c) |
 | NERO 机械臂通信协议 V1.2.1 | 真机组共享 | 协议适用型号、版本、CAN 标准、波特率和数据格式 | 作为受控技术附件申请，不在公开 Wiki 复制全文 |
 
-## 受控内部资源
+!!! info "链接权限"
+    部分 Drive、飞书、语雀或 Google Docs 链接可能要求登录或由资料所有者授权。Wiki 不保存用于打开这些链接的账号、Cookie、密码或 token。
+
+## 配套管理资源
 
 - 硬件资料目录：`<HARDWARE_RESOURCE_DIRECTORY_URL>`
 - 资产与状态登记表：`<HARDWARE_ASSET_REGISTER_URL>`
 - 预约与占用记录：`<HARDWARE_BOOKING_URL>`
 - 协议与标定附件库：`<HARDWARE_PROTOCOL_ARCHIVE_URL>`
 - 维护与异常记录：`<HARDWARE_MAINTENANCE_LOG_URL>`
-- 受控联系人目录：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- 联系人目录：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
 
 ## 操作步骤
 
 1. 根据项目任务和上方组别范围确定需要的硬件或资料。
 2. 在资产登记表确认设备状态和维护者，再提交预约、用途、时段和现场负责人。
-3. 优先阅读本页公开厂商资料；内部手册、协议、标定和访问授权通过受控目录申请。
+3. 优先阅读本页资料链接；需要额外权限的手册、协议、标定和访问授权向资料所有者或设备维护者申请。
 4. 按使用前查验清单完成身份、安全、版本和数据检查，并保留必要的受控记录。
 5. 完成最小 smoke test 后再运行正式实验；任何异常先停机、保留证据并通知维护者。
 6. 实验结束后完成下电、归还、数据落盘和状态更新。
@@ -91,7 +95,7 @@
 - 预约、操作授权和现场安全条件均已确认。
 - 最小 smoke test 通过，日志中没有未解释的错误或越界。
 - 原始数据、标定和实验元数据已写入批准的存储位置。
-- Wiki 和公开仓库中没有真实凭据、内网地址、序列号或受限文档链接。
+- Wiki 和公开仓库中没有真实密码、API Key、token、私钥、Auth ID、Cookie、无人值守访问密码或设备序列号。
 
 ## 故障排查
 
@@ -99,7 +103,7 @@
 - 公开链接失效：记录产品和页面名称，提交维护请求；不要用来历不明的镜像替代。
 - 协议/SDK 与设备不匹配：停止控制，核对型号、固件、协议适用范围和维护记录。
 - 连接失败：先检查供电、线缆、急停和官方最小示例，再检查受控网络与权限。
-- 发现泄露的 token、密码或内部目标：立即停止使用并通知维护者完成吊销和轮换，不要在 Issue 中粘贴原值。
+- 发现泄露的 key、token、密码、私钥、Auth ID、Cookie 或无人值守访问密码：立即停止使用并通知维护者完成吊销和轮换，不要在 Issue 中粘贴原值。
 - 硬件异常或疑似损伤：停机、下电、隔离设备并在维护记录中附上脱敏证据。
 
 ## 维护信息

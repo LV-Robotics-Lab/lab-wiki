@@ -42,6 +42,6 @@
 - 凭据疑似泄露：立即停止使用并联系管理员轮换。
 
 !!! warning "敏感信息"
-    不要在 Wiki 中保存密码、私钥、令牌、内部地址、远程控制码或 `.env` 文件。
+    Wiki 可以记录获准公开的服务地址、主机名和 IP，但不要保存密码、私钥、API key、token、Auth ID、远程控制密码或 `.env` 文件。
 
 <p class="wiki-meta">负责人：Onboarding Maintainer · 最后核验：2026-08-03</p>
