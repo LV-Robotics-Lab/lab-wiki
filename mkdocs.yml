@@ -61,6 +61,7 @@ plugins:
             入门总览: Overview
             新成员清单: New Member Checklist
             账号与权限: Accounts and Access
+            AI API 申请与使用: AI API Access and Usage
             实验室门禁: Lab Access
             行政流程: Administration
             行政总览: Overview
@@ -68,7 +69,13 @@ plugins:
             采购流程: Purchasing
             实验室资源: Lab Resources
             资源总览: Overview
-            硬件资源中心: Hardware Resource Center
+            算力资源: Compute Resources
+            远程接入: Remote Access
+            数据存储与归档: Data Storage and Archiving
+            真机硬件资源中心: Physical-Hardware Resource Center
+            研究与课程: Research and Courses
+            研究方向与项目机会: Research Directions and Project Opportunities
+            课程项目申请: Course Project Applications
             如何贡献: How to Contribute
 
 markdown_extensions:
@@ -99,6 +106,7 @@ nav:
       - 入门总览: onboarding/index.md
       - 新成员清单: onboarding/new-member.md
       - 账号与权限: onboarding/accounts.md
+      - AI API 申请与使用: onboarding/ai-api-access.md
       - 实验室门禁: onboarding/lab-access.md
   - 行政流程:
       - 行政总览: administration/index.md
@@ -106,5 +114,11 @@ nav:
       - 采购流程: administration/purchasing.md
   - 实验室资源:
       - 资源总览: resources/index.md
-      - 硬件资源中心: resources/hardware.md
+      - 算力资源: resources/compute-access.md
+      - 远程接入: resources/remote-access.md
+      - 数据存储与归档: resources/data-management.md
+      - 真机硬件资源中心: resources/hardware.md
+  - 研究与课程:
+      - 研究方向与项目机会: projects/index.md
+      - 课程项目申请: academics/project-courses.md
   - 如何贡献: contributing.md

@@ -1,120 +1,109 @@
-# 硬件资源中心
+# 真机硬件资源中心
 
-!!! danger "不要在 Wiki 中保存真实凭据"
-    本页所有尖括号字段均为占位符。真实链接、密钥、密码、账号、主机地址和内部路径只能从获批的密码管理器或其他受控系统获取，禁止将真实值回填到 Wiki。
+!!! danger "公开页面不保存凭据"
+    本页只提供公开厂商资料、查验流程和受控资源占位符。真实密钥、密码、账号、主机/IP、设备序列号、内部文档地址和个人联系方式不得写入 Wiki。
 
 ## 用途
 
-集中查找实验室硬件的公开文档、内部资料引用和访问配置占位符。
+供真机组成员在预约、上电、开发和归还设备前查验硬件身份、资料版本、安全状态与授权范围。
+
+## 组别范围
+
+| 组别 | 组织关系 | 本页用途 |
+|---|---|---|
+| 真机组 | 上级组 | 负责实体机器人、遥操作、采集与硬件集成 |
+| Ego 组 | 真机组下设 | 查验第一视角采集、人体动作输入和遥操作相关设备 |
+| 灵巧手组 | 真机组下设 | 查验灵巧手、机械臂末端、控制 SDK 与遥操作链路 |
+| 触觉组 | 真机组下设 | 查验触觉传感器、采集板、标定与同步链路 |
+| 仿真组 | 与真机组并列 | 通过受控接口获取已确认的模型、标定和设备参数，不直接占用真机 |
+| 世界模型组 | 与真机组并列 | 通过数据管理流程获取已批准的真机数据和元数据，不直接申请设备控制权 |
+
+!!! note "归口仍需现场确认"
+    下方“建议使用组”用于快速定位资料，不等于设备所有权或操作授权。跨组使用仍需设备维护者批准。
 
 ## 前置条件
 
-- 确认要使用的产品、型号和任务。
-- 获得对应设备、内部资料和账号的访问授权。
-- 使用获批的密码管理器获取所需凭据。
-- 操作设备前阅读厂商最新的安全说明和用户手册。
+- 已获得项目负责人和设备维护者批准，并完成必要的安全培训。
+- 已在受控资产登记表确认型号、当前状态、维护者、预约时段和允许用途。
+- 已阅读与当前硬件/固件版本匹配的厂商安全说明和实验室 SOP。
+- 已明确数据保存位置、责任人、预计占用时间和异常上报路径。
+
+## 使用前查验清单
+
+### 身份与状态
+
+- 对照资产标签确认产品、型号、左右手/末端配置和附件清单。
+- 在受控系统核验设备状态、维护记录、预约冲突和最近异常；公开页面不展示实时库存。
+- 拍摄必要的外观或布线证据时避开序列号、屏幕凭据和内网信息。
+
+### 安全与场地
+
+- 检查急停、限位、供电、固定件、线缆、碰撞区和现场监护人。
+- 首次上电使用最低安全速度/力矩和最小动作范围完成 smoke test。
+- 未完成现场安全确认前，不得远程上电、启动轨迹或绕过急停与限位。
+
+### 软件与协议
+
+- 记录客户端、SDK、固件、模型和通信协议版本，确认与目标设备匹配。
+- 先运行只读状态查询或官方最小示例，再运行项目代码。
+- 禁止把共享密码、设备账户、内网地址或访问 token 写入脚本、Notebook、Issue 或日志截图。
+
+### 数据与归还
+
+- 采集前确认时间同步、坐标系、标定文件、数据格式和落盘位置。
+- 实验结束后停止运动、下电、恢复附件、登记占用结束时间并上报异常。
+- 按[研究数据存储与归档](data-management.md)要求保存原始数据、标定和最小元数据。
 
 ## 资源目录
 
-### Realhand
+| 硬件或资料 | 建议使用组 | 使用前重点查验 | 安全入口 |
+|---|---|---|---|
+| RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python)；内部资料走受控目录 |
+| AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [AgileX NERO 产品页](https://global.agilex.ai/products/nero)；内部手册与 CAN 协议走受控目录 |
+| Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | 受控内部资料；不在 Wiki 发布 SSH 目标 |
+| UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | [HigVR 用户手册](https://higvr.com/en-cn/pages/user-manual)；其余资料走受控目录 |
+| WUJI Hand | 灵巧手组 | 产品代次、左右手、供电、SDK/ROS 兼容性和安全约束 | [WUJI Hand 文档中心](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
+| Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | GELLO 单臂指南与控制授权走受控目录 |
+| YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | [i2rt Python API](https://github.com/i2rt-robotics/i2rt)；内部资料走受控目录 |
+| NERO 机械臂通信协议 V1.2.1 | 真机组共享 | 协议适用型号、版本、CAN 标准、波特率和数据格式 | 作为受控技术附件申请，不在公开 Wiki 复制全文 |
 
-- 内部资料文件夹：`<REALHAND_RESOURCE_FOLDER_URL>`
-- 公开仓库：[LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python)
+## 受控内部资源
 
-### AgileX
-
-!!! warning "Requires maintainer review"
-    三份 AgileX 支持资料缺少可确认的标题。负责人确认标题前，请勿推断其内容。
-
-- 支持资料 1：`<AGILEX_SUPPORT_DOCUMENT_1_URL>`
-- 支持资料 2：`<AGILEX_SUPPORT_DOCUMENT_2_URL>`
-- 支持资料 3：`<AGILEX_SUPPORT_DOCUMENT_3_URL>`
-- TRACER 2.0 用户手册：`<AGILEX_TRACER_2_USER_MANUAL_URL>`
-- NERO 用户手册：`<AGILEX_NERO_USER_MANUAL_URL>`
-- NERO CAN 协议：`<AGILEX_NERO_CAN_PROTOCOL_URL>`
-- 机械臂通信协议：`<AGILEX_ARM_COMMUNICATION_PROTOCOL_URL>`
-
-### Daimon 与 TacClaw
-
-- 内部资料文件夹：`<DAIMON_RESOURCE_FOLDER_URL>`
-- 设备访问配置：见下方“访问配置引用”。
-
-### UDEXREAL 数据手套
-
-- 内部文档：`<UDEXREAL_DATAGLOVES_DOCUMENT_URL>`
-
-### WUJI
-
-- 公开文档：[WUJI Hand 文档中心](https://docs.wuji.tech/docs/zh/wuji-hand/latest/)
-
-### Franka
-
-- GELLO 单臂遥操作指南：`<FRANKA_GELLO_SINGLE_ARM_GUIDE_URL>`
-
-### YAM
-
-- 内部资料文件夹：`<YAM_RESOURCE_FOLDER_URL>`
-- 公开仓库：[i2rt Python API](https://github.com/i2rt-robotics/i2rt)
-
-### HigVR
-
-- 厂商手册：[HigVR User Manual](https://higvr.com/en-cn/pages/user-manual)
-
-### LeRobot 中文教程
-
-- 内部教程：`<LEROBOT_CHINESE_TUTORIAL_URL>`
-
-## 访问配置引用
-
-!!! info "占位符用途"
-    下列字段只说明应从受控系统获取什么信息，不是可用凭据。不要把真实值提交到仓库。
-
-### TacClaw
-
-- 主机：`<TACCLAW_HOST>`
-- 用户名：`<TACCLAW_USERNAME>`
-- 密码引用：`<TACCLAW_PASSWORD>`
-- 服务路径：`<TACCLAW_SERVICE_PATH>`
-- SSH 命令模板：`ssh <TACCLAW_USERNAME>@<TACCLAW_HOST>`
-
-### API 与服务凭据
-
-- GitHub API token：`<GITHUB_API_TOKEN>`
-- Hugging Face API token：`<HUGGINGFACE_API_TOKEN>`
-- Weights & Biases API key：`<WANDB_API_KEY>`
-
-### 实验室与设备账号
-
-- 实验室通用密码：`<LAB_SHARED_PASSWORD>`
-- MISUMI 账号 ID：`<MISUMI_ACCOUNT_ID>`
-- ME Control Lab 用户名：`<ME_CONTROL_LAB_USERNAME>`
-- ME Control Lab 密码：`<ME_CONTROL_LAB_PASSWORD>`
-- Franka 管理员用户名：`<FRANKA_ADMIN_USERNAME>`
-- Franka 管理员密码：`<FRANKA_ADMIN_PASSWORD>`
-- Franka 安全员用户名：`<FRANKA_SAFETY_USERNAME>`
-- Franka 安全员密码：`<FRANKA_SAFETY_PASSWORD>`
+- 硬件资料目录：`<HARDWARE_RESOURCE_DIRECTORY_URL>`
+- 资产与状态登记表：`<HARDWARE_ASSET_REGISTER_URL>`
+- 预约与占用记录：`<HARDWARE_BOOKING_URL>`
+- 协议与标定附件库：`<HARDWARE_PROTOCOL_ARCHIVE_URL>`
+- 维护与异常记录：`<HARDWARE_MAINTENANCE_LOG_URL>`
+- 受控联系人目录：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
 
 ## 操作步骤
 
-1. 确认需要使用的硬件类别和具体型号。
-2. 优先打开本页列出的公开厂商文档或代码仓库。
-3. 遇到内部链接占位符时，向对应维护者申请已批准的内部地址。
-4. 需要凭据或设备访问时，从获批的密码管理器获取授权值；不要将其复制到 Wiki。
-5. 控制硬件前，按厂商最新文档检查安全要求、连接方式和适用型号。
+1. 根据项目任务和上方组别范围确定需要的硬件或资料。
+2. 在资产登记表确认设备状态和维护者，再提交预约、用途、时段和现场负责人。
+3. 优先阅读本页公开厂商资料；内部手册、协议、标定和访问授权通过受控目录申请。
+4. 按使用前查验清单完成身份、安全、版本和数据检查，并保留必要的受控记录。
+5. 完成最小 smoke test 后再运行正式实验；任何异常先停机、保留证据并通知维护者。
+6. 实验结束后完成下电、归还、数据落盘和状态更新。
 
 ## 验证
 
-- 确认打开的文档或仓库对应预期产品和型号。
-- 确认内部资料与设备访问已获授权。
-- 确认操作前已阅读相关安全说明。
-- 确认 Wiki 中仍只有占位符，没有真实凭据或内部地址。
+- 产品、型号、附件和资料版本与实际设备一致。
+- 预约、操作授权和现场安全条件均已确认。
+- 最小 smoke test 通过，日志中没有未解释的错误或越界。
+- 原始数据、标定和实验元数据已写入批准的存储位置。
+- Wiki 和公开仓库中没有真实凭据、内网地址、序列号或受限文档链接。
 
 ## 故障排查
 
-- 占位符尚未替换时，联系对应硬件维护者获取受控资源。
-- 无法打开内部资料时，检查组织成员资格和文档共享权限。
-- 公开链接失效时，向维护者报告产品名称和失效页面。
-- 如果凭据曾出现在文档、提交记录或聊天中，立即撤销并轮换该凭据。
-- 不要通过在 Wiki 中嵌入密钥、密码或内部地址来绕过访问控制。
+- 设备状态或归口不明确：暂停预约，联系 Hardware Resources Maintainer 现场核验。
+- 公开链接失效：记录产品和页面名称，提交维护请求；不要用来历不明的镜像替代。
+- 协议/SDK 与设备不匹配：停止控制，核对型号、固件、协议适用范围和维护记录。
+- 连接失败：先检查供电、线缆、急停和官方最小示例，再检查受控网络与权限。
+- 发现泄露的 token、密码或内部目标：立即停止使用并通知维护者完成吊销和轮换，不要在 Issue 中粘贴原值。
+- 硬件异常或疑似损伤：停机、下电、隔离设备并在维护记录中附上脱敏证据。
 
-<p class="wiki-meta">负责人：Hardware Resources Maintainer · 最后核验：2026-07-31</p>
+## 维护信息
+
+- 负责人：Hardware Resources Maintainer
+- 联系入口：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- 最后核验：2026-08-03

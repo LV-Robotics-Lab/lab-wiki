@@ -1,120 +1,109 @@
-# Hardware Resource Center
+# Physical-Hardware Resource Center
 
-!!! danger "Do not store real credentials in the Wiki"
-    Every angle-bracketed field on this page is a placeholder. Actual links, keys, passwords, accounts, host addresses, and internal paths must be retrieved only from an approved password manager or another access-controlled system. Never replace these placeholders with real values in the Wiki.
+!!! danger "Public pages must not store credentials"
+    This page contains only public vendor resources, verification procedures, and controlled-resource placeholders. Never place real keys, passwords, accounts, host/IP details, device serial numbers, internal document URLs, or personal contact details in the Wiki.
 
 ## Purpose
 
-Find public documentation, internal resource references, and access-configuration placeholders for laboratory hardware in one place.
+Help Physical Systems members verify hardware identity, documentation versions, safety status, and authorization before booking, powering, developing with, or returning equipment.
+
+## Group Scope
+
+| Group | Relationship | How this page applies |
+|---|---|---|
+| Physical Systems | Parent group | Owns physical robots, teleoperation, collection, and hardware integration |
+| Ego | Subgroup of Physical Systems | Checks first-person collection, human-motion input, and teleoperation equipment |
+| Dexterous Hands | Subgroup of Physical Systems | Checks dexterous hands, arm end effectors, control SDKs, and teleoperation links |
+| Tactile | Subgroup of Physical Systems | Checks tactile sensors, acquisition boards, calibration, and synchronization links |
+| Simulation | Peer of Physical Systems | Receives verified models, calibration, and device parameters through controlled interfaces without directly occupying hardware |
+| World Models | Peer of Physical Systems | Receives approved physical-robot data and metadata through the data-management process without directly requesting device-control privileges |
+
+!!! note "Confirm ownership on site"
+    The Recommended Group column below is for resource discovery; it does not grant ownership or operating authorization. Cross-group use still requires approval from the equipment maintainer.
 
 ## Prerequisites
 
-- Confirm the product, model, and task you intend to use.
-- Obtain authorization for the relevant device, internal resources, and accounts.
-- Use the approved password manager to retrieve required credentials.
-- Read the vendor's current safety information and user manual before operating equipment.
+- Obtain approval from the project owner and equipment maintainer, and complete required safety training.
+- Confirm the model, current state, maintainer, booking window, and allowed purpose in the controlled asset register.
+- Read the vendor safety information and laboratory SOP matching the current hardware and firmware version.
+- Confirm the data destination, responsible member, expected occupation period, and incident-reporting path.
+
+## Pre-Use Verification Checklist
+
+### Identity and State
+
+- Match the asset label to the product, model, handedness/end-effector configuration, and accessory list.
+- Verify live device state, maintenance history, booking conflicts, and recent incidents in the controlled system; the public page does not display live inventory.
+- When collecting necessary appearance or wiring evidence, avoid serial numbers, on-screen credentials, and private-network information.
+
+### Safety and Site
+
+- Check the emergency stop, limits, power, fixtures, cables, collision zone, and on-site safety observer.
+- Complete a smoke test with the lowest safe speed/torque and smallest motion range on first power-up.
+- Do not power on remotely, start a trajectory, or bypass emergency-stop or limit controls before on-site safety verification.
+
+### Software and Protocol
+
+- Record client, SDK, firmware, model, and communication-protocol versions and confirm compatibility with the target device.
+- Run a read-only status query or the vendor's minimal example before project code.
+- Never place shared passwords, device accounts, private-network addresses, or access tokens in scripts, notebooks, Issues, or log screenshots.
+
+### Data and Return
+
+- Before collection, confirm time synchronization, coordinate frames, calibration files, data format, and storage destination.
+- After the experiment, stop motion, power down, restore accessories, record the end of occupation, and report anomalies.
+- Store raw data, calibration, and minimum metadata according to [Research Data Storage and Archiving](data-management.en.md).
 
 ## Resource Catalog
 
-### Realhand
+| Hardware or resource | Recommended group | Verify before use | Safe entry point |
+|---|---|---|---|
+| RealHand / LinkerHand | Dexterous Hands | Model, handedness, firmware, and teleoperation-script version | [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python); request internal material through the controlled directory |
+| AgileX NERO / TRACER | Shared Physical Systems | Arm/base model, emergency stop, control mode, SDK, and communication-protocol version | [AgileX NERO product page](https://global.agilex.ai/products/nero); request internal manuals and CAN protocols through the controlled directory |
+| Daimon / TacClaw | Tactile and Dexterous Hands | Main board, sensors, calibration revision, acquisition link, and connection authorization | Controlled internal material; no SSH target is published in the Wiki |
+| UDEXREAL / HigVR data gloves | Ego and Dexterous Hands | Handedness, size, firmware, calibration, and time synchronization | [HigVR User Manual](https://higvr.com/en-cn/pages/user-manual); request other material through the controlled directory |
+| WUJI Hand | Dexterous Hands | Product generation, handedness, power, SDK/ROS compatibility, and safety constraints | [WUJI Hand Documentation Center](https://docs.wuji.tech/docs/en/wuji-hand/latest/) |
+| Franka / GELLO | Ego and Dexterous Hands | Arm identity, controller state, end effector, limits, and teleoperation link | Request the GELLO single-arm guide and control authorization through the controlled directory |
+| YAM / i2rt | Shared Physical Systems | Model, end effector, API/SDK revision, calibration, and safety boundary | [i2rt Python API](https://github.com/i2rt-robotics/i2rt); request internal material through the controlled directory |
+| NERO Arm Communication Protocol V1.2.1 | Shared Physical Systems | Applicable model, revision, CAN standard, bit rate, and data format | Request as a controlled technical attachment; do not reproduce it in the public Wiki |
 
-- Internal resource folder: `<REALHAND_RESOURCE_FOLDER_URL>`
-- Public repository: [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python)
+## Controlled Internal Resources
 
-### AgileX
-
-!!! warning "Requires maintainer review"
-    Three AgileX support resources do not have confirmed titles. Do not infer their contents until the maintainer confirms the titles.
-
-- Support resource 1: `<AGILEX_SUPPORT_DOCUMENT_1_URL>`
-- Support resource 2: `<AGILEX_SUPPORT_DOCUMENT_2_URL>`
-- Support resource 3: `<AGILEX_SUPPORT_DOCUMENT_3_URL>`
-- TRACER 2.0 user manual: `<AGILEX_TRACER_2_USER_MANUAL_URL>`
-- NERO user manual: `<AGILEX_NERO_USER_MANUAL_URL>`
-- NERO CAN protocol: `<AGILEX_NERO_CAN_PROTOCOL_URL>`
-- Robot-arm communication protocol: `<AGILEX_ARM_COMMUNICATION_PROTOCOL_URL>`
-
-### Daimon and TacClaw
-
-- Internal resource folder: `<DAIMON_RESOURCE_FOLDER_URL>`
-- Device access configuration: see Access Configuration References below.
-
-### UDEXREAL Data Gloves
-
-- Internal documentation: `<UDEXREAL_DATAGLOVES_DOCUMENT_URL>`
-
-### WUJI
-
-- Public documentation: [WUJI Hand Documentation Center](https://docs.wuji.tech/docs/zh/wuji-hand/latest/)
-
-### Franka
-
-- GELLO single-arm teleoperation guide: `<FRANKA_GELLO_SINGLE_ARM_GUIDE_URL>`
-
-### YAM
-
-- Internal resource folder: `<YAM_RESOURCE_FOLDER_URL>`
-- Public repository: [i2rt Python API](https://github.com/i2rt-robotics/i2rt)
-
-### HigVR
-
-- Vendor manual: [HigVR User Manual](https://higvr.com/en-cn/pages/user-manual)
-
-### LeRobot Chinese Tutorial
-
-- Internal tutorial: `<LEROBOT_CHINESE_TUTORIAL_URL>`
-
-## Access Configuration References
-
-!!! info "Placeholder purpose"
-    These fields identify what information must be retrieved from a controlled system; they are not usable credentials. Do not commit real values to the repository.
-
-### TacClaw
-
-- Host: `<TACCLAW_HOST>`
-- Username: `<TACCLAW_USERNAME>`
-- Password reference: `<TACCLAW_PASSWORD>`
-- Service path: `<TACCLAW_SERVICE_PATH>`
-- SSH command template: `ssh <TACCLAW_USERNAME>@<TACCLAW_HOST>`
-
-### API and Service Credentials
-
-- GitHub API token: `<GITHUB_API_TOKEN>`
-- Hugging Face API token: `<HUGGINGFACE_API_TOKEN>`
-- Weights & Biases API key: `<WANDB_API_KEY>`
-
-### Laboratory and Device Accounts
-
-- Laboratory shared password: `<LAB_SHARED_PASSWORD>`
-- MISUMI account ID: `<MISUMI_ACCOUNT_ID>`
-- ME Control Lab username: `<ME_CONTROL_LAB_USERNAME>`
-- ME Control Lab password: `<ME_CONTROL_LAB_PASSWORD>`
-- Franka administrator username: `<FRANKA_ADMIN_USERNAME>`
-- Franka administrator password: `<FRANKA_ADMIN_PASSWORD>`
-- Franka safety-officer username: `<FRANKA_SAFETY_USERNAME>`
-- Franka safety-officer password: `<FRANKA_SAFETY_PASSWORD>`
+- Hardware resource directory: `<HARDWARE_RESOURCE_DIRECTORY_URL>`
+- Asset and state register: `<HARDWARE_ASSET_REGISTER_URL>`
+- Booking and occupation log: `<HARDWARE_BOOKING_URL>`
+- Protocol and calibration archive: `<HARDWARE_PROTOCOL_ARCHIVE_URL>`
+- Maintenance and incident log: `<HARDWARE_MAINTENANCE_LOG_URL>`
+- Controlled contact directory: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
 
 ## Procedure
 
-1. Identify the relevant hardware category and exact model.
-2. Prefer the public vendor documentation or code repository listed on this page.
-3. When a placeholder represents an internal link, request the approved destination from the relevant maintainer.
-4. When credentials or device access are required, retrieve authorized values from the approved password manager; never copy them into the Wiki.
-5. Before controlling hardware, use the vendor's latest documentation to check safety requirements, connection methods, and supported models.
+1. Use the project task and Group Scope above to identify the required hardware or documentation.
+2. Confirm device state and maintainer in the asset register, then submit the booking, purpose, period, and on-site responsible member.
+3. Read the public vendor material first; request internal manuals, protocols, calibration, and access authorization through the controlled directory.
+4. Complete identity, safety, version, and data checks from the pre-use checklist and retain necessary controlled records.
+5. Pass the minimum smoke test before the formal experiment; stop on any anomaly, preserve evidence, and notify the maintainer.
+6. Complete power-down, return, data storage, and state updates after the experiment.
 
 ## Verification
 
-- Confirm that the opened documentation or repository matches the intended product and model.
-- Confirm that internal-resource and device access is authorized.
-- Confirm that relevant safety information was reviewed before operation.
-- Confirm that the Wiki still contains placeholders only, with no real credentials or internal addresses.
+- The product, model, accessories, and documentation revision match the physical device.
+- Booking, operating authorization, and on-site safety conditions are confirmed.
+- The minimum smoke test passes with no unexplained error or out-of-bound event.
+- Raw data, calibration, and experiment metadata are written to an approved storage location.
+- No real credential, private-network address, serial number, or restricted-document link appears in the Wiki or public repository.
 
 ## Troubleshooting
 
-- If a placeholder is unresolved, contact the relevant hardware maintainer for the controlled resource.
-- If an internal resource is unavailable, check organization membership and document-sharing permissions.
-- If a public link is unavailable, report the product name and failed page to the maintainer.
-- If a credential appeared in documentation, commit history, or chat, revoke and rotate it immediately.
-- Never bypass access controls by embedding keys, passwords, or internal addresses in the Wiki.
+- Device state or ownership is unclear: pause the booking and ask the Hardware Resources Maintainer to verify it on site.
+- A public link fails: record the product and page name and submit a maintenance request; do not substitute an untrusted mirror.
+- Protocol or SDK does not match the device: stop control and verify the model, firmware, applicable protocol scope, and maintenance record.
+- Connection fails: check power, cables, emergency stop, and the official minimal example before controlled network and permission checks.
+- A token, password, or internal target is exposed: stop using it and notify the maintainer for revocation and rotation; never paste the value into an Issue.
+- Hardware appears damaged: stop, power down, isolate the device, and attach redacted evidence to the maintenance record.
 
-<p class="wiki-meta">Owner: Hardware Resources Maintainer · Last verified: 2026-07-31</p>
+## Maintenance
+
+- Owner: Hardware Resources Maintainer
+- Contact: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
+- Last verified: 2026-08-03
