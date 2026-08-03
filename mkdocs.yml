@@ -1,9 +1,13 @@
 site_name: LV Robotics Lab Wiki
 site_description: Internal documentation for laboratory members
-site_url: https://make-it-realll.github.io/lab-wiki/
-repo_name: make-it-realll/lab-wiki
-repo_url: https://github.com/make-it-realll/lab-wiki
+site_url: https://lv-robotics-lab.github.io/lab-wiki/
+repo_name: LV-Robotics-Lab/lab-wiki
+repo_url: https://github.com/LV-Robotics-Lab/lab-wiki
 edit_uri: edit/main/docs/
+
+# Keep implementation notes in the repository without publishing them as pages.
+exclude_docs: |
+  superpowers/
 
 copyright: Copyright &copy; LV Robotics Lab
 
@@ -74,6 +78,9 @@ markdown_extensions:
   - tables
   - footnotes
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true

@@ -19,14 +19,14 @@ On Windows PowerShell:
 
 Open `http://127.0.0.1:8000`.
 
-## GitHub Pages setup
+## GitHub Pages deployment
 
-1. Push this repository to GitHub using the `main` branch.
-2. Open **Settings → Pages**.
-3. Set **Source** to **GitHub Actions**.
-4. Push a commit or run the workflow manually.
+The repository deploys automatically from `main` through
+`.github/workflows/deploy.yml`.
 
-Before publishing, replace `example` in `mkdocs.yml` with your GitHub username and repository URL.
+Repository administrators should set **Settings → Pages → Source** to
+**GitHub Actions**. The published site is
+`https://lv-robotics-lab.github.io/lab-wiki/`.
 
 ## Public-test warning
 
