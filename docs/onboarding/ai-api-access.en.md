@@ -1,5 +1,8 @@
 # AI API Access and Usage
 
+!!! info "Confirm before using the API"
+    The laboratory AI API Base URL is **[https://kjapi.botsmart.net](https://kjapi.botsmart.net)**. Use only your individually approved API key, and never paste credentials into the Wiki, source code, or chat.
+
 !!! danger "Addresses may be public; credentials may not"
     The Wiki may record API Base URLs, service homepages, and maintainers, but must never record API keys, access tokens, passwords, cookies, request headers, or personal usage details.
 
@@ -79,4 +82,4 @@ Request and use lab-managed AI APIs for approved research projects within an ind
 - Owners: `@_嗯`, `@赖咏曦` (Yongxi Lai)
 - AI API: [https://kjapi.botsmart.net](https://kjapi.botsmart.net)
 - Codex relay: [https://goaihz.com/](https://goaihz.com/)
-- Last verified: 2026-08-03
+- Last verified: 2026-08-07

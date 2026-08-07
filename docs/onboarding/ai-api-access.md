@@ -1,5 +1,8 @@
 # AI API 申请与使用
 
+!!! info "使用 API 前请确认"
+    实验室 AI API Base URL 为 **[https://kjapi.botsmart.net](https://kjapi.botsmart.net)**。请使用个人获批的 API key，切勿在 Wiki、代码或聊天中粘贴凭据。
+
 !!! danger "地址可公开，凭据不可公开"
     Wiki 可以记录 API Base URL、服务主页和负责人，但不得记录 API key、访问 token、密码、Cookie、请求头或个人用量明细。
 
@@ -79,4 +82,4 @@
 - 负责人：`@_嗯`、`@赖咏曦`
 - AI API：[https://kjapi.botsmart.net](https://kjapi.botsmart.net)
 - Codex 中转站：[https://goaihz.com/](https://goaihz.com/)
-- 最后核验：2026-08-03
+- 最后核验：2026-08-07
