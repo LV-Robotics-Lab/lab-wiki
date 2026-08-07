@@ -56,16 +56,20 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 
 ## Resource Catalog
 
+This page only indexes available hardware. Detailed operating manuals, internal attachments, connection procedures, and authorization information remain in the [Hardware Resource Center (Notion)](https://app.notion.com/p/Hardware-Resource-Center-34120ba53f898026b4cfe366c9b71ac1?source=copy_link). Request access from the equipment maintainer if it is unavailable.
+
 | Hardware or resource | Recommended group | Verify before use | Safe entry point |
 |---|---|---|---|
 | RealHand / LinkerHand | Dexterous Hands | Model, handedness, firmware, and teleoperation-script version | [RealHand resource folder](https://drive.google.com/drive/folders/1bDQFkxWZW1SapAQazwENOSOL_vWyM9Ti?usp=sharing); [LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
-| AgileX NERO / TRACER | Shared Physical Systems | Arm/base model, emergency stop, control mode, SDK, and communication-protocol version | [NERO product page](https://global.agilex.ai/products/nero); [NERO user manual](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/air57k7k3nhgeuxb?singleDoc=); [support document 1](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/ad5tfngbirdvhunm?singleDoc=); [support document 2](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/tcpvae9wrb5xnivn?singleDoc=); [TRACER 2.0 user manual](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/yg09k9oh1b4b046x?singleDoc#%20%E3%80%8A%E9%99%84%E4%BB%B62-TRACER%202.0%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E3%80%8B); [support document 4](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/km95una15ctk4b17?singleDoc=) |
+| AgileX NERO / TRACER | Shared Physical Systems | Arm/base model, emergency stop, control mode, SDK, and communication-protocol version | [NERO product page](https://global.agilex.ai/products/nero); see Notion for manuals and protocols |
 | Daimon / TacClaw | Tactile and Dexterous Hands | Main board, sensors, calibration revision, acquisition link, and connection authorization | [Daimon hardware resource folder](https://drive.google.com/drive/folders/1gOMqA2WjBhTcx3Af2x-t1vo9qJFS78E8?usp=sharing) |
-| UDEXREAL / HigVR data gloves | Ego and Dexterous Hands | Handedness, size, firmware, calibration, and time synchronization | [UDEXREAL usage guide](https://hs7ghlauag.feishu.cn/docx/BlqKdFOSeoFQG1xzbV9ccNMMnzc); [HigVR User Manual](https://higvr.com/en-cn/pages/user-manual) |
+| XY physical-data-capture glasses | Ego and Physical Systems | Device version, SDK, calibration, capture format, and time synchronization | [SDK file](https://drive.google.com/file/d/1t48-M-w8L2TNrXIcb_b-elw8ldyBZBKZ/view?usp=sharing) |
+| UDEXREAL / HigVR data gloves | Ego and Dexterous Hands | Handedness, size, firmware, calibration, and time synchronization | See Notion for manuals and calibration procedures |
 | WUJI Hand | Dexterous Hands | Product generation, handedness, power, SDK/ROS compatibility, and safety constraints | [WUJI Hand Documentation Center](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
-| Franka / GELLO | Ego and Dexterous Hands | Arm identity, controller state, end effector, limits, and teleoperation link | [Franka GELLO single-arm guide](https://docs.google.com/document/d/13ILD-wukxa0Szt1wgoUBytA2SqVOcGDsZ0kLR67Po7M/edit?usp=drivesdk) |
+| Franka / GELLO | Ego and Dexterous Hands | Arm identity, controller state, end effector, limits, and teleoperation link | See Notion for the operating guide |
 | YAM / i2rt | Shared Physical Systems | Model, end effector, API/SDK revision, calibration, and safety boundary | [YAM / YUM resource folder](https://drive.google.com/drive/folders/1et1BCPRL1p-zUde3mMlmilPYLowDVnn3); [i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
-| LeRobot | Physical Systems and Simulation | Data format, hardware adapters, version, and example configuration | [LeRobot usage tutorial](https://zihao-ai.feishu.cn/wiki/TS6swApHbinx01kHDi5cf5n5n8c) |
+| LeRobot | Physical Systems and Simulation | Data format, hardware adapters, version, and example configuration | See Notion for the Chinese tutorial |
+| Dexterous Face demo | Physical Systems | Device version, demo workflow, safety boundary, and on-site owner | See Notion for detailed resources and operating guidance |
 | NERO Arm Communication Protocol V1.2.1 | Shared Physical Systems | Applicable model, revision, CAN standard, bit rate, and data format | Request as a controlled technical attachment; do not reproduce it in the public Wiki |
 
 !!! info "Link permissions"
@@ -110,4 +114,4 @@ Help Physical Systems members verify hardware identity, documentation versions, 
 
 - Owner: Hardware Resources Maintainer
 - Contact: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
-- Last verified: 2026-08-03
+- Last verified: 2026-08-07

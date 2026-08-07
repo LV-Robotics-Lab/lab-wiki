@@ -56,16 +56,20 @@
 
 ## 资源目录
 
+本页只提供硬件资源索引。具体操作手册、内部附件、连接方法和授权信息统一通过 [Hardware Resource Center（Notion）](https://app.notion.com/p/Hardware-Resource-Center-34120ba53f898026b4cfe366c9b71ac1?source=copy_link) 查阅；无法打开时，请向设备维护者申请权限。
+
 | 硬件或资料 | 建议使用组 | 使用前重点查验 | 安全入口 |
 |---|---|---|---|
 | RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | [RealHand 资料目录](https://drive.google.com/drive/folders/1bDQFkxWZW1SapAQazwENOSOL_vWyM9Ti?usp=sharing)；[LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
-| AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [NERO 产品页](https://global.agilex.ai/products/nero)；[NERO 用户手册](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/air57k7k3nhgeuxb?singleDoc=)；[支持文档 1](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/ad5tfngbirdvhunm?singleDoc=)；[支持文档 2](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/tcpvae9wrb5xnivn?singleDoc=)；[TRACER 2.0 用户手册](https://agilexsupport.yuque.com/staff-hso6mo/toh64r/yg09k9oh1b4b046x?singleDoc#%20%E3%80%8A%E9%99%84%E4%BB%B62-TRACER%202.0%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%E3%80%8B)；[支持文档 4](https://agilexsupport.yuque.com/staff-hso6mo/alxgtf/km95una15ctk4b17?singleDoc=) |
+| AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [NERO 产品页](https://global.agilex.ai/products/nero)；具体手册与协议见 Notion |
 | Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | [戴盟硬件资料目录](https://drive.google.com/drive/folders/1gOMqA2WjBhTcx3Af2x-t1vo9qJFS78E8?usp=sharing) |
-| UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | [UDEXREAL 使用文档](https://hs7ghlauag.feishu.cn/docx/BlqKdFOSeoFQG1xzbV9ccNMMnzc)；[HigVR 用户手册](https://higvr.com/en-cn/pages/user-manual) |
+| XY 纵横物理数采眼镜 | Ego 组、真机组 | 设备版本、SDK、标定、采集格式和时间同步 | [SDK 文件](https://drive.google.com/file/d/1t48-M-w8L2TNrXIcb_b-elw8ldyBZBKZ/view?usp=sharing) |
+| UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | 具体手册与标定流程见 Notion |
 | WUJI Hand | 灵巧手组 | 产品代次、左右手、供电、SDK/ROS 兼容性和安全约束 | [WUJI Hand 文档中心](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
-| Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | [Franka GELLO 单臂指南](https://docs.google.com/document/d/13ILD-wukxa0Szt1wgoUBytA2SqVOcGDsZ0kLR67Po7M/edit?usp=drivesdk) |
+| Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | 具体操作指南见 Notion |
 | YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | [YAM / YUM 资料目录](https://drive.google.com/drive/folders/1et1BCPRL1p-zUde3mMlmilPYLowDVnn3)；[i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
-| LeRobot | 真机组、仿真组 | 数据格式、硬件适配器、版本和示例配置 | [LeRobot 使用教程](https://zihao-ai.feishu.cn/wiki/TS6swApHbinx01kHDi5cf5n5n8c) |
+| LeRobot | 真机组、仿真组 | 数据格式、硬件适配器、版本和示例配置 | 中文教程见 Notion |
+| 灵巧脸 Demo | 真机组 | 设备版本、演示流程、安全边界和现场负责人 | 具体资料与操作指南见 Notion |
 | NERO 机械臂通信协议 V1.2.1 | 真机组共享 | 协议适用型号、版本、CAN 标准、波特率和数据格式 | 作为受控技术附件申请，不在公开 Wiki 复制全文 |
 
 !!! info "链接权限"
@@ -110,4 +114,4 @@
 
 - 负责人：Hardware Resources Maintainer
 - 联系入口：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
-- 最后核验：2026-08-03
+- 最后核验：2026-08-07
