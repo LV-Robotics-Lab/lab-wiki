@@ -15,7 +15,7 @@
 | 资源 | 申请对象 | 所需信息 | 说明 |
 |---|---|---|
 | GitHub | Wiki 管理员 | GitHub 用户名、项目、仓库权限 | 使用个人 GitHub 账户 |
-| AI API | AI 服务管理员 | 项目、用途、模型和用量估算 | 见 [AI API 申请与使用](ai-api-access.md) |
+| AI API | AI 服务管理员 | 项目、用途、模型和用量估算 | 见 [AI API 申请与使用](../resources/ai-api-access.md) |
 | 算力 | 算力管理员 | GPU、卡数、时长和费用来源 | 见 [算力资源申请与选择](../resources/compute-access.md) |
 | 远程接入 | 网络管理员 | 工作设备、项目、目标资源和期限 | 见 [远程接入与自组网申请](../resources/remote-access.md) |
 | 文件存储 | 数据存储管理员 | 项目、数据类型、容量和成员 | 见 [研究数据存储与归档](../resources/data-management.md) |

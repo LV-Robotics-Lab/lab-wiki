@@ -50,7 +50,7 @@
 
 - [新成员清单](onboarding/new-member.md)
 - [账号与权限](onboarding/accounts.md)
-- [AI API 申请与使用](onboarding/ai-api-access.md)
+- [AI API 申请与使用](resources/ai-api-access.md)
 - [算力资源申请与选择](resources/compute-access.md)
 - [远程接入与自组网申请](resources/remote-access.md)
 - [真机硬件资源中心](resources/hardware.md)

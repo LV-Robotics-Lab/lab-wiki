@@ -50,7 +50,7 @@ Welcome to the laboratory knowledge base. Current content covers onboarding, lab
 
 - [New member checklist](onboarding/new-member.en.md)
 - [Accounts and access](onboarding/accounts.en.md)
-- [AI API Access and Usage](onboarding/ai-api-access.en.md)
+- [AI API Access and Usage](resources/ai-api-access.en.md)
 - [Compute Resource Requests and Selection](resources/compute-access.en.md)
 - [Remote Access and Private-Network Enrollment](resources/remote-access.en.md)
 - [Physical-Hardware Resource Center](resources/hardware.en.md)

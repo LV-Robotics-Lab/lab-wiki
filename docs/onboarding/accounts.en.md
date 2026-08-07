@@ -15,7 +15,7 @@ Provide one place to request laboratory accounts, compute, remote-network access
 | Resource | Contact | Required information | Guidance |
 |---|---|---|
 | GitHub | Wiki Administrator | GitHub username, project, and repository permission | Use a personal GitHub account |
-| AI API | AI Service Administrator | Project, purpose, model, and usage estimate | See [AI API Access and Usage](ai-api-access.en.md) |
+| AI API | AI Service Administrator | Project, purpose, model, and usage estimate | See [AI API Access and Usage](../resources/ai-api-access.en.md) |
 | Compute | Compute Administrator | GPU, count, duration, and budget source | See [Compute Resource Requests and Selection](../resources/compute-access.en.md) |
 | Remote access | Network Administrator | Work device, project, target resource, and period | See [Remote Access and Private-Network Enrollment](../resources/remote-access.en.md) |
 | File storage | Data Storage Administrator | Project, data type, capacity, and members | See [Research Data Storage and Archiving](../resources/data-management.en.md) |

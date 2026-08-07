@@ -106,7 +106,6 @@ nav:
       - 入门总览: onboarding/index.md
       - 新成员清单: onboarding/new-member.md
       - 账号与权限: onboarding/accounts.md
-      - AI API 申请与使用: onboarding/ai-api-access.md
       - 实验室门禁: onboarding/lab-access.md
   - 行政流程:
       - 行政总览: administration/index.md
@@ -114,6 +113,7 @@ nav:
       - 采购流程: administration/purchasing.md
   - 实验室资源:
       - 资源总览: resources/index.md
+      - AI API 申请与使用: resources/ai-api-access.md
       - 算力资源: resources/compute-access.md
       - 远程接入: resources/remote-access.md
       - 数据存储与归档: resources/data-management.md
