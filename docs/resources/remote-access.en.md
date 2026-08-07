@@ -42,13 +42,25 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 ### macOS
 
 1. Install the client through an official Tailscale channel and allow the network extension when macOS prompts.
-2. Add the administrator-provided custom control server in the client settings, or run this in a terminal with the CLI configured:
+2. If Homebrew is available, the standalone client can also be installed with:
+
+    ```bash
+    brew install --cask tailscale
+    ```
+
+3. Add the administrator-provided custom control server in the client settings, or run this in a terminal with the CLI configured:
 
     ```bash
     tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
-3. The control-server address may be public; never publish the browser registration page, Auth ID, or complete terminal output containing credentials.
+4. If the graphical interface does not expose a custom-server entry, use the CLI bundled with the app:
+
+    ```bash
+    /Applications/Tailscale.app/Contents/MacOS/Tailscale login --login-server=https://hs.jingxiangguo.com
+    ```
+
+5. The control-server address may be public; never publish the browser registration page, Auth ID, or complete terminal output containing credentials.
 
 ### Windows
 
@@ -59,7 +71,19 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
     tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
-3. If the command is not on `PATH`, use the installed client UI or ask the Network Administrator to confirm the local installation method.
+3. If the command is not on `PATH`, use the installed executable from PowerShell:
+
+    ```powershell
+    & "$env:ProgramFiles\Tailscale\tailscale.exe" login --login-server=https://hs.jingxiangguo.com
+    ```
+
+4. For fixed workstations or servers that must stay online without an interactive login, enable unattended mode only after separate approval:
+
+    ```powershell
+    tailscale up --unattended=true
+    ```
+
+5. Unattended mode is not the default for personal computers; the project owner and Network Administrator decide whether it is appropriate.
 
 ### Linux
 
@@ -76,9 +100,16 @@ Enroll an approved personal work computer in the laboratory's self-hosted privat
 
 1. After the login command, the browser or terminal displays one-time registration information.
 2. Send only the **Auth ID**, proposed device name, project, and access period to the Network Administrator through a controlled channel; do not forward the complete page or log.
-3. The administrator registers the Auth ID to the correct member identity and applies project-scoped access rules.
-4. Reconnect the client and confirm that the device has a unique name and does not reuse another node's identity.
-5. Never publish Auth IDs or pre-authentication keys in the Wiki; non-interactive enrollment requires separate approval.
+3. The administrator registers the Auth ID to the correct member identity and applies project-scoped access rules. Current enrollments use the Headscale user `<HEADSCALE_USER>` unless the Network Administrator says otherwise.
+4. The administrator approves the node with this command shape; real Auth IDs are kept only in short-lived controlled channels and are never written to the Wiki:
+
+    ```bash
+    headscale auth register --auth-id <AUTH_ID> --user <HEADSCALE_USER>
+    headscale nodes list
+    ```
+
+5. Reconnect the client and confirm that the device has a unique name and does not reuse another node's identity.
+6. Never publish Auth IDs or pre-authentication keys in the Wiki; non-interactive enrollment requires separate approval.
 
 ## SSH Public-Key Authorization
 
@@ -123,6 +154,15 @@ OpenSSH public-key authorization and Tailscale SSH are separate mechanisms. Tail
 6. After enrollment, verify only authorized targets and do not scan or attempt to access other nodes.
 7. Revoke the old device and public-key access when the project ends, the device changes, or the member leaves.
 
+## Administrator Handoff Checklist
+
+- The Auth ID came from the `https://hs.jingxiangguo.com` registration page and is not expired or reused.
+- The node is registered to the correct Headscale user and appears as an independent device in `headscale nodes list`.
+- The node name is clear and unique enough to identify the member, device, or purpose; it does not reuse another online node identity.
+- The new device has a `100.64.0.x` address and can see or ping the approved target.
+- If SSH is required, the member submits only a `.pub` public key, and the administrator deploys it only to the approved target account.
+- Verification uses `BatchMode=yes` and `PasswordAuthentication=no` so SSH does not fall back to password login.
+
 ## Usage Rules
 
 - Use the private network only for research collaboration and approved resource access, not unrelated traffic forwarding.
@@ -144,6 +184,33 @@ tailscale ping <AUTHORIZED_HOSTNAME>
 - Only approved resources are reachable, and the project service, SSH, or remote desktop works as expected.
 - SSH verification does not fall back to password authentication.
 - No Auth ID, key, password, token, or other credential appears in terminal output, screenshots, or documentation.
+
+### Direct Path or DERP Relay
+
+```bash
+tailscale ping <AUTHORIZED_HOSTNAME>
+```
+
+- Output containing `via <IP>:<UDP_PORT>` usually means a peer-to-peer direct path with lower latency.
+- Output containing `via DERP(...)` means DERP relay is in use; the connection is still normal, encrypted, and usable, but may be slower.
+- Direct paths depend on ISP, campus-network, cloud-firewall, and NAT behavior. Members cannot force direct connectivity on their own.
+
+### Optional: Exit Node
+
+Enable an exit node only when all internet traffic must go through an approved exit node:
+
+```bash
+tailscale set --exit-node=<EXIT_NODE_NAME> --exit-node-allow-lan-access=true
+```
+
+Stop using the exit node:
+
+```bash
+tailscale set --exit-node=
+```
+
+!!! warning "Exit nodes require separate approval"
+    An exit node changes the device's internet egress path and is not part of default remote access. Do not enable it for ordinary SSH, remote desktop, or file access.
 
 ## Troubleshooting
 
