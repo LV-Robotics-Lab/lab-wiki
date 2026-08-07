@@ -42,13 +42,25 @@
 ### macOS
 
 1. 从 Tailscale 官方渠道安装客户端并按系统提示允许网络扩展。
-2. 在客户端设置中添加管理员提供的自定义控制服务器，或在已配置命令行的终端运行：
+2. 如果已安装 Homebrew，也可安装独立版客户端：
+
+    ```bash
+    brew install --cask tailscale
+    ```
+
+3. 在客户端设置中添加管理员提供的自定义控制服务器，或在已配置命令行的终端运行：
 
     ```bash
     tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
-3. 控制服务器地址可以公开；浏览器注册页、Auth ID 和包含凭据的完整终端输出不得公开。
+4. 如果图形界面没有自定义服务器入口，可使用 App 内置 CLI：
+
+    ```bash
+    /Applications/Tailscale.app/Contents/MacOS/Tailscale login --login-server=https://hs.jingxiangguo.com
+    ```
+
+5. 控制服务器地址可以公开；浏览器注册页、Auth ID 和包含凭据的完整终端输出不得公开。
 
 ### Windows
 
@@ -59,7 +71,19 @@
     tailscale login --login-server=https://hs.jingxiangguo.com
     ```
 
-3. 如果命令未加入 `PATH`，使用已安装客户端的界面完成登录，或联系网络管理员确认本机安装方式。
+3. 如果命令未加入 `PATH`，在 PowerShell 中使用安装目录里的可执行文件：
+
+    ```powershell
+    & "$env:ProgramFiles\Tailscale\tailscale.exe" login --login-server=https://hs.jingxiangguo.com
+    ```
+
+4. 固定工作站或服务器如需无人登录后保持在线，需单独确认后再启用 unattended 模式：
+
+    ```powershell
+    tailscale up --unattended=true
+    ```
+
+5. 普通个人电脑不默认启用 unattended 模式；是否启用由项目负责人和网络管理员确认。
 
 ### Linux
 
@@ -76,9 +100,16 @@
 
 1. 运行登录命令后，浏览器或终端会显示一次性注册信息。
 2. 只通过受控渠道向网络管理员提交 **Auth ID**、建议设备名、所属项目和访问期限；不要转发完整页面或日志。
-3. 管理员将 Auth ID 注册到正确的成员身份，并按项目范围配置访问规则。
-4. 注册完成后重新连接客户端，确认设备名唯一且未复用其他节点身份。
-5. Auth ID 和预授权密钥均不得发布到 Wiki；非交互式接入必须单独审批。
+3. 管理员将 Auth ID 注册到正确的成员身份，并按项目范围配置访问规则。当前统一注册到 Headscale 用户 `<HEADSCALE_USER>`，除非网络管理员另有说明。
+4. 管理员侧使用如下形式批准节点；真实 Auth ID 只在受控渠道中短期保存，不写入 Wiki：
+
+    ```bash
+    headscale auth register --auth-id <AUTH_ID> --user <HEADSCALE_USER>
+    headscale nodes list
+    ```
+
+5. 注册完成后重新连接客户端，确认设备名唯一且未复用其他节点身份。
+6. Auth ID 和预授权密钥均不得发布到 Wiki；非交互式接入必须单独审批。
 
 ## SSH 公钥授权
 
@@ -123,6 +154,15 @@ OpenSSH 公钥授权与 Tailscale SSH 是两套不同机制。是否启用 Tails
 6. 接入后仅验证已授权的目标，不扫描或尝试访问其他节点。
 7. 项目结束、设备更换或人员离组时，主动申请撤销旧设备和公钥权限。
 
+## 管理员交付检查
+
+- Auth ID 来自 `https://hs.jingxiangguo.com` 的注册页，且未过期、未重复使用。
+- 节点已注册到正确 Headscale 用户，并在 `headscale nodes list` 中显示为独立设备。
+- 节点名清晰、唯一，能体现成员、设备或用途；不要复用其他在线节点身份。
+- 新设备已获得 `100.64.0.x` 地址，并能看到或 ping 通已授权目标。
+- 如需 SSH，成员只提交 `.pub` 公钥，管理员只把公钥部署到批准的目标账户。
+- 验证命令使用 `BatchMode=yes` 和 `PasswordAuthentication=no`，确认不会回退到密码登录。
+
 ## 使用规范
 
 - 自组网仅用于科研协作和获批资源访问，不得用于无关流量中转。
@@ -144,6 +184,33 @@ tailscale ping <AUTHORIZED_HOSTNAME>
 - 只能访问获授权的资源，且项目服务、SSH 或远程桌面按预期工作。
 - SSH 验证不回退到密码登录。
 - 终端输出、截图和文档中没有泄露 Auth ID、密钥、密码、token 或其他凭据。
+
+### 判断直连或 DERP 中继
+
+```bash
+tailscale ping <AUTHORIZED_HOSTNAME>
+```
+
+- 输出包含 `via <IP>:<UDP_PORT>` 时，通常表示点对点直连，延迟更低。
+- 输出包含 `via DERP(...)` 时，表示通过 DERP 中继；这仍然是正常、加密且可用的连接，只是可能更慢。
+- 直连受运营商、校园网、云平台防火墙和 NAT 影响，无法由成员单方面强制。
+
+### 可选：出口节点
+
+只有明确需要让全部互联网流量经过批准的出口节点时才启用：
+
+```bash
+tailscale set --exit-node=<EXIT_NODE_NAME> --exit-node-allow-lan-access=true
+```
+
+停止使用出口节点：
+
+```bash
+tailscale set --exit-node=
+```
+
+!!! warning "出口节点需单独批准"
+    出口节点会改变设备的互联网出口路径，不是远程接入的默认步骤。不要为了普通 SSH、远程桌面或文件访问启用出口节点。
 
 ## 故障排查
 
