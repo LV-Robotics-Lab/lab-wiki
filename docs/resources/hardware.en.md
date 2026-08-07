@@ -1,5 +1,8 @@
 # Physical-Hardware Resource Center
 
+!!! danger "Lab Safety Rule No. 1: power off before leaving"
+    Before leaving the experiment area, stop all robot motion and power off the robot and teleoperation equipment. Never leave powered equipment running unattended: it creates a fire hazard and can damage equipment.
+
 !!! danger "Public pages must not store credentials"
     Maintainer-approved Google Drive, Feishu, Yuque, and vendor-document links, as well as hostnames, tailnet IPs, GPU configurations, and equipment locations, may be documented in the Wiki. Never publish passwords, API keys, access tokens, private keys, Auth IDs, cookies, unattended-access passwords, or request headers containing them.
 
