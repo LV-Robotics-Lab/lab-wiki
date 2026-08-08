@@ -39,7 +39,7 @@ Before adding any information to the Wiki:
 Sensitive information includes, but is not limited to:
 
 - Passwords, API keys, tokens, authentication codes, cookies, and private keys
-- Server credentials, internal IP addresses, VPN details, and privileged access instructions
+- Server credentials, unapproved or privileged internal addresses, VPN secrets, and privileged access instructions
 - Personal phone numbers, personal email addresses, student IDs, employee IDs, and identity documents
 - Financial information, reimbursement records, bank details, home addresses, and signatures
 - Unpublished research results, confidential datasets, embargoed papers, internal project plans, and reviewer correspondence
@@ -55,6 +55,15 @@ Use safe placeholders where needed, for example:
 - `<API_TOKEN>`
 - `<CONTACT_EMAIL>`
 - `<PROJECT_NAME>`
+
+### Maintainer-approved operational endpoints
+
+An authenticated repository administrator or named Wiki maintainer may explicitly approve publication of a non-secret operational endpoint when it is necessary for an access guide. This exception may include a private RFC 1918 address, service port, hostname, or SMB share name that is reachable only through separately authorized network access.
+
+- Record the approval in the pull request description and publish only the minimum endpoint information needed by members.
+- An endpoint approval never authorizes publishing passwords, tokens, authentication codes, cookies, private keys, pre-authentication keys, Auth IDs, or reusable shared credentials.
+- Prefer individual user accounts and least-privilege access even when an endpoint is approved for publication.
+- Reassess and remove stale endpoint information when the service or routing changes.
 
 When summarizing source material:
 
