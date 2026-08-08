@@ -1,7 +1,7 @@
 # Research Data Storage and Archiving
 
 !!! info "Confirm storage status live"
-    The activation date, address, capacity, and mount instructions for centralized storage or NAS must be confirmed through controlled channels. This page does not claim that any particular endpoint is currently available.
+    The currently approved lab NAS address is `192.168.1.213`, and its SMB share name is `vols`. The endpoint may be recorded in the Wiki, but availability, capacity, and permissions must still be confirmed live.
 
 ## Purpose
 
@@ -19,14 +19,14 @@ Reduce the risk of datasets being scattered across personal computers and tempor
 - Personal computers and temporary GPU nodes hold only necessary working copies and are never the sole archive.
 - Final datasets, metadata, and critical checkpoints belong in project-approved centralized storage.
 - Raw data, intermediate outputs, and publishable releases should be separated with clear naming.
-- Never write real internal paths, access tokens, mount passwords, or private share links in the Wiki.
+- Do not publish real internal addresses, paths, or share names without explicit maintainer approval. Access tokens, mount passwords, and private share links must never be published.
 - Apply least privilege to restricted data and revoke access when a member leaves or a project ends.
 
 ## Accessing an Approved NAS over SMB
 
 ### Prerequisites
 
-- Obtain the NAS address, share name, and an individual SMB account from the Data Storage Administrator. The examples below use `<NAS_IP>`, `<SHARE_NAME>`, and `<NAS_USERNAME>`.
+- Obtain an individual SMB account from the Data Storage Administrator. The current NAS address is `192.168.1.213`, its share name is `vols`, and the examples below use `<NAS_USERNAME>` for the individual account.
 - For remote access, connect the device to the lab Tailscale/Headscale network and ensure that the administrator has approved the required subnet route and access rules.
 - Prefer the administrator-provided IP address for remote access. Use a local name such as `.lan` only when the administrator confirms that cross-network DNS is available.
 - Do not enable insecure guest access on Windows or share NAS accounts. If authentication fails, ask the administrator to verify local SMB permissions.
@@ -37,14 +37,14 @@ Reduce the risk of datasets being scattered across personal computers and tempor
 2. Enter:
 
     ```text
-    smb://<NAS_IP>/<SHARE_NAME>
+    smb://192.168.1.213/vols
     ```
 
 3. Select “Registered User” and enter your NAS username and password. Save the credential in Keychain only on a personally managed device.
 4. You can also open the share from Terminal:
 
     ```bash
-    open 'smb://<NAS_IP>/<SHARE_NAME>'
+    open 'smb://192.168.1.213/vols'
     ```
 
 ### Windows
@@ -52,7 +52,7 @@ Reduce the risk of datasets being scattered across personal computers and tempor
 1. Enter the following in the File Explorer address bar:
 
     ```text
-    \\<NAS_IP>\<SHARE_NAME>
+    \\192.168.1.213\vols
     ```
 
 2. If Windows automatically selects a school, company, or Microsoft account, choose **More choices → Use a different account** and enter your NAS account.
@@ -61,8 +61,8 @@ Reduce the risk of datasets being scattered across personal computers and tempor
 
     ```powershell
     net use * /delete /y
-    cmdkey /delete:<NAS_IP>
-    net use Z: \\<NAS_IP>\<SHARE_NAME> /user:<NAS_USERNAME> *
+    cmdkey /delete:192.168.1.213
+    net use Z: \\192.168.1.213\vols /user:<NAS_USERNAME> *
     ```
 
     The trailing `*` prompts for the password interactively so that it is not stored in command history.
@@ -72,14 +72,14 @@ Reduce the risk of datasets being scattered across personal computers and tempor
 Desktop file managers can open:
 
 ```text
-smb://<NAS_IP>/<SHARE_NAME>
+smb://192.168.1.213/vols
 ```
 
 For a command-line mount, first install the distribution-provided CIFS utilities, then run:
 
 ```bash
 sudo mkdir -p /mnt/lab-nas
-sudo mount -t cifs //<NAS_IP>/<SHARE_NAME> /mnt/lab-nas \
+sudo mount -t cifs //192.168.1.213/vols /mnt/lab-nas \
   -o username=<NAS_USERNAME>,vers=3.0
 ```
 
@@ -92,15 +92,15 @@ Confirm the route first, then the required service port:
 === "macOS / Linux"
 
     ```bash
-    ping <NAS_IP>
-    nc -vz <NAS_IP> 445
+    ping 192.168.1.213
+    nc -vz 192.168.1.213 445
     ```
 
 === "Windows PowerShell"
 
     ```powershell
-    ping <NAS_IP>
-    Test-NetConnection <NAS_IP> -Port 445
+    ping 192.168.1.213
+    Test-NetConnection 192.168.1.213 -Port 445
     ```
 
 If a Linux Tailscale client does not automatically accept an approved subnet route, run the following after confirming with the administrator:

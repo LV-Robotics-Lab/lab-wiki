@@ -1,7 +1,7 @@
 # 研究数据存储与归档
 
 !!! info "存储状态需实时确认"
-    集中存储或 NAS 的上线时间、地址、容量和挂载方式必须通过受控渠道确认。本页不声明某个存储端点当前可用。
+    当前批准的实验室 NAS 地址为 `192.168.1.213`，SMB 共享名为 `vols`。地址可记录在 Wiki，但实际可用性、容量和权限仍需实时确认。
 
 ## 用途
 
@@ -19,14 +19,14 @@
 - 个人电脑和临时 GPU 节点只保存必要的工作副本，不作为唯一存档。
 - 正式数据集、元数据和关键检查点应保存到项目批准的集中存储。
 - 原始数据、处理中间产物和可发布版本应分层存放并使用清晰命名。
-- 不将真实内部路径、访问 token、挂载密码或共享链接写入 Wiki。
+- 未经维护者明确批准，不将真实内部地址、路径或共享名写入 Wiki；访问 token、挂载密码和私密共享链接始终禁止公开。
 - 对受限数据采用最小权限，离组或项目结束时及时回收访问权。
 
 ## 通过 SMB 访问已批准的 NAS
 
 ### 前置条件
 
-- 已从数据存储管理员处获得 NAS 地址、共享名和本人独立的 SMB 账号；下文用 `<NAS_IP>`、`<SHARE_NAME>` 和 `<NAS_USERNAME>` 表示。
+- 已从数据存储管理员处获得本人独立的 SMB 账号；当前 NAS 地址为 `192.168.1.213`，共享名为 `vols`，下文用 `<NAS_USERNAME>` 表示个人账号。
 - 远程访问时，设备已接入实验室 Tailscale/Headscale，且管理员已批准相应子网路由和访问规则。
 - 远程访问优先使用管理员提供的 IP 地址。仅在管理员确认跨网络 DNS 可用时才使用 `.lan` 等本地域名。
 - 不启用 Windows 的“不安全的访客登录”，也不共享 NAS 账号；认证失败时联系管理员检查本地 SMB 权限。
@@ -37,14 +37,14 @@
 2. 输入：
 
     ```text
-    smb://<NAS_IP>/<SHARE_NAME>
+    smb://192.168.1.213/vols
     ```
 
 3. 选择“注册用户”，输入本人 NAS 账号和密码；仅在本人管理的设备上将凭据存入钥匙串。
 4. 也可从终端打开：
 
     ```bash
-    open 'smb://<NAS_IP>/<SHARE_NAME>'
+    open 'smb://192.168.1.213/vols'
     ```
 
 ### Windows
@@ -52,7 +52,7 @@
 1. 在文件资源管理器地址栏输入：
 
     ```text
-    \\<NAS_IP>\<SHARE_NAME>
+    \\192.168.1.213\vols
     ```
 
 2. 如果 Windows 自动填入学校、公司或 Microsoft 账号，选择“更多选项 → 使用其他账号”，改用本人 NAS 账号。
@@ -61,8 +61,8 @@
 
     ```powershell
     net use * /delete /y
-    cmdkey /delete:<NAS_IP>
-    net use Z: \\<NAS_IP>\<SHARE_NAME> /user:<NAS_USERNAME> *
+    cmdkey /delete:192.168.1.213
+    net use Z: \\192.168.1.213\vols /user:<NAS_USERNAME> *
     ```
 
     末尾的 `*` 会交互式询问密码，避免把密码写进命令历史。
@@ -72,14 +72,14 @@
 桌面文件管理器可直接打开：
 
 ```text
-smb://<NAS_IP>/<SHARE_NAME>
+smb://192.168.1.213/vols
 ```
 
 命令行挂载前先安装发行版提供的 CIFS 工具，然后执行：
 
 ```bash
 sudo mkdir -p /mnt/lab-nas
-sudo mount -t cifs //<NAS_IP>/<SHARE_NAME> /mnt/lab-nas \
+sudo mount -t cifs //192.168.1.213/vols /mnt/lab-nas \
   -o username=<NAS_USERNAME>,vers=3.0
 ```
 
@@ -92,15 +92,15 @@ sudo mount -t cifs //<NAS_IP>/<SHARE_NAME> /mnt/lab-nas \
 === "macOS / Linux"
 
     ```bash
-    ping <NAS_IP>
-    nc -vz <NAS_IP> 445
+    ping 192.168.1.213
+    nc -vz 192.168.1.213 445
     ```
 
 === "Windows PowerShell"
 
     ```powershell
-    ping <NAS_IP>
-    Test-NetConnection <NAS_IP> -Port 445
+    ping 192.168.1.213
+    Test-NetConnection 192.168.1.213 -Port 445
     ```
 
 Linux Tailscale 客户端如果没有自动接收已批准的子网路由，可在管理员确认后运行：
