@@ -22,6 +22,95 @@
 - 不将真实内部路径、访问 token、挂载密码或共享链接写入 Wiki。
 - 对受限数据采用最小权限，离组或项目结束时及时回收访问权。
 
+## 通过 SMB 访问已批准的 NAS
+
+### 前置条件
+
+- 已从数据存储管理员处获得 NAS 地址、共享名和本人独立的 SMB 账号；下文用 `<NAS_IP>`、`<SHARE_NAME>` 和 `<NAS_USERNAME>` 表示。
+- 远程访问时，设备已接入实验室 Tailscale/Headscale，且管理员已批准相应子网路由和访问规则。
+- 远程访问优先使用管理员提供的 IP 地址。仅在管理员确认跨网络 DNS 可用时才使用 `.lan` 等本地域名。
+- 不启用 Windows 的“不安全的访客登录”，也不共享 NAS 账号；认证失败时联系管理员检查本地 SMB 权限。
+
+### macOS
+
+1. 在 Finder 中选择 **前往 → 连接服务器**，或按 `Command + K`。
+2. 输入：
+
+    ```text
+    smb://<NAS_IP>/<SHARE_NAME>
+    ```
+
+3. 选择“注册用户”，输入本人 NAS 账号和密码；仅在本人管理的设备上将凭据存入钥匙串。
+4. 也可从终端打开：
+
+    ```bash
+    open 'smb://<NAS_IP>/<SHARE_NAME>'
+    ```
+
+### Windows
+
+1. 在文件资源管理器地址栏输入：
+
+    ```text
+    \\<NAS_IP>\<SHARE_NAME>
+    ```
+
+2. 如果 Windows 自动填入学校、公司或 Microsoft 账号，选择“更多选项 → 使用其他账号”，改用本人 NAS 账号。
+3. 如需映射盘符，在“此电脑”中选择“映射网络驱动器”，填写同一 UNC 路径并按需勾选“使用其他凭据连接”。
+4. 如果 Windows 缓存了错误凭据，在 PowerShell 或命令提示符中运行：
+
+    ```powershell
+    net use * /delete /y
+    cmdkey /delete:<NAS_IP>
+    net use Z: \\<NAS_IP>\<SHARE_NAME> /user:<NAS_USERNAME> *
+    ```
+
+    末尾的 `*` 会交互式询问密码，避免把密码写进命令历史。
+
+### Linux
+
+桌面文件管理器可直接打开：
+
+```text
+smb://<NAS_IP>/<SHARE_NAME>
+```
+
+命令行挂载前先安装发行版提供的 CIFS 工具，然后执行：
+
+```bash
+sudo mkdir -p /mnt/lab-nas
+sudo mount -t cifs //<NAS_IP>/<SHARE_NAME> /mnt/lab-nas \
+  -o username=<NAS_USERNAME>,vers=3.0
+```
+
+命令会交互式询问密码。长期挂载应使用权限为 `0600` 的凭据文件或系统密钥存储，不要把密码直接写入 `/etc/fstab`、脚本或仓库。
+
+### 网络与服务验证
+
+先确认路由，再确认所需服务端口：
+
+=== "macOS / Linux"
+
+    ```bash
+    ping <NAS_IP>
+    nc -vz <NAS_IP> 445
+    ```
+
+=== "Windows PowerShell"
+
+    ```powershell
+    ping <NAS_IP>
+    Test-NetConnection <NAS_IP> -Port 445
+    ```
+
+Linux Tailscale 客户端如果没有自动接收已批准的子网路由，可在管理员确认后运行：
+
+```bash
+sudo tailscale set --accept-routes=true
+```
+
+macOS 和 Windows 通常自动接收已批准的子网路由。若访问仍走本地默认网关，请记录路由查询结果并联系网络管理员核对 Headscale 中的 `Approved`、`Available` 和 `Serving` 状态。
+
 ## 操作步骤
 
 1. 向 **数据存储管理员** 提交项目、数据类型、容量和成员信息。
@@ -41,6 +130,9 @@
 ## 故障排查
 
 - 存储不可达：确认服务当前状态和网络授权，不根据旧地址反复尝试。
+- 远程访问超时：确认 Tailscale 在线、客户端已接收子网路由，并让网络管理员检查路由是否处于 `Serving` 状态。
+- Windows 提示组织策略阻止未认证访客访问：选择“使用其他账号”并输入 NAS 凭据，不要降低访客访问安全策略。
+- IP 可达但共享打不开：检查 TCP `445`、共享名和 SMB 服务状态；不要把网络可达误认为已获得文件权限。
 - 权限不足：联系数据存储管理员修正项目权限，不共享他人账户。
 - 空间不足：停止批量传输，提交容量和增长估算后扩容或归档。
 - 文件不一致：保留源副本，重新传输失败文件并复核校验值。
@@ -50,4 +142,4 @@
 
 - 负责人：数据存储管理员
 - 联系入口：`<CONTROLLED_CONTACT_DIRECTORY_URL>`
-- 最后核验：2026-08-03
+- 最后核验：2026-08-08
