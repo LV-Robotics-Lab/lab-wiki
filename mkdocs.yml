@@ -63,6 +63,7 @@ plugins:
             账号与权限: Accounts and Access
             AI API 申请与使用: AI API Access and Usage
             实验室门禁: Lab Access
+            E2-01-04 硬件实验室: E2-01-04 Hardware Lab
             行政流程: Administration
             行政总览: Overview
             报销流程: Reimbursement
@@ -107,6 +108,7 @@ nav:
       - 新成员清单: onboarding/new-member.md
       - 账号与权限: onboarding/accounts.md
       - 实验室门禁: onboarding/lab-access.md
+      - E2-01-04 硬件实验室: onboarding/hardware-lab-access.md
   - 行政流程:
       - 行政总览: administration/index.md
       - 报销流程: administration/reimbursement.md
