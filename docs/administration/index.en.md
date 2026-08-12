@@ -2,7 +2,7 @@
 
 This section records repeatable administrative procedures that require consistent guidance.
 
-## Current examples
+## Current procedures
 
 - [Reimbursement](reimbursement.en.md)
 - [Purchasing](purchasing.en.md)
