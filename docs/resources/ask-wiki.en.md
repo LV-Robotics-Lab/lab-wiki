@@ -67,7 +67,7 @@ The answer should include `codex login --device-auth`, the Codex CLI Wiki page U
 ## Updating and Removing
 
 - Plugin users update or remove `lv-lab-wiki` through the client Plugin manager.
-- Standalone Skill users reinstall from the same public GitHub directory to update, or remove `ask-wiki` through the client Skill manager.
+- Standalone Skill users remove the existing `ask-wiki` through the client Skill manager first, then install the updated version from the same public GitHub directory.
 - Start a new conversation after an update or removal so the client reloads Skills.
 
 ## Troubleshooting

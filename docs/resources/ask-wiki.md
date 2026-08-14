@@ -67,7 +67,7 @@ $ask-wiki Codex CLI 如何使用官方订阅的设备码登录？
 ## 更新与移除
 
 - Plugin 用户通过客户端的 Plugin 管理界面更新或移除 `lv-lab-wiki`。
-- 独立 Skill 用户可从同一公开 GitHub 目录重新安装更新版本，或通过客户端的 Skill 管理界面移除 `ask-wiki`。
+- 独立 Skill 用户先通过客户端的 Skill 管理界面移除已有 `ask-wiki`，再从同一公开 GitHub 目录安装更新版本。
 - 更新或移除后开始新对话，让客户端重新加载 Skills。
 
 ## 故障排查
