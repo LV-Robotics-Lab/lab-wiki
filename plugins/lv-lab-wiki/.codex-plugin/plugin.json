@@ -1,0 +1,34 @@
+{
+  "name": "lv-lab-wiki",
+  "version": "0.1.0",
+  "description": "Ask the deployed LV Robotics Lab Wiki with citations and maintainer escalation.",
+  "author": {
+    "name": "LV Robotics Lab",
+    "url": "https://github.com/LV-Robotics-Lab"
+  },
+  "homepage": "https://lv-robotics-lab.github.io/lab-wiki/resources/ask-wiki/",
+  "repository": "https://github.com/LV-Robotics-Lab/lab-wiki",
+  "keywords": [
+    "wiki",
+    "lab",
+    "documentation",
+    "retrieval"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LV Lab Wiki",
+    "shortDescription": "Ask the live lab Wiki with cited sources.",
+    "longDescription": "Reads the deployed LV Robotics Lab Wiki at question time, cites full pages, and identifies the documented maintainer when the Wiki cannot support an answer.",
+    "developerName": "LV Robotics Lab",
+    "category": "Productivity",
+    "capabilities": [
+      "Web retrieval",
+      "Citations"
+    ],
+    "defaultPrompt": [
+      "$ask-wiki Codex CLI 如何使用设备码登录？",
+      "$ask-wiki How do I request remote lab access?",
+      "$ask-wiki 采购清单应该在什么时候提交？"
+    ]
+  }
+}

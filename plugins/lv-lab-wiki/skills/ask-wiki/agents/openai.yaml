@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ask Lab Wiki"
+  short_description: "Search the live lab Wiki with citations"
+  default_prompt: "Use $ask-wiki to answer my question from the live Lab Wiki."
