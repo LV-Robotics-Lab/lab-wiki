@@ -113,6 +113,7 @@ https://lv-robotics-lab.github.io/lab-wiki/assets/data/ai-index.json
       "title": "Codex CLI 多 Profile 与订阅登录",
       "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/codex-cli/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/codex-cli/",
+      "source_path": "docs/resources/codex-cli.md",
       "summary": "配置 Codex CLI 多 Profile、ChatGPT 订阅登录和设备码登录。",
       "keywords": ["Codex", "CLI", "profile", "订阅", "设备码"],
       "maintainer_ids": ["lab-resources-maintainer"],
@@ -131,6 +132,7 @@ https://lv-robotics-lab.github.io/lab-wiki/assets/data/ai-index.json
 - `id`：页面或负责人稳定标识，不使用显示标题作为外键。
 - `summary`：一到两句公开摘要，只用于选页，不作为最终回答的唯一依据。
 - `keywords`：中英文术语、常见简称和主题别名，不包含秘密或内部搜索词。
+- `source_path`：用于构建期覆盖校验的公开 Markdown 相对路径；Skill 运行时仍只读取已部署网页。
 - `maintainer_ids`：引用顶层负责人映射；至少一个负责人。
 - `contacts`：只发布页面上已经允许公开的账号或“通过受控通讯录联系”等路径，不新增私人电话、邮箱或身份信息。
 - `last_verified`：复制页面公开的最后核验日期，格式为 `YYYY-MM-DD`。
