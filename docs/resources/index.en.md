@@ -14,6 +14,7 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 - **Code repositories**: [LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya resource sheet**: `<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**: [Requests, configuration, and safe usage](ai-api-access.en.md)
+- **Codex CLI**: [Profiles and ChatGPT subscription login](codex-cli.en.md)
 - **Physical-Hardware Resource Center**: [Verify equipment, documentation, and safety state](hardware.en.md)
 - **Compute resources**: [Compute Resource Requests and Selection](compute-access.en.md)
 - **Remote access**: [Remote Access and Private-Network Enrollment](remote-access.en.md)
