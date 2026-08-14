@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
+  "generated_at": "2026-08-14T00:00:00Z",
+  "default_language": "zh",
+  "maintainers": [
+    {
+      "id": "wiki-team",
+      "name_zh": "Wiki Team",
+      "name_en": "Wiki Team",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "onboarding-maintainer",
+      "name_zh": "Onboarding Maintainer",
+      "name_en": "Onboarding Maintainer",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "administration-maintainer",
+      "name_zh": "行政流程维护者",
+      "name_en": "Administration Maintainer",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "purchasing-process-maintainer",
+      "name_zh": "采购流程维护者",
+      "name_en": "Purchasing Process Maintainer",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "lab-resources-maintainer",
+      "name_zh": "Lab Resources Maintainer",
+      "name_en": "Lab Resources Maintainer",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "ai-api-owner-en",
+      "name_zh": "@_嗯",
+      "name_en": "@_嗯",
+      "contacts": [
+        {
+          "type": "public-handle",
+          "value": "@_嗯"
+        }
+      ]
+    },
+    {
+      "id": "yongxi-lai",
+      "name_zh": "@赖咏曦",
+      "name_en": "@赖咏曦",
+      "contacts": [
+        {
+          "type": "public-handle",
+          "value": "@赖咏曦"
+        }
+      ]
+    },
+    {
+      "id": "nilou",
+      "name_zh": "@nilou",
+      "name_en": "@nilou",
+      "contacts": [
+        {
+          "type": "public-handle",
+          "value": "@nilou"
+        }
+      ]
+    },
+    {
+      "id": "zhaohanyu-postdoc",
+      "name_zh": "@赵浩宇-Postdoc",
+      "name_en": "@赵浩宇-Postdoc",
+      "contacts": [
+        {
+          "type": "public-handle",
+          "value": "@赵浩宇-Postdoc"
+        }
+      ]
+    },
+    {
+      "id": "compute-administrator",
+      "name_zh": "算力管理员",
+      "name_en": "Compute Administrator",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "network-administrator",
+      "name_zh": "网络管理员",
+      "name_en": "Network Administrator",
+      "contacts": [
+        {
+          "type": "public-handle",
+          "value": "@nilou"
+        }
+      ]
+    },
+    {
+      "id": "data-storage-administrator",
+      "name_zh": "数据存储管理员",
+      "name_en": "Data Storage Administrator",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "hardware-resources-maintainer",
+      "name_zh": "Hardware Resources Maintainer",
+      "name_en": "Hardware Resources Maintainer",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "research-project-coordinator",
+      "name_zh": "研究项目协调人",
+      "name_en": "Research Project Coordinator",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    },
+    {
+      "id": "course-project-coordinator",
+      "name_zh": "课程项目协调人",
+      "name_en": "Course Project Coordinator",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "index:zh",
+      "language": "zh",
+      "title": "LV Robotics Lab Wiki",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/",
+      "source_path": "docs/index.md",
+      "summary": "实验室公开流程、资源和贡献入口。",
+      "keywords": ["Wiki", "实验室", "流程", "资源"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "index:en",
+      "language": "en",
+      "title": "LV Robotics Lab Wiki",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/",
+      "source_path": "docs/index.en.md",
+      "summary": "Public laboratory procedures, resources, and contribution entry points.",
+      "keywords": ["Wiki", "lab", "procedures", "resources"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "onboarding/index:zh",
+      "language": "zh",
+      "title": "新成员入门",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/",
+      "source_path": "docs/onboarding/index.md",
+      "summary": "新成员加入实验室后的基础准备和推荐顺序。",
+      "keywords": ["新成员", "入门", "账号", "门禁"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "onboarding/index:en",
+      "language": "en",
+      "title": "Onboarding",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/",
+      "source_path": "docs/onboarding/index.en.md",
+      "summary": "Initial laboratory setup and recommended onboarding order for new members.",
+      "keywords": ["onboarding", "new member", "accounts", "access"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "onboarding/new-member:zh",
+      "language": "zh",
+      "title": "新成员清单",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/new-member/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/new-member/",
+      "source_path": "docs/onboarding/new-member.md",
+      "summary": "新成员加入后的账号、沟通渠道和基础准备清单。",
+      "keywords": ["新成员清单", "账号", "准备"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-07-31"
+    },
+    {
+      "id": "onboarding/new-member:en",
+      "language": "en",
+      "title": "New Member Checklist",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/new-member/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/new-member/",
+      "source_path": "docs/onboarding/new-member.en.md",
+      "summary": "Checklist for accounts, communication channels, and initial laboratory setup.",
+      "keywords": ["new member", "checklist", "accounts"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-07-31"
+    },
+    {
+      "id": "onboarding/accounts:zh",
+      "language": "zh",
+      "title": "账号与权限",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/accounts/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/accounts/",
+      "source_path": "docs/onboarding/accounts.md",
+      "summary": "实验室账号、权限申请和受控通讯录的申请边界。",
+      "keywords": ["账号", "权限", "申请", "通讯录"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "onboarding/accounts:en",
+      "language": "en",
+      "title": "Accounts and Access",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/accounts/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/accounts/",
+      "source_path": "docs/onboarding/accounts.en.md",
+      "summary": "Laboratory account, access-request, and controlled-directory boundaries.",
+      "keywords": ["accounts", "access", "request", "directory"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "onboarding/lab-access:zh",
+      "language": "zh",
+      "title": "实验室门禁申请",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/lab-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/lab-access/",
+      "source_path": "docs/onboarding/lab-access.md",
+      "summary": "实验室门禁申请的前置条件、流程和异常处理。",
+      "keywords": ["门禁", "实验室", "申请", "安全"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-07-31"
+    },
+    {
+      "id": "onboarding/lab-access:en",
+      "language": "en",
+      "title": "Laboratory Access Application",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/lab-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/lab-access/",
+      "source_path": "docs/onboarding/lab-access.en.md",
+      "summary": "Prerequisites, procedure, and exceptions for laboratory access applications.",
+      "keywords": ["lab access", "application", "safety"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-07-31"
+    },
+    {
+      "id": "onboarding/hardware-lab-access:zh",
+      "language": "zh",
+      "title": "E2-01-04 硬件实验室准入",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/hardware-lab-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/hardware-lab-access/",
+      "source_path": "docs/onboarding/hardware-lab-access.md",
+      "summary": "E2-01-04 硬件实验室培训、风险和准入流程。",
+      "keywords": ["E2-01-04", "硬件实验室", "培训", "风险"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-08"
+    },
+    {
+      "id": "onboarding/hardware-lab-access:en",
+      "language": "en",
+      "title": "E2-01-04 Hardware Lab Access",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/onboarding/hardware-lab-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/onboarding/hardware-lab-access/",
+      "source_path": "docs/onboarding/hardware-lab-access.en.md",
+      "summary": "E2-01-04 hardware-lab training, risk controls, and access procedure.",
+      "keywords": ["E2-01-04", "hardware lab", "training", "risk"],
+      "maintainer_ids": ["onboarding-maintainer"],
+      "last_verified": "2026-08-08"
+    },
+    {
+      "id": "administration/index:zh",
+      "language": "zh",
+      "title": "行政流程",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/administration/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/",
+      "source_path": "docs/administration/index.md",
+      "summary": "可重复执行、需要统一口径的实验室行政流程入口。",
+      "keywords": ["行政", "流程", "报销", "采购"],
+      "maintainer_ids": ["administration-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "administration/index:en",
+      "language": "en",
+      "title": "Administration",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/administration/",
+      "source_path": "docs/administration/index.en.md",
+      "summary": "Entry point for repeatable laboratory administrative procedures.",
+      "keywords": ["administration", "procedures", "reimbursement", "purchasing"],
+      "maintainer_ids": ["administration-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "administration/reimbursement:zh",
+      "language": "zh",
+      "title": "报销流程",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/administration/reimbursement/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/reimbursement/",
+      "source_path": "docs/administration/reimbursement.md",
+      "summary": "公开测试用的报销前置条件、提交步骤和核验占位流程。",
+      "keywords": ["报销", "发票", "审批", "占位流程"],
+      "maintainer_ids": ["administration-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "administration/reimbursement:en",
+      "language": "en",
+      "title": "Reimbursement",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/reimbursement/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/administration/reimbursement/",
+      "source_path": "docs/administration/reimbursement.en.md",
+      "summary": "Public-test placeholder for reimbursement prerequisites, steps, and verification.",
+      "keywords": ["reimbursement", "invoice", "approval", "placeholder"],
+      "maintainer_ids": ["administration-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "administration/purchasing:zh",
+      "language": "zh",
+      "title": "采购流程",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/administration/purchasing/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/purchasing/",
+      "source_path": "docs/administration/purchasing.md",
+      "summary": "各组采购选型、周末汇总、下单和到货入库的统一流程。",
+      "keywords": ["采购", "购物车", "周末汇总", "入库"],
+      "maintainer_ids": ["purchasing-process-maintainer"],
+      "last_verified": "2026-08-11"
+    },
+    {
+      "id": "administration/purchasing:en",
+      "language": "en",
+      "title": "Purchasing Process",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/purchasing/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/administration/purchasing/",
+      "source_path": "docs/administration/purchasing.en.md",
+      "summary": "Unified group purchasing selection, weekend consolidation, ordering, and inventory process.",
+      "keywords": ["purchasing", "shopping cart", "consolidation", "inventory"],
+      "maintainer_ids": ["purchasing-process-maintainer"],
+      "last_verified": "2026-08-11"
+    },
+    {
+      "id": "resources/index:zh",
+      "language": "zh",
+      "title": "实验室资源",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/",
+      "source_path": "docs/resources/index.md",
+      "summary": "实验室 AI、算力、远程接入、数据和硬件资源索引。",
+      "keywords": ["资源", "AI", "算力", "硬件"],
+      "maintainer_ids": ["lab-resources-maintainer"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "resources/index:en",
+      "language": "en",
+      "title": "Lab Resources",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/",
+      "source_path": "docs/resources/index.en.md",
+      "summary": "Index of laboratory AI, compute, remote access, data, and hardware resources.",
+      "keywords": ["resources", "AI", "compute", "hardware"],
+      "maintainer_ids": ["lab-resources-maintainer"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "resources/ai-api-access:zh",
+      "language": "zh",
+      "title": "AI API 申请与使用",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ai-api-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ai-api-access/",
+      "source_path": "docs/resources/ai-api-access.md",
+      "summary": "AI API 申请、凭据边界、用量规范和故障排查。",
+      "keywords": ["AI API", "申请", "API key", "用量"],
+      "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "resources/ai-api-access:en",
+      "language": "en",
+      "title": "AI API Access and Usage",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ai-api-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ai-api-access/",
+      "source_path": "docs/resources/ai-api-access.en.md",
+      "summary": "AI API access requests, credential boundaries, usage rules, and troubleshooting.",
+      "keywords": ["AI API", "access", "API key", "usage"],
+      "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "resources/codex-cli:zh",
+      "language": "zh",
+      "title": "Codex CLI 多 Profile 与订阅登录",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/codex-cli/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/codex-cli/",
+      "source_path": "docs/resources/codex-cli.md",
+      "summary": "Codex CLI 多 Profile、ChatGPT 订阅登录和设备码登录方法。",
+      "keywords": ["Codex", "CLI", "profile", "订阅", "设备码"],
+      "maintainer_ids": ["lab-resources-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "resources/codex-cli:en",
+      "language": "en",
+      "title": "Codex CLI Profiles and Subscription Login",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/codex-cli/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/codex-cli/",
+      "source_path": "docs/resources/codex-cli.en.md",
+      "summary": "Codex CLI profiles, ChatGPT subscription login, and device-code login.",
+      "keywords": ["Codex", "CLI", "profile", "subscription", "device code"],
+      "maintainer_ids": ["lab-resources-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "resources/compute-access:zh",
+      "language": "zh",
+      "title": "算力资源申请与选择",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/compute-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/compute-access/",
+      "source_path": "docs/resources/compute-access.md",
+      "summary": "算力资源选择、申请、验证、费用和故障排查。",
+      "keywords": ["算力", "GPU", "Headscale", "申请"],
+      "maintainer_ids": ["nilou", "yongxi-lai", "zhaohanyu-postdoc", "compute-administrator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "resources/compute-access:en",
+      "language": "en",
+      "title": "Compute Resource Requests and Selection",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/compute-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/compute-access/",
+      "source_path": "docs/resources/compute-access.en.md",
+      "summary": "Compute selection, access requests, verification, cost, and troubleshooting.",
+      "keywords": ["compute", "GPU", "Headscale", "request"],
+      "maintainer_ids": ["nilou", "yongxi-lai", "zhaohanyu-postdoc", "compute-administrator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "resources/remote-access:zh",
+      "language": "zh",
+      "title": "远程接入与自组网申请",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/remote-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/remote-access/",
+      "source_path": "docs/resources/remote-access.md",
+      "summary": "远程接入、设备注册、权限批准和安全边界。",
+      "keywords": ["远程接入", "Headscale", "Tailscale", "网络"],
+      "maintainer_ids": ["network-administrator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "resources/remote-access:en",
+      "language": "en",
+      "title": "Remote Access and Private-Network Enrollment",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/remote-access/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/remote-access/",
+      "source_path": "docs/resources/remote-access.en.md",
+      "summary": "Remote access, device enrollment, approval, and security boundaries.",
+      "keywords": ["remote access", "Headscale", "Tailscale", "network"],
+      "maintainer_ids": ["network-administrator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "resources/data-management:zh",
+      "language": "zh",
+      "title": "研究数据存储与归档",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/data-management/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/data-management/",
+      "source_path": "docs/resources/data-management.md",
+      "summary": "研究数据分类、存储、备份、归档和访问变更流程。",
+      "keywords": ["数据", "存储", "备份", "归档"],
+      "maintainer_ids": ["data-storage-administrator"],
+      "last_verified": "2026-08-08"
+    },
+    {
+      "id": "resources/data-management:en",
+      "language": "en",
+      "title": "Research Data Storage and Archiving",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/data-management/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/data-management/",
+      "source_path": "docs/resources/data-management.en.md",
+      "summary": "Research data classification, storage, backup, archiving, and access changes.",
+      "keywords": ["data", "storage", "backup", "archiving"],
+      "maintainer_ids": ["data-storage-administrator"],
+      "last_verified": "2026-08-08"
+    },
+    {
+      "id": "resources/hardware:zh",
+      "language": "zh",
+      "title": "真机硬件资源中心",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/hardware/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/hardware/",
+      "source_path": "docs/resources/hardware.md",
+      "summary": "真机硬件资源索引、预约、授权、安全和异常上报边界。",
+      "keywords": ["硬件", "设备", "预约", "维护者"],
+      "maintainer_ids": ["hardware-resources-maintainer"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "resources/hardware:en",
+      "language": "en",
+      "title": "Physical-Hardware Resource Center",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/hardware/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/hardware/",
+      "source_path": "docs/resources/hardware.en.md",
+      "summary": "Physical hardware index, booking, authorization, safety, and escalation boundaries.",
+      "keywords": ["hardware", "equipment", "booking", "maintainer"],
+      "maintainer_ids": ["hardware-resources-maintainer"],
+      "last_verified": "2026-08-07"
+    },
+    {
+      "id": "projects/index:zh",
+      "language": "zh",
+      "title": "研究方向与项目机会",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/projects/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/",
+      "source_path": "docs/projects/index.md",
+      "summary": "实验室研究方向、项目机会和参与前的确认事项。",
+      "keywords": ["研究方向", "项目", "机会", "负责人"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "projects/index:en",
+      "language": "en",
+      "title": "Research Directions and Project Opportunities",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/projects/",
+      "source_path": "docs/projects/index.en.md",
+      "summary": "Laboratory research directions, project opportunities, and pre-participation checks.",
+      "keywords": ["research", "projects", "opportunities", "owner"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "academics/project-courses:zh",
+      "language": "zh",
+      "title": "课程项目、Capstone 与 Dissertation 申请",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/academics/project-courses/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/academics/project-courses/",
+      "source_path": "docs/academics/project-courses.md",
+      "summary": "课程项目、Capstone 和 Dissertation 申请前的确认与注册流程。",
+      "keywords": ["课程项目", "Capstone", "Dissertation", "申请"],
+      "maintainer_ids": ["course-project-coordinator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "academics/project-courses:en",
+      "language": "en",
+      "title": "Course Projects, Capstone, and Dissertation Applications",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/academics/project-courses/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/academics/project-courses/",
+      "source_path": "docs/academics/project-courses.en.md",
+      "summary": "Confirmation and registration process for course, capstone, and dissertation projects.",
+      "keywords": ["course project", "capstone", "dissertation", "application"],
+      "maintainer_ids": ["course-project-coordinator"],
+      "last_verified": "2026-08-03"
+    },
+    {
+      "id": "contributing:zh",
+      "language": "zh",
+      "title": "如何贡献",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/contributing/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/contributing/",
+      "source_path": "docs/contributing.md",
+      "summary": "Wiki 双语页面、分支、构建和 Pull Request 贡献流程。",
+      "keywords": ["贡献", "Pull Request", "MkDocs", "双语"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "contributing:en",
+      "language": "en",
+      "title": "How to Contribute",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/contributing/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/contributing/",
+      "source_path": "docs/contributing.en.md",
+      "summary": "Contribution workflow for bilingual pages, branches, builds, and pull requests.",
+      "keywords": ["contribute", "pull request", "MkDocs", "bilingual"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-14"
+    }
+  ]
+}

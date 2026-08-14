@@ -28,3 +28,8 @@ Windows PowerShell:
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
+
+## Maintenance
+
+- **Maintainer:** Wiki Team
+- **Last verified:** 2026-08-14

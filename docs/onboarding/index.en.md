@@ -10,3 +10,8 @@ This section helps new members complete their initial laboratory setup.
 
 !!! note
     Names, accounts, and procedures on this page are demonstration placeholders.
+
+## Maintenance
+
+- **Maintainer:** Onboarding Maintainer
+- **Last verified:** 2026-08-14
