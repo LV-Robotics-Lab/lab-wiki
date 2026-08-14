@@ -604,6 +604,30 @@
       "last_verified": "2026-08-03"
     },
     {
+      "id": "resources/ask-wiki:zh",
+      "language": "zh",
+      "title": "用 AI 查询 Wiki",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ask-wiki/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ask-wiki/",
+      "source_path": "docs/resources/ask-wiki.md",
+      "summary": "安装和使用 ask-wiki Skill，通过网页检索 Wiki 并在必要时联系负责人。",
+      "keywords": ["ask-wiki", "Skill", "AI", "Wiki", "网页检索"],
+      "maintainer_ids": ["wiki-team", "lab-resources-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "resources/ask-wiki:en",
+      "language": "en",
+      "title": "Ask the Wiki with AI",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ask-wiki/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ask-wiki/",
+      "source_path": "docs/resources/ask-wiki.en.md",
+      "summary": "Install and use ask-wiki to retrieve live Wiki pages and escalate to maintainers when needed.",
+      "keywords": ["ask-wiki", "Skill", "AI", "Wiki", "web retrieval"],
+      "maintainer_ids": ["wiki-team", "lab-resources-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
       "id": "contributing:zh",
       "language": "zh",
       "title": "如何贡献",

@@ -15,6 +15,7 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 - **Romoya resource sheet**: `<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**: [Requests, configuration, and safe usage](ai-api-access.en.md)
 - **Codex CLI**: [Profiles and ChatGPT subscription login](codex-cli.en.md)
+- **Ask the Wiki with AI**: [Install and use the ask-wiki Skill](ask-wiki.en.md)
 - **Physical-Hardware Resource Center**: [Verify equipment, documentation, and safety state](hardware.en.md)
 - **Compute resources**: [Compute Resource Requests and Selection](compute-access.en.md)
 - **Remote access**: [Remote Access and Private-Network Enrollment](remote-access.en.md)

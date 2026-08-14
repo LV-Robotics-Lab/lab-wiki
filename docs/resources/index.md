@@ -15,6 +15,7 @@
 - **Romoya 相关资源表**：`<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**：[申请、配置与安全使用](ai-api-access.md)
 - **Codex CLI**：[多 Profile 与 ChatGPT 订阅登录](codex-cli.md)
+- **AI 查询 Wiki**：[安装并使用 ask-wiki Skill](ask-wiki.md)
 - **真机硬件资源中心**：[查验设备、资料与安全状态](hardware.md)
 - **算力资源**：[算力资源申请与选择](compute-access.md)
 - **远程接入**：[远程接入与自组网申请](remote-access.md)
