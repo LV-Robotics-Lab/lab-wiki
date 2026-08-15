@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
-  "generated_at": "2026-08-14T00:00:00Z",
+  "generated_at": "2026-08-15T00:00:00Z",
   "default_language": "zh",
   "maintainers": [
     {
@@ -622,9 +622,9 @@
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/non-hardware-worktree/",
       "source_path": "docs/project-collaboration/non-hardware-worktree.md",
       "summary": "所有非真机组的组织仓库、个人 worktree、实验产物和 main 合入协作规范。",
-      "keywords": ["非真机组", "worktree", "Git", "main", "实验产物"],
+      "keywords": ["非真机组", "worktree", "Git", "main", "实验产物", "data", "数据目录"],
       "maintainer_ids": ["non-hardware-team-maintainer"],
-      "last_verified": "2026-08-14"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "project-collaboration/non-hardware-worktree:en",
@@ -634,9 +634,9 @@
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/non-hardware-worktree/",
       "source_path": "docs/project-collaboration/non-hardware-worktree.en.md",
       "summary": "Collaboration rules for organization repositories, personal worktrees, experiment artifacts, and shared main branches.",
-      "keywords": ["non-hardware teams", "worktree", "Git", "main", "experiment artifacts"],
+      "keywords": ["non-hardware teams", "worktree", "Git", "main", "experiment artifacts", "data directory"],
       "maintainer_ids": ["non-hardware-team-maintainer"],
-      "last_verified": "2026-08-14"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "resources/ask-wiki:zh",

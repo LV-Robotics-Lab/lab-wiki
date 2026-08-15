@@ -20,8 +20,8 @@ This policy manages code, experiment configurations, scripts, notes, and staged 
 - The project uses one organization repository and has identified a repository maintainer and project lead.
 - A shared workspace is available for the shared `main`, Git metadata, and public resources.
 - Each member has a personal project workspace, personal branch, and the required repository permissions.
-- The project lead has agreed on local directories and manifest fields for large data, checkpoints, caches, and run results.
-- The repository `.gitignore` excludes local artifacts that must not enter Git.
+- The project lead has confirmed that large data, checkpoints, caches, and run results use the worktree-root `data/` directory and has agreed on its manifest fields.
+- The repository `.gitignore` uses the root-anchored `/data/` rule for that directory without excluding same-named source subdirectories.
 
 ## Directory and Branch Model
 
@@ -55,8 +55,8 @@ In this model:
 
 ## Large Files and Experiment Artifacts
 
-- Large datasets, checkpoints, caches, and run results do not go directly into Git, but must remain in the project worktree under `local_data/`, `data/`, or another agreed directory.
-- Use `.gitignore` for local artifacts. Do not replace the agreed directory with a location outside the repository, and do not treat an ignored file as the only backup.
+- Large datasets, checkpoints, caches, and run results do not go directly into Git; keep them under the ignored `data/` directory in the project worktree, and do not create alternative top-level directories for the same payloads.
+- Use `.gitignore` for local artifacts. Do not replace `data/` with a location outside the repository, and do not treat an ignored file as the only backup.
 - For each important dataset or result, keep a tracked manifest recording its source, version or generating commit, file count and total size, checksum, owner, license or access boundary, storage location, and last verification date.
 - To share or reproduce an experiment, commit the configuration, scripts, README, and manifest; do not commit the data itself, authentication material, or private download links.
 - Important local data must have a project-approved centralized copy or backup. Before cleaning a personal worktree, confirm that the backup is readable and matches the manifest.
@@ -78,7 +78,7 @@ Before deleting an old directory, branch, or experiment material, complete all o
 
 1. Run `git status --short` in the target worktree and confirm that no project files are uncommitted.
 2. Inspect local and remote branch relationships. Confirm that unique commits have been pushed and are covered by an active branch or `main`.
-3. Check manifests, checksums, and backup status for `local_data/`, `data/`, and other ignored directories.
+3. Check manifests, checksums, and backup status for `data/` and any historical ignored directories; retire legacy locations after migration.
 4. Ask the project lead to confirm that no other member, task, or reproduction experiment still uses the directory, branch, or material.
 5. Record the cleanup target, approver, and date. If any item cannot be confirmed, pause cleanup and retain the original material.
 
@@ -90,7 +90,7 @@ For every handoff, migration, or milestone closeout, confirm that:
 - Every member can locate their personal worktree, personal branch, and remote branch.
 - `git remote -v` points to the organization repository, with no personal repository or long-lived second clone.
 - Code, configurations, scripts, and notes are inside the personal worktree and have been committed and pushed by stage.
-- Large local artifacts are inside an agreed worktree directory and do not appear as accidentally tracked files.
+- Large local artifacts are inside the worktree's `data/` directory and do not appear as accidentally tracked files.
 - Important data has a manifest, checksum, source description, and verifiable backup.
 - Functionality intended for `main` has been verified, while unfinished experiments remain on personal branches.
 
@@ -107,4 +107,4 @@ For every handoff, migration, or milestone closeout, confirm that:
 
 - Maintainers: non-hardware team project leads and repository maintainers
 - Contact entry: `<CONTROLLED_CONTACT_DIRECTORY_URL>`
-- Last verified: 2026-08-14
+- Last verified: 2026-08-15
