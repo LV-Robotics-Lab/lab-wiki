@@ -1,20 +1,20 @@
 # Compute Resource Requests and Selection
 
-!!! warning "Configuration snapshot"
-    The table below comes from the Master Course “设备情况” sheet updated on 2026-08-03. Host availability, GPU occupation, pricing, and project authorization change over time; verify them with `tailscale status`, `nvidia-smi`, and the current allocation record before launch.
+!!! warning "Public-page boundary"
+    This page documents resource categories, request procedures, and safety requirements only. Device names, internal addresses, room locations, accounts, current allocations, and the contact directory belong in an organization-controlled internal inventory, not in the public Wiki.
 
 ## Purpose
 
 Select an appropriate laboratory compute resource based on visualization needs, run duration, GPU count, and distributed-training scale.
 
-## Contacts and Resource Entry Points
+## Resource Entry Points
 
-| Need | Contact |
+| Need | Request channel |
 |---|---|
-| Headscale enrollment and visual workstations | `@nilou` (Ye Zheng) |
-| AutoDL single-node workloads, normally up to eight GPUs | `@赖咏曦` (Yongxi Lai) |
-| Always-on single-GPU resources | `@赵浩宇-Postdoc` or the Compute Administrator |
-| Alibaba Cloud DLC training beyond eight GPUs | Contact the Compute Administrator in advance |
+| Headscale enrollment and visual workstations | Apply through the organization-internal administrator channel |
+| AutoDL single-node workloads, normally up to eight GPUs | Submit an internal compute request |
+| Always-on single-GPU resources | Request a time window from the current Compute Administrator |
+| Alibaba Cloud DLC training beyond eight GPUs | Complete the internal project-approval process in advance |
 
 ## Prerequisites
 
@@ -33,25 +33,9 @@ Select an appropriate laboratory compute resource based on visualization needs, 
 | Distributed training beyond one node | Alibaba Cloud DLC or another distributed platform | Complete a smoke test and prepare a one-line launch command in a single-GPU development environment |
 | No GPU requirement | CPU, local, or low-cost development environment | Do not occupy scarce GPU resources |
 
-## Current Device Inventory
+## Internal Resource Inventory
 
-| Tailscale device | Tailscale IP | Compute | Current allocation | Location |
-|---|---|---|---|---|
-| `sg-ai-gateway` | `100.64.0.1` | No GPU | VPS control plane; not for development | Cloud |
-| `boris-pc` | `100.64.0.4` | RTX 3070 Ti | Franka physical-robot control | E2-01-06 |
-| `dm-26zj-020` | `100.64.0.7` | RTX 5060 | Daimeng benchmark setup | Daimeng company |
-| `dm-26zj-008` | `100.64.0.3` | RTX 5090 | Daimeng benchmark setup | Daimeng company |
-| `lvrobotics-System-Product-Name` | `100.64.0.10` | RTX 4060 Ti | AgileX NERO physical-robot control | E2-01-06 |
-| `shaol-PC` | `100.64.0.5` | RTX 4090 | Ego2Dex | COM2-01-04 |
-| `jingxiang-B850M-C` | `100.64.0.6` | RTX 5090 | Robot Harness Gen-Env | COM2-01-06 |
-| `yuhang-B850M-C` | `100.64.0.9` | RTX 5090 | UMI WAM Stage 2 | E2-01-06 |
-| `aliyun-dsw-1055` | `100.64.0.11` | A100 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1021-h20` | `100.64.0.13` | H20 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1056` | `100.64.0.21` | A100 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1019` | `100.64.0.25` | 4×A10 | Data-pipeline encoding and decoding | Cloud |
-
-!!! info "Access note"
-    These IPs are reachable only inside the laboratory Tailscale/Headscale network. The table is a configuration and allocation snapshot, not a claim that a device is currently online or idle. AutoDL is usage-billed and is not kept online.
+The complete inventory is maintained in an organization-controlled internal document and contains live device identifiers, network addresses, locations, GPU specifications, project allocations, and responsible owners. Organization members should use that internal source; this public page does not copy the inventory or treat a historical snapshot as current authorization.
 
 ## Request Information
 
@@ -77,12 +61,12 @@ Select an appropriate laboratory compute resource based on visualization needs, 
 - Start usage-billed resources only when needed and shut them down immediately after use; never leave an ownerless idle job running.
 - A host being online does not grant authorization; re-confirm the project allocation each time.
 - Do not treat a successful launch as proof of healthy large-scale training; verify real processes, GPUs, logs, and checkpoints.
-- Hostnames, IPs, and GPU specifications may be documented; passwords, API keys, tokens, private keys, and unattended-access passwords must not appear in commands, environment files, logs, or the Wiki.
+- Hostnames, internal addresses, locations, current allocations, and named contacts belong only in the controlled internal inventory. Passwords, API keys, tokens, private keys, and unattended-access credentials must not appear in repositories, Wikis, issues, logs, or screenshots.
 - Use approved remote-desktop channels and never store unattended-access passwords in the Wiki.
 
 ## Verification
 
-- The target device name and IP in `tailscale status` match the table and are currently reachable.
+- An administrator has confirmed the target identity, reachability, and current authorization against live network state and the internal resource inventory.
 - `nvidia-smi` reports the approved GPU model, count, and current occupation.
 - The smoke test completes at least one valid step and produces the expected log or checkpoint.
 - GPU count, process topology, and task configuration match the approved request.
@@ -90,17 +74,15 @@ Select an appropriate laboratory compute resource based on visualization needs, 
 
 ## Troubleshooting
 
-- Device offline or IP mismatch: treat live Headscale state as authoritative and report the difference so this page can be updated.
+- Device offline or address mismatch: treat live Headscale state as authoritative and ask an administrator to update the internal inventory.
 - No GPU available: reduce scale, change the schedule, or ask the administrator to reallocate resources.
 - Multi-GPU communication fails: retain the error summary and job ID, then confirm that the platform supports the requested topology.
-- Remote desktop unavailable: verify the network path, then contact `@nilou` or the on-site maintainer.
+- Remote desktop unavailable: verify the network path, then contact the on-site maintainer through the internal channel.
 - Data or checkpoints cannot be written: stop the full run and validate permissions and free space before resuming.
 - Unexpected cost: stop the job immediately and notify the project owner and Compute Administrator.
 
 ## Maintenance
 
-- Headscale and workstations: `@nilou` (Ye Zheng)
-- AutoDL: `@赖咏曦` (Yongxi Lai)
-- Always-on resources: `@赵浩宇-Postdoc` and the Compute Administrator
-- Configuration source: Master Course → 设备情况
-- Last verified: 2026-08-03
+- Public-page maintainer: LV Robotics Lab
+- Device, contact, and allocation source: the organization-controlled internal resource inventory
+- This page is not evidence that a host is online, idle, or authorized for a particular user
