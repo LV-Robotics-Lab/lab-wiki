@@ -168,6 +168,17 @@
           "value": "通过实验室受控通讯录联系"
         }
       ]
+    },
+    {
+      "id": "non-hardware-team-maintainer",
+      "name_zh": "非真机组项目负责人和仓库维护者",
+      "name_en": "Non-Hardware Team Project Leads and Repository Maintainers",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
     }
   ],
   "pages": [
@@ -602,6 +613,30 @@
       "keywords": ["course project", "capstone", "dissertation", "application"],
       "maintainer_ids": ["course-project-coordinator"],
       "last_verified": "2026-08-03"
+    },
+    {
+      "id": "project-collaboration/non-hardware-worktree:zh",
+      "language": "zh",
+      "title": "非真机组统一协作模式",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/non-hardware-worktree/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/non-hardware-worktree/",
+      "source_path": "docs/project-collaboration/non-hardware-worktree.md",
+      "summary": "所有非真机组的组织仓库、个人 worktree、实验产物和 main 合入协作规范。",
+      "keywords": ["非真机组", "worktree", "Git", "main", "实验产物"],
+      "maintainer_ids": ["non-hardware-team-maintainer"],
+      "last_verified": "2026-08-14"
+    },
+    {
+      "id": "project-collaboration/non-hardware-worktree:en",
+      "language": "en",
+      "title": "Unified Collaboration for Non-Hardware Teams",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/non-hardware-worktree/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/non-hardware-worktree/",
+      "source_path": "docs/project-collaboration/non-hardware-worktree.en.md",
+      "summary": "Collaboration rules for organization repositories, personal worktrees, experiment artifacts, and shared main branches.",
+      "keywords": ["non-hardware teams", "worktree", "Git", "main", "experiment artifacts"],
+      "maintainer_ids": ["non-hardware-team-maintainer"],
+      "last_verified": "2026-08-14"
     },
     {
       "id": "resources/ask-wiki:zh",
