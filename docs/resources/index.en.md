@@ -10,7 +10,8 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 ## Resource Links
 
 - **Intern and visiting-member tracker**: `<INTERN_VISITING_TRACKER_URL>`
-- **Purchase and asset register**: `<PURCHASE_ASSET_REGISTER_URL>`
+- **Purchase Requirements Table (first table)**: [Submit one Excel requirements file per group per week](https://app.notion.com/p/1a9a5a3a6fa1823c982a81b0b85292a9?v=9a9a5a3a6fa183ad91c38825a9477526&source=copy_link)
+- **Ordered Items Table (second table)**: [Update after ordering and add photographs after delivery](https://app.notion.com/p/3b995c72020b8041a0cbed31aa08759c?v=3b995c72020b80c583df000c4f17b9e5&source=copy_link)
 - **Code repositories**: [LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya resource sheet**: `<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**: [Requests, configuration, and safe usage](ai-api-access.en.md)
@@ -22,6 +23,6 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 - **Data management**: [Research Data Storage and Archiving](data-management.en.md)
 
 !!! info "Access permissions"
-    Some repositories may require membership in the LV Robotics Lab GitHub organization. Contact the relevant project maintainer if access is unavailable.
+    The two purchasing tables are access-controlled by Notion. Some repositories may require membership in the LV Robotics Lab GitHub organization. Contact the relevant project maintainer if access is unavailable.
 
-<p class="wiki-meta">Owner: Lab Resources Maintainer · Last verified: 2026-08-07</p>
+<p class="wiki-meta">Owner: Lab Resources Maintainer · Last verified: 2026-08-15</p>

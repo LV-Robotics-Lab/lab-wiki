@@ -373,7 +373,7 @@
       "summary": "各组采购选型、周末汇总、下单和到货入库的统一流程。",
       "keywords": ["采购", "购物车", "周末汇总", "入库"],
       "maintainer_ids": ["purchasing-process-maintainer"],
-      "last_verified": "2026-08-11"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "administration/purchasing:en",
@@ -385,7 +385,7 @@
       "summary": "Unified group purchasing selection, weekend consolidation, ordering, and inventory process.",
       "keywords": ["purchasing", "shopping cart", "consolidation", "inventory"],
       "maintainer_ids": ["purchasing-process-maintainer"],
-      "last_verified": "2026-08-11"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "resources/index:zh",
@@ -397,7 +397,7 @@
       "summary": "实验室 AI、算力、远程接入、数据和硬件资源索引。",
       "keywords": ["资源", "AI", "算力", "硬件"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-07"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "resources/index:en",
@@ -409,7 +409,7 @@
       "summary": "Index of laboratory AI, compute, remote access, data, and hardware resources.",
       "keywords": ["resources", "AI", "compute", "hardware"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-07"
+      "last_verified": "2026-08-15"
     },
     {
       "id": "resources/ai-api-access:zh",
