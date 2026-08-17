@@ -326,7 +326,7 @@ git commit -m "docs: index repository guide"
 Run:
 
 ```bash
-python -m unittest discover -v
+python -m unittest discover -s tests -v
 ```
 
 Expected: every discovered test passes with final status `OK`.
@@ -346,12 +346,12 @@ Expected: both `zh` and `en` sites build successfully with no warnings or errors
 Run:
 
 ```bash
-git diff --check HEAD~3..HEAD
+git diff --check 5dc494a..HEAD
 git status --short
-git log -4 --oneline
+git log -6 --oneline
 ```
 
-Expected: `git diff --check` prints nothing, `git status --short` is empty, and the log shows the test, bilingual-content, and indexing commits after the implementation-plan commit.
+Expected: `git diff --check` prints nothing, `git status --short` is empty, and the log shows the test, bilingual-content, indexing, and verification-plan correction commits after the implementation-plan commit.
 
 - [ ] **Step 4: Confirm the generated pages exist**
 
