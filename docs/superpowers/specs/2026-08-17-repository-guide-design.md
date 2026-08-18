@@ -70,4 +70,3 @@
 - 运行 `python -m unittest` 验证 AI 索引覆盖和其他现有测试。
 - 运行 `mkdocs build --strict`，确保双语页面、导航、链接和 Markdown 均可严格构建。
 - 运行 `git diff --check` 并审查 `git diff`，确认没有无关文件或未获批准的信息进入改动。
-

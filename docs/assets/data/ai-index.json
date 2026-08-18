@@ -168,6 +168,17 @@
           "value": "通过实验室受控通讯录联系"
         }
       ]
+    },
+    {
+      "id": "non-hardware-team-maintainer",
+      "name_zh": "非真机组项目负责人和仓库维护者",
+      "name_en": "Non-Hardware Team Project Leads and Repository Maintainers",
+      "contacts": [
+        {
+          "type": "controlled-directory",
+          "value": "通过实验室受控通讯录联系"
+        }
+      ]
     }
   ],
   "pages": [
@@ -628,6 +639,30 @@
       "last_verified": "2026-08-03"
     },
     {
+      "id": "project-collaboration/non-hardware-worktree:zh",
+      "language": "zh",
+      "title": "非真机组统一协作模式",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/non-hardware-worktree/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/non-hardware-worktree/",
+      "source_path": "docs/project-collaboration/non-hardware-worktree.md",
+      "summary": "所有非真机组的组织仓库、个人 worktree、实验产物和 main 合入协作规范。",
+      "keywords": ["非真机组", "worktree", "Git", "main", "实验产物", "data", "数据目录"],
+      "maintainer_ids": ["non-hardware-team-maintainer"],
+      "last_verified": "2026-08-15"
+    },
+    {
+      "id": "project-collaboration/non-hardware-worktree:en",
+      "language": "en",
+      "title": "Unified Collaboration for Non-Hardware Teams",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/non-hardware-worktree/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/non-hardware-worktree/",
+      "source_path": "docs/project-collaboration/non-hardware-worktree.en.md",
+      "summary": "Collaboration rules for organization repositories, personal worktrees, experiment artifacts, and shared main branches.",
+      "keywords": ["non-hardware teams", "worktree", "Git", "main", "experiment artifacts", "data directory"],
+      "maintainer_ids": ["non-hardware-team-maintainer"],
+      "last_verified": "2026-08-15"
+    },
+    {
       "id": "resources/ask-wiki:zh",
       "language": "zh",
       "title": "用 AI 查询 Wiki",
@@ -650,6 +685,30 @@
       "keywords": ["ask-wiki", "Skill", "AI", "Wiki", "web retrieval"],
       "maintainer_ids": ["wiki-team", "lab-resources-maintainer"],
       "last_verified": "2026-08-14"
+    },
+    {
+      "id": "project-collaboration/repository-guide:zh",
+      "language": "zh",
+      "title": "LV Robotics Lab 仓库导览",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/repository-guide/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/repository-guide/",
+      "source_path": "docs/project-collaboration/repository-guide.md",
+      "summary": "实验室组织仓库的组别归属、主入口、依赖层级、治理快照与导航建议。",
+      "keywords": ["仓库导览", "GitHub", "仿真组", "世界模型组", "真机组", "仓库治理"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-16"
+    },
+    {
+      "id": "project-collaboration/repository-guide:en",
+      "language": "en",
+      "title": "LV Robotics Lab Repository Guide",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/repository-guide/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/repository-guide/",
+      "source_path": "docs/project-collaboration/repository-guide.en.md",
+      "summary": "Team ownership, entry points, dependency layers, governance snapshot, and navigation guidance for the lab organization repositories.",
+      "keywords": ["repository guide", "GitHub", "simulation team", "world model team", "real-robot team", "repository governance"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-16"
     },
     {
       "id": "contributing:zh",

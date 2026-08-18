@@ -80,6 +80,9 @@ plugins:
             研究与课程: Research and Courses
             研究方向与项目机会: Research Directions and Project Opportunities
             课程项目申请: Course Project Applications
+            项目协作: Project Collaboration
+            非真机组统一协作模式: Unified Collaboration for Non-Hardware Teams
+            实验室仓库导览: Lab Repository Guide
             如何贡献: How to Contribute
 
 markdown_extensions:
@@ -129,4 +132,7 @@ nav:
   - 研究与课程:
       - 研究方向与项目机会: projects/index.md
       - 课程项目申请: academics/project-courses.md
+  - 项目协作:
+      - 非真机组统一协作模式: project-collaboration/non-hardware-worktree.md
+      - 实验室仓库导览: project-collaboration/repository-guide.md
   - 如何贡献: contributing.md

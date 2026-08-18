@@ -14,6 +14,7 @@
 
 - `docs/project-collaboration/non-hardware-worktree.md`: Chinese operational guide and source-of-truth wording for the requested rule.
 - `docs/project-collaboration/non-hardware-worktree.en.md`: English mirror with matching headings, examples, and safety boundaries.
+- `docs/assets/data/ai-index.json`: Register the new public pages and their role-based maintainer so the repository index contract remains complete.
 - `mkdocs.yml`: Add the top-level bilingual navigation section and its English labels.
 - `docs/superpowers/plans/2026-08-14-non-hardware-team-collaboration.md`: This implementation record; excluded from the published site by `exclude_docs`.
 
@@ -76,6 +77,7 @@ Expected: both pages have the same 12 section positions, all three placeholder t
 
 **Files:**
 - Modify: `mkdocs.yml`
+- Modify: `docs/assets/data/ai-index.json`
 
 - [ ] **Step 1: Add English navigation translations**
 
@@ -97,11 +99,16 @@ After the existing `研究与课程` section and before `如何贡献`, add:
 
 Do not move or rename the existing `如何贡献` entry.
 
+- [ ] **Step 3: Register both pages in the public AI index**
+
+Add the role-based maintainer `non-hardware-team-maintainer` with a controlled-directory contact, then add reciprocal `zh` and `en` page records for `docs/project-collaboration/non-hardware-worktree.md` and `docs/project-collaboration/non-hardware-worktree.en.md`. Use the published paths `/lab-wiki/project-collaboration/non-hardware-worktree/` and `/lab-wiki/en/project-collaboration/non-hardware-worktree/`, set `last_verified` to `2026-08-14`, and reference only the new role-based maintainer.
+
 ### Task 4: Build and review the complete change
 
 **Files:**
 - Verify: `docs/project-collaboration/non-hardware-worktree.md`
 - Verify: `docs/project-collaboration/non-hardware-worktree.en.md`
+- Verify: `docs/assets/data/ai-index.json`
 - Verify: `mkdocs.yml`
 
 - [ ] **Step 1: Run the strict MkDocs build**
@@ -124,12 +131,12 @@ git diff --stat
 git status --short
 ```
 
-Expected: only the two new bilingual pages and `mkdocs.yml` are implementation changes; no `.venv/`, `site/`, credentials, personal identifiers, or unrelated edits are present.
+Expected: only the two new bilingual pages, `docs/assets/data/ai-index.json`, and `mkdocs.yml` are implementation changes; no `.venv/`, `site/`, credentials, personal identifiers, or unrelated edits are present.
 
 - [ ] **Step 3: Commit the implementation**
 
 ```bash
-git add docs/project-collaboration/non-hardware-worktree.md docs/project-collaboration/non-hardware-worktree.en.md mkdocs.yml
+git add docs/project-collaboration/non-hardware-worktree.md docs/project-collaboration/non-hardware-worktree.en.md docs/assets/data/ai-index.json mkdocs.yml
 git commit -m "docs: add non-hardware team collaboration guide"
 ```
 
@@ -142,4 +149,3 @@ Expected: one commit contains the bilingual guide and navigation update. Do not 
 - [ ] Both language pages use the same scope, path placeholders, cleanup boundary, and verification date.
 - [ ] The page is discoverable under `项目协作`, not under `如何贡献`.
 - [ ] Strict build and diff review are completed before claiming the change is ready.
-

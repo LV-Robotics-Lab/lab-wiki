@@ -63,14 +63,14 @@
 
 | 硬件或资料 | 建议使用组 | 使用前重点查验 | 安全入口 |
 |---|---|---|---|
-| RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | [RealHand 资料目录](https://drive.google.com/drive/folders/1bDQFkxWZW1SapAQazwENOSOL_vWyM9Ti?usp=sharing)；[LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
+| RealHand / LinkerHand | 灵巧手组 | 型号、左右手、固件、遥操作脚本版本 | RealHand 资料目录（组织内受控文档）；[LinkerHand teleoperation Python](https://gitee.com/ericbrunt/linkerhand_telop_python) |
 | AgileX NERO / TRACER | 真机组共享 | 机械臂/底盘型号、急停、控制模式、SDK 与通信协议版本 | [NERO 产品页](https://global.agilex.ai/products/nero)；具体手册与协议见 Notion |
-| Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | [戴盟硬件资料目录](https://drive.google.com/drive/folders/1gOMqA2WjBhTcx3Af2x-t1vo9qJFS78E8?usp=sharing) |
+| Daimon / TacClaw | 触觉组、灵巧手组 | 主板、传感器、标定版本、采样链路和连接授权 | 戴盟硬件资料目录（组织内受控文档） |
 | XY 纵横物理数采眼镜 | Ego 组、真机组 | 设备版本、SDK、标定、采集格式和时间同步 | [SDK 文件](https://drive.google.com/file/d/1t48-M-w8L2TNrXIcb_b-elw8ldyBZBKZ/view?usp=sharing) |
 | UDEXREAL / HigVR 数据手套 | Ego 组、灵巧手组 | 左右手、尺寸、固件、标定、时间同步 | 具体手册与标定流程见 Notion |
 | WUJI Hand | 灵巧手组 | 产品代次、左右手、供电、SDK/ROS 兼容性和安全约束 | [WUJI Hand 文档中心](https://docs.wuji.tech/docs/zh/wuji-hand/latest/) |
 | Franka / GELLO | Ego 组、灵巧手组 | 机械臂身份、控制器状态、末端、限位和遥操作链路 | 具体操作指南见 Notion |
-| YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | [YAM / YUM 资料目录](https://drive.google.com/drive/folders/1et1BCPRL1p-zUde3mMlmilPYLowDVnn3)；[i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
+| YAM / i2rt | 真机组共享 | 型号、末端、API/SDK 版本、标定和安全边界 | YAM / YUM 资料目录（组织内受控文档）；[i2rt Python API](https://github.com/i2rt-robotics/i2rt) |
 | LeRobot | 真机组、仿真组 | 数据格式、硬件适配器、版本和示例配置 | 中文教程见 Notion |
 | 灵巧脸 Demo | 真机组 | 设备版本、演示流程、安全边界和现场负责人 | 具体资料与操作指南见 Notion |
 | NERO 机械臂通信协议 V1.2.1 | 真机组共享 | 协议适用型号、版本、CAN 标准、波特率和数据格式 | 作为受控技术附件申请，不在公开 Wiki 复制全文 |
