@@ -41,7 +41,7 @@
     |---|---|
     | 名称 | `Lab AI API` |
     | API Key / Authentication | `<AI_API_KEY>` |
-    | Base URL | `https://kjapi.botsmart.net` |
+    | Base URL | `https://kjapi.botsmart.net/v1` |
     | Model | 管理员确认的 `<MODEL_ID>` |
 
 4. 如果界面显示认证字段选项，优先保持自定义供应商的默认值；只有管理员明确要求时才在 `ANTHROPIC_API_KEY` 与 `ANTHROPIC_AUTH_TOKEN` 之间切换。
