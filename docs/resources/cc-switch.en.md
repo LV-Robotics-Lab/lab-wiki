@@ -41,7 +41,7 @@ After installation, start CC Switch and confirm that its window and system-tray 
     |---|---|
     | Name | `Lab AI API` |
     | API Key / Authentication | `<AI_API_KEY>` |
-    | Base URL | `https://kjapi.botsmart.net` |
+    | Base URL | `https://kjapi.botsmart.net/v1` |
     | Model | The administrator-confirmed `<MODEL_ID>` |
 
 4. If the form displays an authentication-field selector, keep the custom provider default. Switch between `ANTHROPIC_API_KEY` and `ANTHROPIC_AUTH_TOKEN` only when the administrator explicitly instructs you to do so.
