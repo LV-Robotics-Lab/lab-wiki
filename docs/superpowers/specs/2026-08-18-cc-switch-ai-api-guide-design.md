@@ -55,4 +55,3 @@ The new guide will appear under Resources directly after the AI API guide in bot
 - Run the AI-index validator and repository tests.
 - Run `mkdocs build --strict`.
 - Review the final diff for secrets, unintended files, and navigation mismatch.
-
