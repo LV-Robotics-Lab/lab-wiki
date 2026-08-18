@@ -1,7 +1,7 @@
 # AI API 申请与使用
 
 !!! info "使用 API 前请确认"
-    实验室 AI API Base URL 为 **[https://kjapi.botsmart.net](https://kjapi.botsmart.net)**。请使用个人获批的 API key，切勿在 Wiki、代码或聊天中粘贴凭据。
+    请使用个人获批的 API key，切勿在 Wiki、代码或聊天中粘贴凭据。
 
 !!! danger "地址可公开，凭据不可公开"
     Wiki 可以记录 API Base URL、服务主页和负责人，但不得记录 API key、访问 token、密码、Cookie、请求头或个人用量明细。
@@ -14,11 +14,10 @@
 
 | 服务 | 地址 | 申请或咨询 |
 |---|---|---|
-| 实验室 AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@_嗯`、`@赖咏曦` |
-| 实验室 Codex 中转站 | [https://goaihz.com/](https://goaihz.com/) | `@赖咏曦` |
+| 实验室 AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@赖咏曦` |
+| 实验室 Codex 中转站 | [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd) | `@赖咏曦` |
 
-!!! note "个人 key"
-    API key 按用户分配并进行流量监控。页面公开 Base URL，但 key 仍须向负责人单独申请，禁止共用。
+需要图形化配置 Claude Code 或 Codex 时，请参阅[使用 CC Switch 配置 AI API](cc-switch.md)。
 
 ## 前置条件
 
@@ -34,7 +33,6 @@
 | 项目 | 所属科研项目及负责人角色 |
 | 用途 | 计划完成的研究任务 |
 | 模型需求 | 所需模型类别或能力，不填写密钥 |
-| 用量估算 | 预计请求量、并发量和使用周期 |
 | 数据边界 | 是否包含未公开研究数据或其他受限内容 |
 | 申请人 | 个人账户标识；每人使用独立凭据 |
 
@@ -57,7 +55,7 @@
 
 - 凭据按用户分配并进行流量监控，禁止共享、转发或代他人使用。
 - 仅用于获批科研项目，禁止用于与项目无关的日常任务。
-- Goal 模式、多 Agent、长时间运行和高并发任务可能快速消耗额度，启动前应评估预算并取得批准。
+- 多 Agent、长时间运行和高并发任务可能快速消耗额度，启动前应评估预算并取得批准。（不要使用Goal 模式！）
 - 不得把未脱敏的个人信息、受限数据或未公开材料发送给未经批准的模型服务。
 - 不得在 Notebook、Shell 历史、训练日志、错误截图或 Git 提交中保留 key。
 
@@ -81,5 +79,5 @@
 
 - 负责人：`@_嗯`、`@赖咏曦`
 - AI API：[https://kjapi.botsmart.net](https://kjapi.botsmart.net)
-- Codex 中转站：[https://goaihz.com/](https://goaihz.com/)
-- 最后核验：2026-08-07
+- Codex 中转站：[https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd)
+- 最后核验：2026-08-18

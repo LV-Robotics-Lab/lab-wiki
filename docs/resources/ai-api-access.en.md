@@ -1,7 +1,7 @@
 # AI API Access and Usage
 
 !!! info "Confirm before using the API"
-    The laboratory AI API Base URL is **[https://kjapi.botsmart.net](https://kjapi.botsmart.net)**. Use only your individually approved API key, and never paste credentials into the Wiki, source code, or chat.
+    Use only your individually approved API key, and never paste credentials into the Wiki, source code, or chat.
 
 !!! danger "Addresses may be public; credentials may not"
     The Wiki may record API Base URLs, service homepages, and maintainers, but must never record API keys, access tokens, passwords, cookies, request headers, or personal usage details.
@@ -14,11 +14,10 @@ Request and use lab-managed AI APIs for approved research projects within an ind
 
 | Service | Address | Request or support |
 |---|---|---|
-| Laboratory AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@_嗯`, `@赖咏曦` (Yongxi Lai) |
-| Laboratory Codex relay | [https://goaihz.com/](https://goaihz.com/) | `@赖咏曦` (Yongxi Lai) |
+| Laboratory AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@赖咏曦` (Yongxi Lai) |
+| Laboratory Codex relay | [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd) | `@赖咏曦` (Yongxi Lai) |
 
-!!! note "Personal keys"
-    API keys are issued per user and traffic is monitored. The Base URL is public on this page, but each key must still be requested individually and must never be shared.
+For graphical Claude Code or Codex setup, see [Configure AI APIs with CC Switch](cc-switch.en.md).
 
 ## Prerequisites
 
@@ -34,7 +33,6 @@ Request and use lab-managed AI APIs for approved research projects within an ind
 | Project | Research project and project-owner role |
 | Purpose | Research task to be completed |
 | Model requirement | Required model class or capability; do not include credentials |
-| Usage estimate | Expected request volume, concurrency, and usage period |
 | Data boundary | Whether unpublished research data or other restricted content is involved |
 | Requester | Personal account identifier; each user receives separate credentials |
 
@@ -57,7 +55,7 @@ Request and use lab-managed AI APIs for approved research projects within an ind
 
 - Credentials are assigned per user and monitored; never share, forward, or use them on behalf of another person.
 - Use the service only for approved research projects, not unrelated daily work.
-- Goal mode, multi-agent, long-running, and high-concurrency workloads can consume quota rapidly; estimate the budget and obtain approval before launch.
+- Multi-agent, long-running, and high-concurrency tasks can consume quota rapidly; estimate the budget and obtain approval before launch. Do not use Goal mode.
 - Do not send unredacted personal information, restricted data, or unpublished material to an unapproved model service.
 - Never leave keys in notebooks, shell history, training logs, error screenshots, or Git commits.
 
@@ -81,5 +79,5 @@ Request and use lab-managed AI APIs for approved research projects within an ind
 
 - Owners: `@_嗯`, `@赖咏曦` (Yongxi Lai)
 - AI API: [https://kjapi.botsmart.net](https://kjapi.botsmart.net)
-- Codex relay: [https://goaihz.com/](https://goaihz.com/)
-- Last verified: 2026-08-07
+- Codex relay: [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd)
+- Last verified: 2026-08-18
