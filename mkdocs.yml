@@ -62,6 +62,7 @@ plugins:
             新成员清单: New Member Checklist
             账号与权限: Accounts and Access
             AI API 申请与使用: AI API Access and Usage
+            使用 CC Switch 配置 AI API: Configure AI APIs with CC Switch
             Codex CLI 多 Profile 与订阅登录: Codex CLI Profiles and Subscription Login
             用 AI 查询 Wiki: Ask the Wiki with AI
             实验室门禁: Lab Access
@@ -118,6 +119,7 @@ nav:
   - 实验室资源:
       - 资源总览: resources/index.md
       - AI API 申请与使用: resources/ai-api-access.md
+      - 使用 CC Switch 配置 AI API: resources/cc-switch.md
       - Codex CLI 多 Profile 与订阅登录: resources/codex-cli.md
       - 用 AI 查询 Wiki: resources/ask-wiki.md
       - 算力资源: resources/compute-access.md
