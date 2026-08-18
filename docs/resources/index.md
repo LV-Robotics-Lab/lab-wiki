@@ -15,6 +15,7 @@
 - **代码仓库**：[LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya 相关资源表**：`<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**：[申请、配置与安全使用](ai-api-access.md)
+- **CC Switch**：[通过图形界面配置 Claude Code 和 Codex API](cc-switch.md)
 - **Codex CLI**：[多 Profile 与 ChatGPT 订阅登录](codex-cli.md)
 - **AI 查询 Wiki**：[安装并使用 ask-wiki Skill](ask-wiki.md)
 - **真机硬件资源中心**：[查验设备、资料与安全状态](hardware.md)
@@ -25,4 +26,4 @@
 !!! info "访问权限"
     两个采购表由 Notion 权限控制。部分代码仓库可能需要 LV Robotics Lab GitHub 组织权限。无法访问时，请联系对应项目的维护者。
 
-<p class="wiki-meta">负责人：Lab Resources Maintainer · 最后核验：2026-08-15</p>
+<p class="wiki-meta">负责人：Lab Resources Maintainer · 最后核验：2026-08-18</p>

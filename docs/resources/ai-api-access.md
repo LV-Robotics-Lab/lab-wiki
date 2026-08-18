@@ -15,8 +15,9 @@
 | 服务 | 地址 | 申请或咨询 |
 |---|---|---|
 | 实验室 AI API | [https://kjapi.botsmart.net](https://kjapi.botsmart.net) | `@赖咏曦` |
-| 实验室 Codex 中转站 | [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd)| `@赖咏曦` |
+| 实验室 Codex 中转站 | [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd) | `@赖咏曦` |
 
+需要图形化配置 Claude Code 或 Codex 时，请参阅[使用 CC Switch 配置 AI API](cc-switch.md)。
 
 ## 前置条件
 
@@ -78,5 +79,5 @@
 
 - 负责人：`@_嗯`、`@赖咏曦`
 - AI API：[https://kjapi.botsmart.net](https://kjapi.botsmart.net)
-- Codex 中转站： [https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd)
+- Codex 中转站：[https://cpa114515.somnia.ltd](https://cpa114515.somnia.ltd)
 - 最后核验：2026-08-18

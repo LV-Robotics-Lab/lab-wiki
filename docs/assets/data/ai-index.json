@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
-  "generated_at": "2026-08-17T00:00:00Z",
+  "generated_at": "2026-08-18T00:00:00Z",
   "default_language": "zh",
   "maintainers": [
     {
@@ -408,7 +408,7 @@
       "summary": "实验室 AI、算力、远程接入、数据和硬件资源索引。",
       "keywords": ["资源", "AI", "算力", "硬件"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-15"
+      "last_verified": "2026-08-18"
     },
     {
       "id": "resources/index:en",
@@ -420,7 +420,7 @@
       "summary": "Index of laboratory AI, compute, remote access, data, and hardware resources.",
       "keywords": ["resources", "AI", "compute", "hardware"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-15"
+      "last_verified": "2026-08-18"
     },
     {
       "id": "resources/ai-api-access:zh",
@@ -432,7 +432,7 @@
       "summary": "AI API 申请、凭据边界、用量规范和故障排查。",
       "keywords": ["AI API", "申请", "API key", "用量"],
       "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
-      "last_verified": "2026-08-07"
+      "last_verified": "2026-08-18"
     },
     {
       "id": "resources/ai-api-access:en",
@@ -444,7 +444,31 @@
       "summary": "AI API access requests, credential boundaries, usage rules, and troubleshooting.",
       "keywords": ["AI API", "access", "API key", "usage"],
       "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
-      "last_verified": "2026-08-07"
+      "last_verified": "2026-08-18"
+    },
+    {
+      "id": "resources/cc-switch:zh",
+      "language": "zh",
+      "title": "使用 CC Switch 配置 AI API",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/cc-switch/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/cc-switch/",
+      "source_path": "docs/resources/cc-switch.md",
+      "summary": "使用 CC Switch 图形界面配置 Claude Code 和 Codex 的实验室 API。",
+      "keywords": ["CC Switch", "Claude Code", "Codex", "API", "中转站"],
+      "maintainer_ids": ["yongxi-lai"],
+      "last_verified": "2026-08-18"
+    },
+    {
+      "id": "resources/cc-switch:en",
+      "language": "en",
+      "title": "Configure AI APIs with CC Switch",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/cc-switch/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/cc-switch/",
+      "source_path": "docs/resources/cc-switch.en.md",
+      "summary": "Configure the lab APIs for Claude Code and Codex through the CC Switch graphical interface.",
+      "keywords": ["CC Switch", "Claude Code", "Codex", "API", "relay"],
+      "maintainer_ids": ["yongxi-lai"],
+      "last_verified": "2026-08-18"
     },
     {
       "id": "resources/codex-cli:zh",

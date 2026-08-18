@@ -15,6 +15,7 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 - **Code repositories**: [LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya resource sheet**: `<ROMOYA_RESOURCE_SHEET_URL>`
 - **AI API**: [Requests, configuration, and safe usage](ai-api-access.en.md)
+- **CC Switch**: [Configure Claude Code and Codex APIs from a graphical interface](cc-switch.en.md)
 - **Codex CLI**: [Profiles and ChatGPT subscription login](codex-cli.en.md)
 - **Ask the Wiki with AI**: [Install and use the ask-wiki Skill](ask-wiki.en.md)
 - **Physical-Hardware Resource Center**: [Verify equipment, documentation, and safety state](hardware.en.md)
@@ -25,4 +26,4 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 !!! info "Access permissions"
     The two purchasing tables are access-controlled by Notion. Some repositories may require membership in the LV Robotics Lab GitHub organization. Contact the relevant project maintainer if access is unavailable.
 
-<p class="wiki-meta">Owner: Lab Resources Maintainer · Last verified: 2026-08-15</p>
+<p class="wiki-meta">Owner: Lab Resources Maintainer · Last verified: 2026-08-18</p>
