@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
-  "generated_at": "2026-08-15T00:00:00Z",
+  "generated_at": "2026-08-17T00:00:00Z",
   "default_language": "zh",
   "maintainers": [
     {
@@ -661,6 +661,30 @@
       "keywords": ["ask-wiki", "Skill", "AI", "Wiki", "web retrieval"],
       "maintainer_ids": ["wiki-team", "lab-resources-maintainer"],
       "last_verified": "2026-08-14"
+    },
+    {
+      "id": "project-collaboration/repository-guide:zh",
+      "language": "zh",
+      "title": "LV Robotics Lab 仓库导览",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/repository-guide/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/repository-guide/",
+      "source_path": "docs/project-collaboration/repository-guide.md",
+      "summary": "实验室组织仓库的组别归属、主入口、依赖层级、治理快照与导航建议。",
+      "keywords": ["仓库导览", "GitHub", "仿真组", "世界模型组", "真机组", "仓库治理"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-16"
+    },
+    {
+      "id": "project-collaboration/repository-guide:en",
+      "language": "en",
+      "title": "LV Robotics Lab Repository Guide",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/project-collaboration/repository-guide/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/project-collaboration/repository-guide/",
+      "source_path": "docs/project-collaboration/repository-guide.en.md",
+      "summary": "Team ownership, entry points, dependency layers, governance snapshot, and navigation guidance for the lab organization repositories.",
+      "keywords": ["repository guide", "GitHub", "simulation team", "world model team", "real-robot team", "repository governance"],
+      "maintainer_ids": ["wiki-team"],
+      "last_verified": "2026-08-16"
     },
     {
       "id": "contributing:zh",
