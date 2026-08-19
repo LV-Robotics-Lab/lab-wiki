@@ -35,23 +35,23 @@
 
 ## 当前设备清单
 
-| Tailscale 设备名 | Tailscale IP | 算力 | 当前分配 | 位置 |
-|---|---|---|---|---|
-| `sg-ai-gateway` | `100.64.0.1` | 无 GPU | VPS 控制面，不用于开发 | 云端 |
-| `boris-pc` | `100.64.0.4` | RTX 3070 Ti | Franka 真机控制 | E2-01-06 |
-| `dm-26zj-020` | `100.64.0.7` | RTX 5060 | 戴盟 benchmark 搭建 | 戴盟公司内 |
-| `dm-26zj-008` | `100.64.0.3` | RTX 5090 | 戴盟 benchmark 搭建 | 戴盟公司内 |
-| `lvrobotics-System-Product-Name` | `100.64.0.10` | RTX 4060 Ti | 松灵 NERO 真机控制 | E2-01-06 |
-| `shaol-PC` | `100.64.0.5` | RTX 4090 | Ego2Dex | COM2-01-04 |
-| `jingxiang-B850M-C` | `100.64.0.6` | RTX 5090 | Robot Harness Gen-Env | COM2-01-06 |
-| `yuhang-B850M-C` | `100.64.0.9` | RTX 5090 | UMI WAM Stage 2 | E2-01-06 |
-| `aliyun-dsw-1055` | `100.64.0.11` | A100 | UMI WAM Stage 1 | 云端 |
-| `aliyun-dsw-1021-h20` | `100.64.0.13` | H20 | UMI WAM Stage 1 | 云端 |
-| `aliyun-dsw-1056` | `100.64.0.21` | A100 | UMI WAM Stage 1 | 云端 |
-| `aliyun-dsw-1019` | `100.64.0.25` | 4×A10 | 数据管线编解码 | 云端 |
+| Tailscale 设备名 | Tailscale IP | 设备种类 | 算力 | 当前分配 | 位置 |
+|---|---|---|---|---|---|
+| `sg-ai-gateway` | `100.64.0.1` | VPS 中央机，请勿作为开发用途 | 无 GPU | — | 云端 |
+| `boris-pc-z890` | `100.64.0.32` | 实验室公用主机 | RTX 4090 | TacHarness 评测搭建 | COM4-05-01 |
+| `dm-26zj-008` | `100.64.0.3` | 戴盟合作项目主机 | RTX 5090 | — | 戴盟公司内 |
+| `dm-26zj-020` | `100.64.0.7` | 戴盟合作项目主机 | RTX 5060 | — | 戴盟公司内 |
+| `autodl-container-nhpaq5ml8z-8b8d996b` | `100.64.0.33` | AutoDL 服务器 | A800 | UMI WAM | 云端 |
+| `boris-pc` | `100.64.0.4` | 实验室公用笔记本 | RTX 3070 Ti | Franka 组真机控制 | E2-01-06 |
+| `lvrobotics-System-Product-Name` | `100.64.0.34` | 实验室公用主机 | RTX 4060 Ti | Nero 组真机控制 | E2-01-06 |
+| `agilex` | `100.64.0.27` | 实验室公用主机 | RTX 4060 | Cobot 组真机控制 | E2-01-06 |
+| `gmlab-System-Product-Name` | `100.64.0.39` | 实验室公用主机 | RTX 3080 | Piper 组真机控制 | E2-01-06 |
+| `jingxiang-B850M-C` | `100.64.0.6` | 实验室公用主机 | RTX 5090 | Lerobot 组真机控制 | E2-01-06 |
+| `yuhang-B850M-C` | `100.64.0.9` | 实验室公用主机 | RTX 5090 | UMI 组算法测试 | E2-01-06 |
+| `shaol-PC` | `100.64.0.5` | 实验室公用主机 | RTX 4090 | Ego 组算法测试 | COM2-01-04 |
 
 !!! info "访问说明"
-    上述 IP 只能从实验室 Tailscale/Headscale 网络访问。表格表示配置与项目归属快照，不代表设备当前在线或空闲；AutoDL 按量计费且不会常开。
+    上述 IP 只能从实验室 Tailscale/Headscale 网络访问。表格表示配置与项目归属快照，不代表设备当前在线或空闲；AutoDL 按量计费且不会常开。AnyDesk 设备码和登录密码属于远程访问凭据，不在 Wiki 保存；需要远程桌面时向维护者申请受控登记表中的临时授权。
 
 ## 申请信息
 
