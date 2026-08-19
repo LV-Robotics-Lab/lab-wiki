@@ -78,6 +78,7 @@ plugins:
             真机硬件资源中心: Physical-Hardware Resource Center
             研究与课程: Research and Courses
             研究方向与项目机会: Research Directions and Project Opportunities
+            实验室分组名单: Lab Team Directory
             课程项目申请: Course Project Applications
             如何贡献: How to Contribute
 
@@ -126,5 +127,6 @@ nav:
       - 真机硬件资源中心: resources/hardware.md
   - 研究与课程:
       - 研究方向与项目机会: projects/index.md
+      - 实验室分组名单: projects/teams.md
       - 课程项目申请: academics/project-courses.md
   - 如何贡献: contributing.md
