@@ -35,23 +35,23 @@ Select an appropriate laboratory compute resource based on visualization needs, 
 
 ## Current Device Inventory
 
-| Tailscale device | Tailscale IP | Compute | Current allocation | Location |
-|---|---|---|---|---|
-| `sg-ai-gateway` | `100.64.0.1` | No GPU | VPS control plane; not for development | Cloud |
-| `boris-pc` | `100.64.0.4` | RTX 3070 Ti | Franka physical-robot control | E2-01-06 |
-| `dm-26zj-020` | `100.64.0.7` | RTX 5060 | Daimeng benchmark setup | Daimeng company |
-| `dm-26zj-008` | `100.64.0.3` | RTX 5090 | Daimeng benchmark setup | Daimeng company |
-| `lvrobotics-System-Product-Name` | `100.64.0.10` | RTX 4060 Ti | AgileX NERO physical-robot control | E2-01-06 |
-| `shaol-PC` | `100.64.0.5` | RTX 4090 | Ego2Dex | COM2-01-04 |
-| `jingxiang-B850M-C` | `100.64.0.6` | RTX 5090 | Robot Harness Gen-Env | COM2-01-06 |
-| `yuhang-B850M-C` | `100.64.0.9` | RTX 5090 | UMI WAM Stage 2 | E2-01-06 |
-| `aliyun-dsw-1055` | `100.64.0.11` | A100 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1021-h20` | `100.64.0.13` | H20 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1056` | `100.64.0.21` | A100 | UMI WAM Stage 1 | Cloud |
-| `aliyun-dsw-1019` | `100.64.0.25` | 4×A10 | Data-pipeline encoding and decoding | Cloud |
+| Tailscale device | Tailscale IP | Device type | Compute | Current allocation | Location |
+|---|---|---|---|---|---|
+| `sg-ai-gateway` | `100.64.0.1` | VPS central host; not for development | No GPU | — | Cloud |
+| `boris-pc-z890` | `100.64.0.32` | Shared laboratory workstation | RTX 4090 | TacHarness evaluation setup | COM4-05-01 |
+| `dm-26zj-008` | `100.64.0.3` | Daimeng collaboration host | RTX 5090 | — | Daimeng company |
+| `dm-26zj-020` | `100.64.0.7` | Daimeng collaboration host | RTX 5060 | — | Daimeng company |
+| `autodl-container-nhpaq5ml8z-8b8d996b` | `100.64.0.33` | AutoDL server | A800 | UMI WAM | Cloud |
+| `boris-pc` | `100.64.0.4` | Shared laboratory laptop | RTX 3070 Ti | Franka physical-robot control | E2-01-06 |
+| `lvrobotics-System-Product-Name` | `100.64.0.34` | Shared laboratory workstation | RTX 4060 Ti | Nero physical-robot control | E2-01-06 |
+| `agilex` | `100.64.0.27` | Shared laboratory workstation | RTX 4060 | Cobot physical-robot control | E2-01-06 |
+| `gmlab-System-Product-Name` | `100.64.0.39` | Shared laboratory workstation | RTX 3080 | Piper physical-robot control | E2-01-06 |
+| `jingxiang-B850M-C` | `100.64.0.6` | Shared laboratory workstation | RTX 5090 | Lerobot physical-robot control | E2-01-06 |
+| `yuhang-B850M-C` | `100.64.0.9` | Shared laboratory workstation | RTX 5090 | UMI algorithm testing | E2-01-06 |
+| `shaol-PC` | `100.64.0.5` | Shared laboratory workstation | RTX 4090 | Ego algorithm testing | COM2-01-04 |
 
 !!! info "Access note"
-    These IPs are reachable only inside the laboratory Tailscale/Headscale network. The table is a configuration and allocation snapshot, not a claim that a device is currently online or idle. AutoDL is usage-billed and is not kept online.
+    These IPs are reachable only inside the laboratory Tailscale/Headscale network. The table is a configuration and allocation snapshot, not a claim that a device is currently online or idle. AutoDL is usage-billed and is not kept online. AnyDesk device codes and login passwords are remote-access credentials and are not stored in the Wiki; request time-limited authorization through the maintainer-controlled register when remote desktop access is needed.
 
 ## Request Information
 
