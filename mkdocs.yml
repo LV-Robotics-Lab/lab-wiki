@@ -77,9 +77,11 @@ plugins:
             远程接入: Remote Access
             数据存储与归档: Data Storage and Archiving
             真机硬件资源中心: Physical-Hardware Resource Center
+            Ego 组设备清单: Ego Group Equipment Inventory
             研究与课程: Research and Courses
             研究方向与项目机会: Research Directions and Project Opportunities
             实验室分组名单: Lab Team Directory
+            项目组出勤表: Project Team Attendance
             课程项目申请: Course Project Applications
             项目协作: Project Collaboration
             非真机组统一协作模式: Unified Collaboration for Non-Hardware Teams
@@ -138,9 +140,11 @@ nav:
       - 远程接入: resources/remote-access.md
       - 数据存储与归档: resources/data-management.md
       - 真机硬件资源中心: resources/hardware.md
+      - Ego 组设备清单: resources/ego-devices.md
   - 研究与课程:
       - 研究方向与项目机会: projects/index.md
       - 实验室分组名单: projects/teams.md
+      - 项目组出勤表: projects/attendance.md
       - 课程项目申请: academics/project-courses.md
   - 项目协作:
       - 非真机组统一协作模式: project-collaboration/non-hardware-worktree.md
