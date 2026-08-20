@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
-  "generated_at": "2026-08-18T00:00:00Z",
+  "generated_at": "2026-08-20T00:00:00Z",
   "default_language": "zh",
   "maintainers": [
     {
@@ -591,6 +591,30 @@
       "last_verified": "2026-08-07"
     },
     {
+      "id": "resources/ego-devices:zh",
+      "language": "zh",
+      "title": "Ego 组设备清单",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ego-devices/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ego-devices/",
+      "source_path": "docs/resources/ego-devices.md",
+      "summary": "Ego 组设备数量、调试状态、附件和使用前确认信息。",
+      "keywords": ["Ego", "设备清单", "手套", "头显", "传感器"],
+      "maintainer_ids": ["hardware-resources-maintainer"],
+      "last_verified": "2026-08-20"
+    },
+    {
+      "id": "resources/ego-devices:en",
+      "language": "en",
+      "title": "Ego Group Equipment Inventory",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ego-devices/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ego-devices/",
+      "source_path": "docs/resources/ego-devices.en.md",
+      "summary": "Ego group equipment quantities, debug status, accessories, and pre-use checks.",
+      "keywords": ["Ego", "equipment inventory", "gloves", "headset", "sensors"],
+      "maintainer_ids": ["hardware-resources-maintainer"],
+      "last_verified": "2026-08-20"
+    },
+    {
       "id": "projects/index:zh",
       "language": "zh",
       "title": "研究方向与项目机会",
@@ -613,6 +637,54 @@
       "keywords": ["research", "projects", "opportunities", "owner"],
       "maintainer_ids": ["research-project-coordinator"],
       "last_verified": "2026-08-03"
+    },
+    {
+      "id": "projects/teams:zh",
+      "language": "zh",
+      "title": "实验室分组名单",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/projects/teams/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/teams/",
+      "source_path": "docs/projects/teams.md",
+      "summary": "实验室设备、项目、参与同学和负责同学的当前分组名单。",
+      "keywords": ["分组名单", "项目组", "参与同学", "负责人"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-20"
+    },
+    {
+      "id": "projects/teams:en",
+      "language": "en",
+      "title": "Lab Team Directory",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/teams/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/projects/teams/",
+      "source_path": "docs/projects/teams.en.md",
+      "summary": "Current laboratory assignments by device, project, participant, and lead.",
+      "keywords": ["team directory", "project group", "participants", "lead"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-20"
+    },
+    {
+      "id": "projects/attendance:zh",
+      "language": "zh",
+      "title": "项目组出勤表",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/projects/attendance/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/attendance/",
+      "source_path": "docs/projects/attendance.md",
+      "summary": "真机项目组按星期和时间段排列的出勤安排。",
+      "keywords": ["出勤表", "排班", "项目组", "时间段"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-20"
+    },
+    {
+      "id": "projects/attendance:en",
+      "language": "en",
+      "title": "Project Team Attendance",
+      "url": "https://lv-robotics-lab.github.io/lab-wiki/en/projects/attendance/",
+      "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/projects/attendance/",
+      "source_path": "docs/projects/attendance.en.md",
+      "summary": "Physical-robot project attendance organized by weekday and time slot.",
+      "keywords": ["attendance", "schedule", "project team", "time slot"],
+      "maintainer_ids": ["research-project-coordinator"],
+      "last_verified": "2026-08-20"
     },
     {
       "id": "academics/project-courses:zh",

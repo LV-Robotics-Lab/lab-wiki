@@ -37,4 +37,4 @@
 
 - Source: Team list provided by the lab
 - Maintainer: Project leads
-- Last verified: Pending project-lead confirmation
+- Last verified: 2026-08-20 (assignments remain subject to project-lead confirmation)

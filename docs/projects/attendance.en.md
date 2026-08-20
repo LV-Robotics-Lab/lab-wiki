@@ -72,4 +72,4 @@ The current schedule is maintained in the [Chinese attendance table](attendance.
 
 - Source: Attendance schedule provided by the lab
 - Maintainer: Project leads
-- Last verified: Pending confirmation
+- Last verified: 2026-08-20 (the schedule remains subject to project-lead confirmation)

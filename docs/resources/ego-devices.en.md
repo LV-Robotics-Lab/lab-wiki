@@ -29,4 +29,4 @@
 
 - Source: Equipment list provided by the Ego group
 - Maintainer: Ego group lead
-- Last verified: Pending confirmation
+- Last verified: 2026-08-20 (equipment status remains subject to Ego group lead confirmation)
