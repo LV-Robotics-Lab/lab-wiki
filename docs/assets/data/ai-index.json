@@ -381,10 +381,10 @@
       "url": "https://lv-robotics-lab.github.io/lab-wiki/administration/purchasing/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/purchasing/",
       "source_path": "docs/administration/purchasing.md",
-      "summary": "各组采购选型、周末汇总、下单和到货入库的统一流程。",
-      "keywords": ["采购", "购物车", "周末汇总", "入库"],
+      "summary": "各组使用真机负责人在群中发布的 Excel 完成采购选型、周末汇总、下单和到货入库的统一流程，包含已下单表重要参考入口。",
+      "keywords": ["采购", "Excel", "真机负责人", "群", "购物车", "周末汇总", "已下单表", "入库"],
       "maintainer_ids": ["purchasing-process-maintainer"],
-      "last_verified": "2026-08-15"
+      "last_verified": "2026-09-04"
     },
     {
       "id": "administration/purchasing:en",
@@ -393,10 +393,10 @@
       "url": "https://lv-robotics-lab.github.io/lab-wiki/en/administration/purchasing/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/administration/purchasing/",
       "source_path": "docs/administration/purchasing.en.md",
-      "summary": "Unified group purchasing selection, weekend consolidation, ordering, and inventory process.",
-      "keywords": ["purchasing", "shopping cart", "consolidation", "inventory"],
+      "summary": "Unified purchasing selection, weekend consolidation, ordering, and inventory process using the Excel template posted by the Physical-Hardware Lead in the group chat, including the important Ordered Items Table reference.",
+      "keywords": ["purchasing", "Excel", "physical-hardware lead", "group chat", "shopping cart", "consolidation", "ordered items table", "inventory"],
       "maintainer_ids": ["purchasing-process-maintainer"],
-      "last_verified": "2026-08-15"
+      "last_verified": "2026-09-04"
     },
     {
       "id": "resources/index:zh",
@@ -408,7 +408,7 @@
       "summary": "实验室 AI、算力、远程接入、数据和硬件资源索引。",
       "keywords": ["资源", "AI", "算力", "硬件"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-04"
     },
     {
       "id": "resources/index:en",
@@ -420,7 +420,7 @@
       "summary": "Index of laboratory AI, compute, remote access, data, and hardware resources.",
       "keywords": ["resources", "AI", "compute", "hardware"],
       "maintainer_ids": ["lab-resources-maintainer"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-04"
     },
     {
       "id": "resources/ai-api-access:zh",

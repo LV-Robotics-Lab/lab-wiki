@@ -3,19 +3,23 @@
 This process standardizes group requirements, product selection, weekend consolidation, purchasing in the following week, package collection, and inventory records. It is intended to reduce duplicate purchases, incompatible models, missing accessories, and items that remain unused after purchase.
 
 !!! info "Weekly purchasing schedule"
-    Each group submits only one Excel purchase list and one total shared-cart link per week. The complete submission is sent to the Purchasing Coordinator on Saturday or Sunday. The current week's consolidated requests are purchased in the following week, and weekly batches must remain separate.
+    The Physical-Hardware Lead posts the purchasing Excel template in the group chat. Each group uses the latest version from the chat and submits only one Excel purchase list and one total shared-cart link per week. The complete submission is sent to the Purchasing Coordinator on Saturday or Sunday. The current week's consolidated requests are purchased in the following week, and weekly batches must remain separate.
 
 ## Table Links
 
-- [Purchase Requirements Table (first table)](https://app.notion.com/p/1a9a5a3a6fa1823c982a81b0b85292a9?v=9a9a5a3a6fa183ad91c38825a9477526&source=copy_link): Each group submits one Excel file per week and records its unified purchase requirements.
+!!! important "Important purchasing reference"
+    The [Ordered Items Table (second table)](https://app.notion.com/p/3b995c72020b8041a0cbed31aa08759c?v=3b995c72020b80c583df000c4f17b9e5&source=copy_link) is an important reference for carrying out the purchasing process, checking order status, and recording deliveries. Consult and update the relevant purchasing week before and after ordering.
+
+- **Purchasing requirements Excel:** The Notion Purchase Requirements Table is no longer used. The Physical-Hardware Lead posts the template in the group chat; each group must download and use the latest version from the chat.
 - [Ordered Items Table (second table)](https://app.notion.com/p/3b995c72020b8041a0cbed31aa08759c?v=3b995c72020b80c583df000c4f17b9e5&source=copy_link): Update the ordered details for the corresponding purchase week after ordering; the owning group adds item photographs after delivery.
 
-Both tables are access-controlled by Notion. The Wiki provides the entry points only and does not copy orders, photographs, or other purchase details.
+The Ordered Items Table is access-controlled by Notion. The Wiki provides the entry point only and does not copy Excel files, orders, photographs, or other purchase details.
 
 ## Roles and Responsibilities
 
 | Role | Responsibility |
 |---|---|
+| Physical-Hardware Lead | Post the purchasing requirements Excel template in the group chat and notify groups when they must use an updated version |
 | Group members | Confirm the need together, compare suppliers, discuss product selection, and complete feasibility research |
 | Group Purchasing Submitter | Prepare the group's single weekly Excel file, verify the items and cart, and submit the total shared-cart link |
 | Purchasing Coordinator | Consolidate submissions over the weekend and check fields, duplicates, cart consistency, research, and approval status |
@@ -24,6 +28,7 @@ Both tables are access-controlled by Notion. The Wiki provides the entry points 
 
 ## Prerequisites
 
+- The latest Excel purchasing template posted by the Physical-Hardware Lead has been obtained from the group chat.
 - Group members have jointly confirmed the need and selection; no individual makes the selection alone.
 - Every item has a clear purpose, expected users, and expected usage period, and the purchase is genuinely needed.
 - Existing inventory has been checked and no suitable item can be reused or shared.
@@ -35,7 +40,7 @@ Both tables are access-controlled by Notion. The Wiki provides the entry points 
 ## Submission Procedure
 
 1. Define the complete purpose and requirements within the group. Compare at least three suppliers or reasonable alternatives where practical, then confirm the model, quantity, amount, and required accessories.
-2. The Group Purchasing Submitter prepares the group's only Excel file for the week. Every item must include its name, quantity, model, amount, purpose, product link, and application group.
+2. Obtain the latest Excel template posted by the Physical-Hardware Lead in the group chat. The Group Purchasing Submitter then prepares the group's only Excel file for the week. Every item must include its name, quantity, model, amount, purpose, product link, and application group.
 3. Add every confirmed item for the week to one cart on the relevant platform. Verify models, quantities, accessories, prices, and shipping, then generate one total shared-cart link.
 4. Send the Excel file and total shared-cart link together as one complete submission to the Purchasing Coordinator on Saturday or Sunday. Individual requests sent as text, chat messages, or other scattered formats do not enter the purchasing process.
 5. The Purchasing Coordinator consolidates the group submissions over the weekend and checks complete fields, duplicates, Excel-to-cart consistency, feasibility research, shipping, and approval status. Non-compliant requests are returned to the owning group for completion.
@@ -44,7 +49,7 @@ Both tables are access-controlled by Notion. The Wiki provides the entry points 
 
 ## Excel Template
 
-Each group creates only one Excel file per week and submits it with the total shared-cart link over the weekend:
+The fields below describe the required content only; the actual submission must use the latest Excel template posted by the Physical-Hardware Lead in the group chat. Each group creates only one Excel file per week and submits it with the total shared-cart link over the weekend:
 
 ```text
 Application group:
@@ -81,6 +86,7 @@ For a wrong, missing, damaged, or unusable item, pause inventory registration, r
 
 ## Verification Checklist
 
+- [ ] The latest Excel template posted by the Physical-Hardware Lead in the group chat was used.
 - [ ] The group submitted only one Excel file and one total shared-cart link this week.
 - [ ] Every item includes a name, quantity, model, amount, purpose, product link, and application group.
 - [ ] No individual request was submitted separately as text, chat, or another scattered format.
@@ -104,9 +110,9 @@ For a wrong, missing, damaged, or unusable item, pause inventory registration, r
 
 ## Information Security
 
-The two Notion tables are confirmed public entry points. Actual Excel files, shared-cart links, order details, payment information, personal addresses, and purchase photographs are managed in Notion or other lab-approved controlled channels. The Wiki does not store personal information or unreviewed internal records.
+The Ordered Items Table is a confirmed public entry point. The Physical-Hardware Lead posts the purchasing requirements Excel in the group chat. Actual Excel files, shared-cart links, order details, payment information, personal addresses, and purchase photographs are managed in Notion or other lab-approved controlled channels. The Wiki does not store personal information or unreviewed internal records.
 
 ## Maintenance
 
 - **Maintainer:** Purchasing Process Maintainer
-- **Last verified:** 2026-08-15
+- **Last verified:** 2026-09-04
