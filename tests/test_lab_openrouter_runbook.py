@@ -15,6 +15,7 @@ ZH_CODEX = ROOT / "docs/resources/codex-cli.md"
 EN_CODEX = ROOT / "docs/resources/codex-cli.en.md"
 SKILL = ROOT / "plugins/lv-lab-wiki/skills/ask-wiki/SKILL.md"
 INDEX = ROOT / "docs/assets/data/ai-index.json"
+MKDOCS = ROOT / "mkdocs.yml"
 
 APPROVED_MODELS = (
     "claude-sonnet-5",
@@ -110,6 +111,17 @@ class LabOpenRouterRunbookTests(unittest.TestCase):
         cc_keywords = " ".join(pages["resources/cc-switch:en"]["keywords"])
         for marker in ("503", "count_tokens", "Pool Mode", "Claude Desktop"):
             self.assertIn(marker, cc_keywords)
+
+    def test_navigation_names_the_openrouter_runbook(self) -> None:
+        text = MKDOCS.read_text(encoding="utf-8")
+        self.assertIn(
+            "使用 CC Switch 配置实验室自有 OpenRouter: Configure the Lab Self-hosted OpenRouter with CC Switch",
+            text,
+        )
+        self.assertIn(
+            "- 使用 CC Switch 配置实验室自有 OpenRouter: resources/cc-switch.md",
+            text,
+        )
 
     def test_skill_contains_agent_execution_constraints(self) -> None:
         text = SKILL.read_text(encoding="utf-8")
