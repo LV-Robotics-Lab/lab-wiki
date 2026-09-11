@@ -52,6 +52,16 @@ class PluginPackageTests(unittest.TestCase):
             "Source",
         ):
             self.assertIn(phrase, body)
+        for phrase in (
+            "Lab Self-hosted OpenRouter",
+            "operating system",
+            "local credential entry",
+            "claude-sonnet-5",
+            "xhigh",
+            "503 No available accounts",
+            "Pool Mode",
+        ):
+            self.assertIn(phrase, body)
 
     def test_openai_metadata_invokes_skill(self) -> None:
         payload = yaml.safe_load(OPENAI_YAML.read_text(encoding="utf-8"))
