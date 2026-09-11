@@ -14,8 +14,8 @@
 - **已下单表（第二张表，采购流程重要参考资料）**：[采购前后核对下单状态，并在到货后由申请组更新照片和记录](https://app.notion.com/p/3b995c72020b8041a0cbed31aa08759c?v=3b995c72020b80c583df000c4f17b9e5&source=copy_link)
 - **代码仓库**：[LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya 相关资源表**：`<ROMOYA_RESOURCE_SHEET_URL>`
-- **AI API**：[申请、配置与安全使用](ai-api-access.md)
-- **CC Switch**：[通过图形界面配置 Claude Code 和 Codex API](cc-switch.md)
+- **AI API**：[申请并理解实验室自有 OpenRouter 的协议与安全边界](ai-api-access.md)
+- **CC Switch**：[由 Agent 在 Windows、macOS、Linux 或 WSL 配置 Claude Code 与 Claude Desktop](cc-switch.md)
 - **Codex CLI**：[多 Profile 与 ChatGPT 订阅登录](codex-cli.md)
 - **AI 查询 Wiki**：[安装并使用 ask-wiki Skill](ask-wiki.md)
 - **真机硬件资源中心**：[查验设备、资料与安全状态](hardware.md)
