@@ -40,6 +40,19 @@ The profile file overlays the base file, so it only needs to contain differences
 
 For account or complete state isolation, see [Isolate multiple subscription accounts](#multi-subscription-accounts).
 
+## Protocol Boundary With The Lab Self-hosted OpenRouter
+
+Codex and Claude may use the same Lab Self-hosted OpenRouter platform, but they must not reuse the same client protocol profile:
+
+| Client | Protocol | Base URL |
+|---|---|---|
+| Codex | OpenAI `Responses` | `<LAB_OPENROUTER_OPENAI_BASE_URL>` |
+| Claude Code / Claude Desktop | `Anthropic Messages` | `<LAB_OPENROUTER_ANTHROPIC_BASE_URL>` or an approved local adapter |
+
+An OpenAI-compatible endpoint may route a Claude-named model without implementing the Anthropic Messages protocol. Do not copy a Codex `Responses` profile directly into Claude, and do not copy Claude authentication fields directly into Codex.
+
+For Claude, CC Switch, model allowlists, and thinking effort, see [Configure the Lab Self-hosted OpenRouter with CC Switch](cc-switch.en.md).
+
 ## Create a relay profile
 
 This example names the profile `relay`. Profile names may contain letters, numbers, hyphens, and underscores.

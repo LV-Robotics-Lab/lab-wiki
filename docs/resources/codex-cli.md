@@ -40,6 +40,19 @@ Codex 的用户配置目录默认是 `~/.codex`，也可以由 `CODEX_HOME` 指�
 
 如果要隔离账户或全部本地状态，请看[多订阅账户隔离](#multi-subscription-accounts)。
 
+## 与实验室自有 OpenRouter 的协议边界
+
+Codex 和 Claude 可以使用同一个实验室自有 OpenRouter 平台，但不能复用同一套客户端协议配置：
+
+| 客户端 | 协议 | Base URL |
+|---|---|---|
+| Codex | OpenAI `Responses` | `<LAB_OPENROUTER_OPENAI_BASE_URL>` |
+| Claude Code / Claude Desktop | `Anthropic Messages` | `<LAB_OPENROUTER_ANTHROPIC_BASE_URL>` 或经过审核的本地适配器 |
+
+OpenAI 兼容入口即使能够路由名称中带 Claude 的模型，也不代表它实现了 Anthropic Messages 协议。不要把 Codex 的 `Responses` Profile 直接复制给 Claude，也不要把 Claude 的认证字段直接复制进 Codex。
+
+Claude、CC Switch、模型白名单和思考强度配置见[使用 CC Switch 配置实验室自有 OpenRouter](cc-switch.md)。
+
 ## 创建中转站 Profile
 
 以下示例把 profile 命名为 `relay`。profile 名只能使用字母、数字、连字符和下划线。
