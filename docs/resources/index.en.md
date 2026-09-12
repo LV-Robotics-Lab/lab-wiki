@@ -14,8 +14,8 @@ Find commonly used laboratory administration sheets, code repositories, AI APIs,
 - **Ordered Items Table (second table; important purchasing reference)**: [Check order status before and after purchasing, then have the owning group update photographs and records after delivery](https://app.notion.com/p/3b995c72020b8041a0cbed31aa08759c?v=3b995c72020b80c583df000c4f17b9e5&source=copy_link)
 - **Code repositories**: [LV Robotics Lab repositories](https://github.com/orgs/LV-Robotics-Lab/repositories)
 - **Romoya resource sheet**: `<ROMOYA_RESOURCE_SHEET_URL>`
-- **AI API**: [Requests, configuration, and safe usage](ai-api-access.en.md)
-- **CC Switch**: [Configure Claude Code and Codex APIs from a graphical interface](cc-switch.en.md)
+- **AI API**: [Request access and understand the Lab Self-hosted OpenRouter protocol and safety boundaries](ai-api-access.en.md)
+- **CC Switch**: [Have an agent configure Claude Code and Claude Desktop on Windows, macOS, Linux, or WSL](cc-switch.en.md)
 - **Codex CLI**: [Profiles and ChatGPT subscription login](codex-cli.en.md)
 - **Ask the Wiki with AI**: [Install and use the ask-wiki Skill](ask-wiki.en.md)
 - **Physical-Hardware Resource Center**: [Verify equipment, documentation, and safety state](hardware.en.md)

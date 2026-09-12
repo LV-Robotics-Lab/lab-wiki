@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "site_url": "https://lv-robotics-lab.github.io/lab-wiki/",
-  "generated_at": "2026-08-20T00:00:00Z",
+  "generated_at": "2026-09-11T00:00:00Z",
   "default_language": "zh",
   "maintainers": [
     {
@@ -429,10 +429,10 @@
       "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ai-api-access/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ai-api-access/",
       "source_path": "docs/resources/ai-api-access.md",
-      "summary": "AI API 申请、凭据边界、用量规范和故障排查。",
-      "keywords": ["AI API", "申请", "API key", "用量"],
+      "summary": "申请实验室 AI API，并区分实验室自有 OpenRouter 的管理、Anthropic Messages 和 OpenAI 兼容端点。",
+      "keywords": ["AI API", "申请", "API key", "用量", "OpenRouter", "Anthropic Messages", "Claude Desktop"],
       "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-11"
     },
     {
       "id": "resources/ai-api-access:en",
@@ -441,34 +441,34 @@
       "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/ai-api-access/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/ai-api-access/",
       "source_path": "docs/resources/ai-api-access.en.md",
-      "summary": "AI API access requests, credential boundaries, usage rules, and troubleshooting.",
-      "keywords": ["AI API", "access", "API key", "usage"],
+      "summary": "Request lab AI API access and distinguish the Lab Self-hosted OpenRouter admin, Anthropic Messages, and OpenAI-compatible endpoints.",
+      "keywords": ["AI API", "access", "API key", "usage", "OpenRouter", "Anthropic Messages", "Claude Desktop"],
       "maintainer_ids": ["ai-api-owner-en", "yongxi-lai"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-11"
     },
     {
       "id": "resources/cc-switch:zh",
       "language": "zh",
-      "title": "使用 CC Switch 配置 AI API",
+      "title": "使用 CC Switch 配置实验室自有 OpenRouter",
       "url": "https://lv-robotics-lab.github.io/lab-wiki/resources/cc-switch/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/cc-switch/",
       "source_path": "docs/resources/cc-switch.md",
-      "summary": "使用 CC Switch 图形界面配置 Claude Code 和 Codex 的实验室 API。",
-      "keywords": ["CC Switch", "Claude Code", "Codex", "API", "中转站"],
+      "summary": "供 Agent 在 Windows、macOS、Linux 和 WSL 配置 Claude Code 与 Claude Desktop，并诊断实验室自有 OpenRouter。",
+      "keywords": ["CC Switch", "Claude Code", "Claude Desktop", "Windows", "macOS", "Linux", "WSL", "OpenRouter", "Anthropic Messages", "503", "count_tokens", "Pool Mode"],
       "maintainer_ids": ["yongxi-lai"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-11"
     },
     {
       "id": "resources/cc-switch:en",
       "language": "en",
-      "title": "Configure AI APIs with CC Switch",
+      "title": "Configure the Lab Self-hosted OpenRouter with CC Switch",
       "url": "https://lv-robotics-lab.github.io/lab-wiki/en/resources/cc-switch/",
       "alternate_url": "https://lv-robotics-lab.github.io/lab-wiki/resources/cc-switch/",
       "source_path": "docs/resources/cc-switch.en.md",
-      "summary": "Configure the lab APIs for Claude Code and Codex through the CC Switch graphical interface.",
-      "keywords": ["CC Switch", "Claude Code", "Codex", "API", "relay"],
+      "summary": "Let an agent configure Claude Code and Claude Desktop on Windows, macOS, Linux, or WSL and diagnose the Lab Self-hosted OpenRouter.",
+      "keywords": ["CC Switch", "Claude Code", "Claude Desktop", "Windows", "macOS", "Linux", "WSL", "OpenRouter", "Anthropic Messages", "503", "count_tokens", "Pool Mode"],
       "maintainer_ids": ["yongxi-lai"],
-      "last_verified": "2026-08-18"
+      "last_verified": "2026-09-11"
     },
     {
       "id": "resources/codex-cli:zh",

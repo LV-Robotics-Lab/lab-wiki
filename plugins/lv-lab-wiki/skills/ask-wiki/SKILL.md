@@ -1,6 +1,6 @@
 ---
 name: ask-wiki
-description: Use when questions concern LV Robotics Lab procedures, onboarding, accounts, access, administration, compute, remote access, data, hardware, projects, courses, Codex, AI API usage, or other guidance documented in the lab Wiki.
+description: Use when questions concern LV Robotics Lab procedures, onboarding, accounts, access, administration, compute, remote access, data, hardware, projects, courses, Codex, Claude Code, Claude Desktop, CC Switch, OpenRouter, AI API usage, or other guidance documented in the lab Wiki.
 ---
 
 # Ask the Lab Wiki
@@ -45,6 +45,21 @@ https://lv-robotics-lab.github.io/lab-wiki/search/search_index.json
 Still fetch the selected full page before answering. Extract maintainer details from that page; if none are present, route the user to Wiki Team through the lab controlled directory.
 
 If the index, fallbacks, or selected pages cannot be reached because of a network failure, do not answer from remembered or cached Wiki content. State that the live Wiki cannot be verified, link the trusted origin, and route to Wiki Team through the controlled directory.
+
+## Lab Self-hosted OpenRouter Runbook
+
+For Lab Self-hosted OpenRouter, Claude Code, Claude Desktop, CC Switch, model selection, thinking effort, `/count_tokens`, or `503 No available accounts`:
+
+1. Fetch both current `resources/ai-api-access` and `resources/cc-switch` full pages in the user's language.
+2. Determine the operating system and distinguish native Windows, macOS, native Linux, and Windows-hosted CC Switch with WSL Claude Code. Apply only that platform branch.
+3. Confirm the target client. Claude Code and Claude Desktop have separate configurations; do not infer that one configures the other.
+4. Use local credential entry: have the user type the individual key into CC Switch or another approved local field. Never ask the user to paste it into chat, and never print its value.
+5. Preserve the documented model allowlist. Default to `claude-sonnet-5`; use only documented fallbacks. Preserve the effort cap `low`, `medium`, `high`, or `xhigh` (Extra High).
+6. Treat `/models` as discovery only. Verification requires a content-free minimal inference result; Claude Desktop also requires the documented token-count and Messages checks.
+7. Route a `/count_tokens` compatibility failure to the local adapter path instead of declaring the credential invalid.
+8. Route `503 No available accounts`, account-group eligibility, scheduling, and Pool Mode to the indexed maintainer. Do not perform privileged pool, mapping, or account changes from public instructions.
+
+Keep endpoint details in the live pages. Preserve their placeholders exactly and do not invent or reconstruct a private endpoint.
 
 ## Escalation Rules
 
